@@ -100,13 +100,14 @@
             // 
             // CupTable
             // 
+            this.CupTable.AutoSize = true;
             this.CupTable.ColumnCount = 1;
-            this.CupTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.CupTable.Location = new System.Drawing.Point(564, 46);
+            this.CupTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.CupTable.Location = new System.Drawing.Point(358, 44);
             this.CupTable.Name = "CupTable";
             this.CupTable.RowCount = 1;
-            this.CupTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.CupTable.Size = new System.Drawing.Size(200, 100);
+            this.CupTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.CupTable.Size = new System.Drawing.Size(417, 238);
             this.CupTable.TabIndex = 6;
             this.CupTable.Visible = false;
             this.CupTable.Paint += new System.Windows.Forms.PaintEventHandler(this.CupTable_Paint);

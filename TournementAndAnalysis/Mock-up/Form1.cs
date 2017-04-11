@@ -34,6 +34,46 @@ namespace Mock_up
             EnterTeams.Left = ClientRectangle.Width / 2 - EnterTeams.Width / 2;
             EnterTeams.Width = 150;
 
+            SetupCupTable();
+
+        }
+
+        private void SetupCupTable()
+        {
+            CupTable.Height = 20;
+            CupTable.Width = 20;
+            CupTable.Top = 50;
+            CupTable.ColumnCount = 6;
+            CupTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15));
+            CupTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15));
+            CupTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15));
+            CupTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15));
+            CupTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15));
+            CupTable.Left = ClientRectangle.Width / 10 * 2;
+
+            Label label = new Label();
+            label.Text = "Teams";
+            CupTable.Controls.Add(label, 0, 0);
+
+            Label label2 = new Label();
+            label2.Text = "Played";
+            CupTable.Controls.Add(label2, 1, 0);
+
+            Label label3 = new Label();
+            label3.Text = "Won";
+            CupTable.Controls.Add(label3, 2, 0);
+
+            Label label4 = new Label();
+            label4.Text = "Loss";
+            CupTable.Controls.Add(label4, 3, 0);
+
+            Label label5 = new Label();
+            label5.Text = "Draw";
+            CupTable.Controls.Add(label5, 4, 0);
+
+            Label label6 = new Label();
+            label6.Text = "Position";
+            CupTable.Controls.Add(label6, 5, 0);
         }
 
         private void ElimTourn_Click(object sender, EventArgs e)
@@ -86,6 +126,7 @@ namespace Mock_up
                 EnterTeams.Visible = false;
                 TeamList.Visible = false;
                 SetupTable();
+                CupTable.Visible = true;
             }
         }
 
@@ -93,7 +134,10 @@ namespace Mock_up
         {
             for (int i = 0; i < teams.Count; i++)
             {
-                CupTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 20));
+                CupTable.RowStyles.Add(new RowStyle(SizeType.AutoSize, 20));
+                Label label = new Label();
+                label.Text = teams[i];
+                CupTable.Controls.Add(label, 0, i + 1);
             }
 
             CupTable.Visible = true;
