@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TournamentTest", "Tournamen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mock-up", "Mock-up\Mock-up.csproj", "{E1285676-1A8B-4839-9006-C5454DFEFE52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleElimTest", "..\..\..\..\Documents\Visual Studio 2015\Projects\SingleElimTest\SingleElimTest\SingleElimTest.csproj", "{E0758C55-0F3B-422E-BB10-9ACA2140CCE2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleElimTest", "SingleElimTest\SingleElimTest.csproj", "{E0758C55-0F3B-422E-BB10-9ACA2140CCE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
