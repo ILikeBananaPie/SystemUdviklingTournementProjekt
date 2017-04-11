@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ElimTourn = new System.Windows.Forms.Button();
             this.CupTourn = new System.Windows.Forms.Button();
             this.EnterTeams = new System.Windows.Forms.TextBox();
@@ -36,6 +37,7 @@
             this.TeamList = new System.Windows.Forms.ListBox();
             this.CupTable = new System.Windows.Forms.TableLayoutPanel();
             this.NextRound = new System.Windows.Forms.Button();
+            this.checker = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // ElimTourn
@@ -124,6 +126,11 @@
             this.NextRound.Visible = false;
             this.NextRound.Click += new System.EventHandler(this.NextRound_Click);
             // 
+            // checker
+            // 
+            this.checker.Enabled = true;
+            this.checker.Tick += new System.EventHandler(this.checker_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,6 +162,7 @@
         private System.Windows.Forms.ListBox TeamList;
         private System.Windows.Forms.TableLayoutPanel CupTable;
         private System.Windows.Forms.Button NextRound;
+        private System.Windows.Forms.Timer checker;
     }
 }
 
