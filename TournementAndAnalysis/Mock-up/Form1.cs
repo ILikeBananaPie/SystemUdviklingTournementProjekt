@@ -15,6 +15,7 @@ namespace Mock_up
         private List<string> teams = new List<string>();
         private bool elim;
         private bool cup;
+        private int round = 0;
 
         public Form1()
         {
@@ -33,6 +34,9 @@ namespace Mock_up
             EnterTeams.Top = ClientRectangle.Height / 2 - EnterTeams.Height * 2;
             EnterTeams.Left = ClientRectangle.Width / 2 - EnterTeams.Width / 2;
             EnterTeams.Width = 150;
+
+            NextRound.Top = ClientRectangle.Height / 2;
+            NextRound.Left = ClientRectangle.Width / 2 - ElimTourn.Width;
 
             SetupCupTable();
 
@@ -121,12 +125,21 @@ namespace Mock_up
             }
             if (cup)
             {
-                Done.Visible = false;
-                Add.Visible = false;
-                EnterTeams.Visible = false;
-                TeamList.Visible = false;
-                SetupTable();
-                CupTable.Visible = true;
+                if (teams.Count < 2)
+                {
+                    //error message
+                }
+                else
+                {
+                    Done.Visible = false;
+                    Add.Visible = false;
+                    EnterTeams.Visible = false;
+                    TeamList.Visible = false;
+                    SetupTable();
+                    CupTable.Visible = true;
+                    NextRound.Visible = true;
+                }
+
             }
         }
 
@@ -139,8 +152,21 @@ namespace Mock_up
                 label.Text = teams[i];
                 CupTable.Controls.Add(label, 0, i + 1);
             }
-
+            ShowStats();
             CupTable.Visible = true;
+        }
+
+        private void ShowStats()
+        {
+            for (int x = 1; x < CupTable.ColumnCount; x++)
+            {
+                for (int y = 1; y < teams.Count + 1; y++)
+                {
+                    Label text = new Label();
+                    text.Text = "0";
+                    CupTable.Controls.Add(text, x, y);
+                }
+            }
         }
 
         private void Add_Click(object sender, EventArgs e)
@@ -161,6 +187,72 @@ namespace Mock_up
 
         private void CupTable_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void NextRound_Click(object sender, EventArgs e)
+        {
+            for (int i = 1; i < teams.Count + 1; i++)
+            {
+                CupTable.GetControlFromPosition(0, i).BackColor = Color.White;
+            }
+
+            if (round == 0)
+            {
+                Label label = new Label();
+                label.BackColor = Color.Red;
+                CupTable.GetControlFromPosition(0, 1).BackColor = Color.Red;
+                CupTable.GetControlFromPosition(0, 2).BackColor = Color.Red;
+
+                CupTable.GetControlFromPosition(1, 1).Text = "1";
+                CupTable.GetControlFromPosition(1, 2).Text = "1";
+
+                CupTable.GetControlFromPosition(2, 1).Text = "1";
+                CupTable.GetControlFromPosition(3, 2).Text = "1";
+
+                CupTable.GetControlFromPosition(5, 1).Text = "1";
+                CupTable.GetControlFromPosition(5, 2).Text = "3";
+                CupTable.GetControlFromPosition(5, 3).Text = "2";
+                round++;
+            }
+            else if (round == 1)
+            {
+                Label label = new Label();
+                label.BackColor = Color.Red;
+                CupTable.GetControlFromPosition(0, 2).BackColor = Color.Red;
+                CupTable.GetControlFromPosition(0, 3).BackColor = Color.Red;
+
+                CupTable.GetControlFromPosition(1, 2).Text = "2";
+                CupTable.GetControlFromPosition(1, 3).Text = "1";
+
+                CupTable.GetControlFromPosition(3, 2).Text = "2";
+                CupTable.GetControlFromPosition(2, 3).Text = "1";
+
+                CupTable.GetControlFromPosition(5, 1).Text = "1";
+                CupTable.GetControlFromPosition(5, 2).Text = "3";
+                CupTable.GetControlFromPosition(5, 3).Text = "2";
+                round++;
+            }
+            else if (round == 2)
+            {
+                Label label = new Label();
+                label.BackColor = Color.Red;
+                CupTable.GetControlFromPosition(0, 1).BackColor = Color.Red;
+                CupTable.GetControlFromPosition(0, 3).BackColor = Color.Red;
+
+                CupTable.GetControlFromPosition(1, 1).Text = "2";
+                CupTable.GetControlFromPosition(1, 3).Text = "2";
+
+                CupTable.GetControlFromPosition(3, 1).Text = "1";
+                CupTable.GetControlFromPosition(2, 3).Text = "2";
+
+                CupTable.GetControlFromPosition(5, 1).Text = "2";
+                CupTable.GetControlFromPosition(5, 2).Text = "3";
+                CupTable.GetControlFromPosition(5, 3).Text = "1";
+                round++;
+            }
+
+
 
         }
 
