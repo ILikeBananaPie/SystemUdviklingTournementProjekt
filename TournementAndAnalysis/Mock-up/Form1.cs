@@ -109,27 +109,27 @@ namespace Mock_up
 
         private void Done_Click(object sender, EventArgs e)
         {
-            if (elim)
+            if (teams.Count <= 2)
             {
-                if (teams.Count % 2 != 0)
-                {
-                    EnterTeams.Text = "Must have an even amount";
-                }
-                else
-                {
-                    Done.Visible = false;
-                    Add.Visible = false;
-                    EnterTeams.Visible = false;
-                    TeamList.Visible = false;
-                }
+                EnterTeams.Text = "Must have more than two teams";
             }
-            if (cup)
+            else
             {
-                if (teams.Count < 2)
+                if (elim)
                 {
-                    //error message
+                    if (teams.Count % 2 != 0)
+                    {
+                        EnterTeams.Text = "Must have an even amount";
+                    }
+                    else
+                    {
+                        Done.Visible = false;
+                        Add.Visible = false;
+                        EnterTeams.Visible = false;
+                        TeamList.Visible = false;
+                    }
                 }
-                else
+                if (cup)
                 {
                     Done.Visible = false;
                     Add.Visible = false;
@@ -139,8 +139,8 @@ namespace Mock_up
                     CupTable.Visible = true;
                     NextRound.Visible = true;
                 }
-
             }
+
         }
 
         private void SetupTable()
@@ -182,7 +182,7 @@ namespace Mock_up
 
         private void TeamList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void CupTable_Paint(object sender, PaintEventArgs e)
