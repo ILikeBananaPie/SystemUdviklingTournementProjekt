@@ -16,6 +16,7 @@ namespace Mock_up
         private bool elim;
         private bool cup;
         private int round = 0;
+        private Form frm;
 
         public Form1()
         {
@@ -82,13 +83,15 @@ namespace Mock_up
 
         private void ElimTourn_Click(object sender, EventArgs e)
         {
-            ElimTourn.Visible = false;
-            CupTourn.Visible = false;
-            Done.Visible = true;
-            Add.Visible = true;
-            EnterTeams.Visible = true;
-            TeamList.Visible = true;
-            elim = true;
+            //ElimTourn.Visible = false;
+            //CupTourn.Visible = false;
+            //Done.Visible = true;
+            //Add.Visible = true;
+            //EnterTeams.Visible = true;
+            //TeamList.Visible = true;
+            //elim = true;
+            frm = new Form4G();
+            frm.Show();
         }
 
         private void CupTourn_Click(object sender, EventArgs e)
@@ -259,6 +262,20 @@ namespace Mock_up
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void checker_Tick(object sender, EventArgs e)
+        {
+            if (frm != null)
+            {
+                if (frm.IsDisposed)
+                {
+                    if (this.Visible == false) { this.Visible = true; }
+                } else
+                {
+                    if (this.Visible) { this.Visible = false; }
+                }
+            }
         }
     }
 }
