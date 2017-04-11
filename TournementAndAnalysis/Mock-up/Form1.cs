@@ -39,6 +39,9 @@ namespace Mock_up
             NextRound.Top = ClientRectangle.Height / 2;
             NextRound.Left = ClientRectangle.Width / 2 - ElimTourn.Width;
 
+            BackToMain.Top = ClientRectangle.Height - BackToMain.Height;
+            BackToMain.Left = ClientRectangle.Width - BackToMain.Width;
+
             SetupCupTable();
 
         }
@@ -103,6 +106,7 @@ namespace Mock_up
             EnterTeams.Visible = true;
             TeamList.Visible = true;
             cup = true;
+            BackToMain.Visible = true;
         }
 
         private void EnterTeams_TextChanged(object sender, EventArgs e)
@@ -141,6 +145,7 @@ namespace Mock_up
                     SetupTable();
                     CupTable.Visible = true;
                     NextRound.Visible = true;
+                    SetupCupTable();
                 }
             }
 
@@ -276,6 +281,23 @@ namespace Mock_up
                     if (this.Visible) { this.Visible = false; }
                 }
             }
+        }
+
+        private void BackToMain_Click(object sender, EventArgs e)
+        {
+            ElimTourn.Visible = true;
+            CupTourn.Visible = true;
+            Done.Visible = false;
+            Add.Visible = false;
+            EnterTeams.Visible = false;
+            TeamList.Visible = false;
+            cup = false;
+            NextRound.Visible = false;
+            CupTable.Visible = false;
+            CupTable.Controls.Clear();
+            teams.Clear();
+            TeamList.Items.Clear();
+            BackToMain.Visible = false;
         }
     }
 }
