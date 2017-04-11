@@ -35,6 +35,7 @@
             this.Add = new System.Windows.Forms.Button();
             this.TeamList = new System.Windows.Forms.ListBox();
             this.CupTable = new System.Windows.Forms.TableLayoutPanel();
+            this.NextRound = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ElimTourn
@@ -112,11 +113,23 @@
             this.CupTable.Visible = false;
             this.CupTable.Paint += new System.Windows.Forms.PaintEventHandler(this.CupTable_Paint);
             // 
+            // NextRound
+            // 
+            this.NextRound.Location = new System.Drawing.Point(25, 367);
+            this.NextRound.Name = "NextRound";
+            this.NextRound.Size = new System.Drawing.Size(75, 23);
+            this.NextRound.TabIndex = 7;
+            this.NextRound.Text = "Next Round";
+            this.NextRound.UseVisualStyleBackColor = true;
+            this.NextRound.Visible = false;
+            this.NextRound.Click += new System.EventHandler(this.NextRound_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(849, 473);
+            this.Controls.Add(this.NextRound);
             this.Controls.Add(this.CupTable);
             this.Controls.Add(this.TeamList);
             this.Controls.Add(this.Add);
@@ -141,6 +154,7 @@
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.ListBox TeamList;
         private System.Windows.Forms.TableLayoutPanel CupTable;
+        private System.Windows.Forms.Button NextRound;
     }
 }
 
