@@ -12,6 +12,11 @@ namespace TournementAndAnalysis
 {
     public partial class Form1:Form
     {
+        private Button elim;
+        private Button cup;
+        private Graphics dc;
+        private Font f;
+
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +24,21 @@ namespace TournementAndAnalysis
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            elim = new Button();
+            elim.Text = "Elimination";
+            Controls.Add(elim);
 
+            cup = new Button();
+            cup.Text = "Cup";
+            Controls.Add(cup);
+
+            timer1.Enabled = true;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            elim.Location = new Point(Width / 3 - elim.Width / 2, Height / 2 - elim.Height / 2);
+            cup.Location = new Point(Width - Width / 3 - cup.Width / 2, Height / 2 - cup.Height / 2);
         }
     }
 }
