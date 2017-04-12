@@ -21,5 +21,10 @@ namespace TournementAndAnalysis
         {
 
         }
+
+        public int TestMethod()
+        {
+            return 1;
+        }
     }
 }
