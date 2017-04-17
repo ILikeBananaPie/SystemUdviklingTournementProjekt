@@ -10,6 +10,8 @@ namespace TournamentTest
         [TestMethod]
         public void TestMethod1()
         {
+            Form1 myForm = new Form1();
+            Assert.AreEqual(1, myForm.TestMethod());
         }
     }
 }
