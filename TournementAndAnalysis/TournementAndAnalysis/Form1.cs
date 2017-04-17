@@ -33,6 +33,7 @@ namespace TournementAndAnalysis
             Controls.Add(cup);
 
             timer1.Enabled = true;
+            TestMethod();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -45,5 +46,35 @@ namespace TournementAndAnalysis
         {
             return 1;
         }
+
+        public int RoundResult(string str)
+        {
+            Dice myDice = new Dice();
+            int a = myDice.Roll();
+            int b = myDice.Roll();
+
+            if (str == "elim")
+            {
+                if (a == b)
+                {
+                    RoundResult("elim");
+                }
+            }
+            else
+            {
+                if (a == b)
+                {
+                    return 0;
+                }
+            }
+
+            if (a > b)
+            {
+                return 1;
+            }
+            else return 2;
+
+        }
+
     }
 }
