@@ -16,6 +16,7 @@ namespace TournementAndAnalysis
         private Button cup;
         private Graphics dc;
         private Font f;
+        private Random rnd;
 
         public Form1()
         {
@@ -47,33 +48,14 @@ namespace TournementAndAnalysis
             return 1;
         }
 
-        public int RoundResult(string str)
+        public int ElimRound()
         {
-            Dice myDice = new Dice();
-            int a = myDice.Roll();
-            int b = myDice.Roll();
+            return rnd.Next(1);
+        }
 
-            if (str == "elim")
-            {
-                if (a == b)
-                {
-                    RoundResult("elim");
-                }
-            }
-            else
-            {
-                if (a == b)
-                {
-                    return 0;
-                }
-            }
-
-            if (a > b)
-            {
-                return 1;
-            }
-            else return 2;
-
+        public int LeagueRound()
+        {
+            return rnd.Next(0, 3);
         }
 
     }
