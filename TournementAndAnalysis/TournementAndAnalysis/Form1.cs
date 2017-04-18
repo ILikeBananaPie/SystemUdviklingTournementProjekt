@@ -12,11 +12,9 @@ namespace TournementAndAnalysis
 {
     public partial class Form1:Form
     {
-        private Button elim;
-        private Button cup;
         private Graphics dc;
         private Font f;
-        private Random rnd;
+        private Random rnd = new Random();
 
         public Form1()
         {
@@ -25,13 +23,8 @@ namespace TournementAndAnalysis
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            elim = new Button();
-            elim.Text = "Elimination";
-            Controls.Add(elim);
-
-            cup = new Button();
-            cup.Text = "Cup";
-            Controls.Add(cup);
+            LeagueButton.Location = new Point(Width - Width / 3 - LeagueButton.Width / 2, Height / 2 - LeagueButton.Height / 2);
+            CupButton.Location = new Point(Width / 3 - CupButton.Width / 2, Height / 2 - CupButton.Height / 2);
 
             timer1.Enabled = true;
             TestMethod();
@@ -39,8 +32,7 @@ namespace TournementAndAnalysis
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            elim.Location = new Point(Width / 3 - elim.Width / 2, Height / 2 - elim.Height / 2);
-            cup.Location = new Point(Width - Width / 3 - cup.Width / 2, Height / 2 - cup.Height / 2);
+
         }
 
         public int TestMethod()
