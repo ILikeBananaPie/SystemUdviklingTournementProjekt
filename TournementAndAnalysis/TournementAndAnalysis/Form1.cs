@@ -106,6 +106,7 @@ namespace TournementAndAnalysis
 
         private void SetupTable()
         {
+            //Hello
             tableLayoutPanel1.Size = new Size(20, 100);
             tableLayoutPanel1.BackColor = Color.Transparent;
             tableLayoutPanel1.Visible = true;
