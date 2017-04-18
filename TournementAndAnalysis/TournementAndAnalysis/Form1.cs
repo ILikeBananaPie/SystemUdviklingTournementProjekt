@@ -58,5 +58,14 @@ namespace TournementAndAnalysis
             return rnd.Next(0, 3);
         }
 
+        private void CupButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LeagueButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
