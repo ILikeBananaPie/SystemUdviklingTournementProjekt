@@ -18,9 +18,14 @@ namespace TournementAndAnalysis
         private Random rnd = new Random();
         private List<Button> MainScreenButtons;
         private List<Button> LeagueAddTeamButtons;
-        private List<string> LeagueTeamList = new List<string>();
+        private List<string[]> LeagueTeamList = new List<string[]>();
+        private List<int> LeagueTeamNumbers = new List<int>();
+        private List<string> LeagueTeamCombinations = new List<string>();
+        private int leagueRound = 1;
+
         private List<string> ColumnHeaders;
         private List<Button> LeagueTeamButtons = new List<Button>();
+        private int TeamNumber = 1;
 
         public Form1()
         {
@@ -88,9 +93,10 @@ namespace TournementAndAnalysis
 
         private void AddTeam_Click(object sender, EventArgs e)
         {
-            LeagueTeamList.Add(AddTeamTextbox.Text);
+            LeagueTeamList.Add(new string[] { AddTeamTextbox.Text, TeamNumber.ToString() });
             LeagueTeams.Items.Add(AddTeamTextbox.Text);
             AddTeamTextbox.Text = "";
+            TeamNumber++;
         }
 
         private void StartTournament_Click(object sender, EventArgs e)
@@ -99,10 +105,38 @@ namespace TournementAndAnalysis
             {
                 button.Visible = false;
             }
+            foreach (string[] item in LeagueTeamList)
+            {
+                LeagueTeamNumbers.Add(int.Parse(item[1]));
+            }
+
             AddTeamTextbox.Visible = false;
             LeagueTeams.Visible = false;
+            LeagueNextRound.Visible = true;
+            CreateCombinations();
             SetupTable();
 
+        }
+
+        private void CreateCombinations()
+        {
+            bool done = false;
+            int x = 0;
+            int i = 1;
+            while (!done)
+            {
+                LeagueTeamCombinations.Add(LeagueTeamNumbers[x].ToString() + "," +  LeagueTeamNumbers[i].ToString());
+                i++;
+                if (i == LeagueTeamNumbers.Count)
+                {
+                    x++;
+                    i = x + 1;
+                }
+                if (x == LeagueTeamNumbers.Count - 1)
+                {
+                    done = true;
+                }
+            }
         }
 
         private void SetupTable()
@@ -129,7 +163,7 @@ namespace TournementAndAnalysis
             for (int i = 0; i < LeagueTeamList.Count; i++)
             {
                 Button myButton = new Button();
-                myButton.Text = LeagueTeamList[i];
+                myButton.Text = LeagueTeamList[i][0];
                 LeagueTeamButtons.Add(myButton);
                 tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 30));
                 tableLayoutPanel1.Controls.Add(myButton, 0, i + 1);
@@ -149,7 +183,79 @@ namespace TournementAndAnalysis
 
         private void LeagueNextRound_Click(object sender, EventArgs e)
         {
+            if (LeagueTeamCombinations.Count == 0)
+            {
+                CreateCombinations();
+                leagueRound++;
+            }
 
+            char[] delimiterChars = { ',' };
+            int combination = rnd.Next(LeagueTeamCombinations.Count);
+            string[] teams = LeagueTeamCombinations[combination].Split(delimiterChars);
+            LeagueTeamCombinations.RemoveAt(combination);
+            int team1 = int.Parse(teams[0]) - 1;
+            int team2 = int.Parse(teams[1]) - 1;
+            int winLose = LeagueRound();
+            int y;
+            if (winLose == 0)
+            {
+                y = 4;
+                int first = int.Parse(tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team1][1])).Text);
+                first++;
+                tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team1][1])).Text = first.ToString();
+
+                int second = int.Parse(tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team2][1])).Text);
+                second++;
+                tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team2][1])).Text = second.ToString();
+
+            }
+            else if (winLose == 1)
+            {
+                y = 2;
+                int first = int.Parse(tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team1][1])).Text);
+                first++;
+                tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team1][1])).Text = first.ToString();
+
+                y = 3;
+                int second = int.Parse(tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team2][1])).Text);
+                second++;
+                tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team2][1])).Text = second.ToString();
+            }
+            else
+            {
+                y = 3;
+                int first = int.Parse(tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team1][1])).Text);
+                first++;
+                tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team1][1])).Text = first.ToString();
+
+                y = 2;
+                int second = int.Parse(tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team2][1])).Text);
+                second++;
+                tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team2][1])).Text = second.ToString();
+            }
+            y = 1;
+            int played = int.Parse(tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team1][1])).Text);
+            played++;
+            tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team1][1])).Text = played.ToString();
+
+            played = int.Parse(tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team2][1])).Text);
+            played++;
+            tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team2][1])).Text = played.ToString();
+
+
+            if (LeagueTeamList.Count % 2 == 0)
+            {
+                //LeagueTeamList[0][1]
+            }
+            else
+            {
+
+            }
+        }
+
+        public void SetPosition()
+        {
+            //sets the current position for all teams
         }
     }
 }
