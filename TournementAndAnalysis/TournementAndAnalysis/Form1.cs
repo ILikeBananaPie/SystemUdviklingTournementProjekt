@@ -186,7 +186,7 @@ namespace TournementAndAnalysis
 
         private void ElimWinner_Click(object sender, EventArgs e)
         {
-
+            TournementHolder.Instance.NextRound();
         }
 
         private void OK_Click(object sender, EventArgs e)

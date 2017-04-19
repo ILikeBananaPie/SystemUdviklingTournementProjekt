@@ -26,6 +26,11 @@ namespace TournementAndAnalysis
 
         private Graphics dc;
 
+        private Color backCol;
+        private Color foreCol;
+
+        private Random rnd;
+
         private ELIMSCENE scene;
         private Form1 frm;
         private List<Button> buttons;
@@ -40,6 +45,7 @@ namespace TournementAndAnalysis
 
         public void Load(Form1 x, Graphics dc)
         {
+            rnd = new Random();
             scene = ELIMSCENE.None;
             frm = x;
             this.dc = dc;
@@ -59,6 +65,8 @@ namespace TournementAndAnalysis
                     amount.Hide();
                 }
             }
+            backCol = buttons[0].BackColor;
+            foreCol = buttons[0].ForeColor;
         }
 
         public void AskForAmount()
@@ -69,6 +77,7 @@ namespace TournementAndAnalysis
 
         public void SetupForEight()
         {
+            foreach (Button btn in buttons) { btn.BackColor = backCol; btn.ForeColor = foreCol; }
             scene = ELIMSCENE.Eight;
             Hide();
         }
@@ -99,6 +108,58 @@ namespace TournementAndAnalysis
                         ElimEight();
                         break;
                     }
+            }
+        }
+
+        public void NextRound()
+        {
+            switch (scene)
+            {
+                case ELIMSCENE.Eight:
+                    {
+                        if ((buttons.Find(x => x.Name == "Elimbutton1") as Button).BackColor == backCol)
+                        {
+                            ColourButtons(buttons.Find(x => x.Name == "Elimbutton1"), buttons.Find(x => x.Name == "Elimbutton2"), buttons.Find(x => x.Name == "ElimA1v2"));
+                        } else if ((buttons.Find(x => x.Name == "Elimbutton3") as Button).BackColor == backCol)
+                        {
+                            ColourButtons(buttons.Find(x => x.Name == "Elimbutton3"), buttons.Find(x => x.Name == "Elimbutton4"), buttons.Find(x => x.Name == "ElimB3v4"));
+                        } else if ((buttons.Find(x => x.Name == "Elimbutton5") as Button).BackColor == backCol)
+                        {
+                            ColourButtons(buttons.Find(x => x.Name == "Elimbutton5"), buttons.Find(x => x.Name == "Elimbutton6"), buttons.Find(x => x.Name == "ElimC5v6"));
+                        } else if ((buttons.Find(x => x.Name == "Elimbutton7") as Button).BackColor == backCol)
+                        {
+                            ColourButtons(buttons.Find(x => x.Name == "Elimbutton7"), buttons.Find(x => x.Name == "Elimbutton8"), buttons.Find(x => x.Name == "ElimD7v8"));
+                        } else if ((buttons.Find(x => x.Name == "ElimA1v2") as Button).BackColor == backCol)
+                        {
+                            ColourButtons(buttons.Find(x => x.Name == "ElimA1v2"), buttons.Find(x => x.Name == "ElimB3v4"), buttons.Find(x => x.Name == "ElimAvB"));
+                        } else if ((buttons.Find(x => x.Name == "ElimC5v6") as Button).BackColor == backCol)
+                        {
+                            ColourButtons(buttons.Find(x => x.Name == "ElimC5v6"), buttons.Find(x => x.Name == "ElimD7v8"), buttons.Find(x => x.Name == "ElimCvD"));
+                        } else if ((buttons.Find(x => x.Name == "ElimAvB") as Button).BackColor == backCol)
+                        {
+                            ColourButtons(buttons.Find(x => x.Name == "ElimAvB"), buttons.Find(x => x.Name == "ElimCvD"), buttons.Find(x => x.Name == "ElimFinalABvCD"));
+                        }
+                        break;
+                    }
+            }
+        }
+
+        private void ColourButtons(Button a, Button b, Button t)
+        {
+            if (rnd.Next(2) == 0)
+            {
+                a.BackColor = Color.Green;
+                b.BackColor = Color.Red;
+                t.Text = a.Text;
+            } else
+            {
+                a.BackColor = Color.Red;
+                b.BackColor = Color.Green;
+                t.Text = b.Text;
+            }
+            if (t.Name == "ElimFinalABvCD")
+            {
+                t.BackColor = Color.Gold;
             }
         }
 
@@ -205,6 +266,12 @@ namespace TournementAndAnalysis
                         {
                             if (!btn.Visible) { btn.Show(); }
                             btn.Location = new Point((frm.Width / 8) * 4 - btn.Width / 2, (frm.Height / 8) * 4 - btn.Height);
+                            break;
+                        }
+                    case "ElimWinner":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 8) * 4 - btn.Width / 2, (frm.Height / 8) * 7 - btn.Height);
                             break;
                         }
                 }
