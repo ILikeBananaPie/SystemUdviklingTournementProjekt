@@ -31,8 +31,6 @@ namespace TournementAndAnalysis
             scene1 = MENUSCENE.Menu;
             dc = CreateGraphics();
 
-            //backBuffer = BufferedGraphicsManager.Current.Allocate(dc, DisplayRectangle);
-            //dc = backBuffer.Graphics;
             TournementHolder.Instance.Load(this, dc);
 
 
@@ -62,8 +60,6 @@ namespace TournementAndAnalysis
                         break;
                     }
             }
-            //backBuffer = BufferedGraphicsManager.Current.Allocate(dc, DisplayRectangle);
-            //backBuffer.Render();
             
         }
 
