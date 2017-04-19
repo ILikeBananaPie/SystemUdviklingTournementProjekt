@@ -50,6 +50,7 @@
             this.ElimWinner = new System.Windows.Forms.Button();
             this.ElimAmount = new System.Windows.Forms.TextBox();
             this.OK = new System.Windows.Forms.Button();
+            this.Back = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -276,6 +277,17 @@
             this.OK.UseVisualStyleBackColor = true;
             this.OK.Click += new System.EventHandler(this.OK_Click);
             // 
+            // Back
+            // 
+            this.Back.Location = new System.Drawing.Point(523, 188);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.TabIndex = 22;
+            this.Back.Tag = "Elimbutton";
+            this.Back.Text = "Back";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(3, 99);
@@ -328,6 +340,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(691, 481);
+            this.Controls.Add(this.Back);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -384,6 +397,7 @@
         private System.Windows.Forms.Button ElimWinner;
         private System.Windows.Forms.TextBox ElimAmount;
         private System.Windows.Forms.Button OK;
+        private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;

@@ -10,10 +10,11 @@ using System.Windows.Forms;
 
 namespace TournementAndAnalysis
 {
-    enum MENUSCENE { Menu, Elim, Cup}
+    public enum MENUSCENE { Menu, Elim, Cup}
     public partial class Form1:Form
     {
         private MENUSCENE scene1;
+        public MENUSCENE Scene1 { get { return scene1; } set { scene1 = value; } }
         private Graphics dc;
         private BufferedGraphics backBuffer;
         private Font f; //til alt eventuel tekst
@@ -80,7 +81,8 @@ namespace TournementAndAnalysis
 
         private void MenuTick()
         {
-
+            if (!CupButton.Visible) { CupButton.Show(); }
+            if (!LeagueButton.Visible) { LeagueButton.Show(); }
         }
 
         private void ElimTick()
@@ -217,6 +219,11 @@ namespace TournementAndAnalysis
             {
                 ElimAmount.Text = "Indtast tal";
             }
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.GoBackToMenu();
         }
 
         #endregion
