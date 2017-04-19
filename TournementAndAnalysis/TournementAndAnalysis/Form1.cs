@@ -12,7 +12,7 @@ namespace TournementAndAnalysis
 {
     public partial class Form1 : Form
     {
-        //hey mr nitro fandt ud af det shit i think
+        
         private Graphics dc;
         private Font f;
         private Random rnd = new Random();
