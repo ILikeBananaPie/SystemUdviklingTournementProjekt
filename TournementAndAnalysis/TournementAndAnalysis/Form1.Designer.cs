@@ -50,6 +50,11 @@
             this.ElimWinner = new System.Windows.Forms.Button();
             this.ElimAmount = new System.Windows.Forms.TextBox();
             this.OK = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // timer1
@@ -58,7 +63,7 @@
             // 
             // CupButton
             // 
-            this.CupButton.Location = new System.Drawing.Point(83, 89);
+            this.CupButton.Location = new System.Drawing.Point(3, 12);
             this.CupButton.Name = "CupButton";
             this.CupButton.Size = new System.Drawing.Size(75, 23);
             this.CupButton.TabIndex = 0;
@@ -68,7 +73,7 @@
             // 
             // LeagueButton
             // 
-            this.LeagueButton.Location = new System.Drawing.Point(83, 129);
+            this.LeagueButton.Location = new System.Drawing.Point(3, 41);
             this.LeagueButton.Name = "LeagueButton";
             this.LeagueButton.Size = new System.Drawing.Size(75, 23);
             this.LeagueButton.TabIndex = 1;
@@ -271,11 +276,63 @@
             this.OK.UseVisualStyleBackColor = true;
             this.OK.Click += new System.EventHandler(this.OK_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 99);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "4 ";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(3, 128);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 23;
+            this.button2.Text = "8";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(3, 156);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 24;
+            this.button3.Text = "12";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(3, 185);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 25;
+            this.button4.Text = "16";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(3, 214);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 26;
+            this.button5.Text = "20";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(691, 481);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.OK);
             this.Controls.Add(this.ElimAmount);
             this.Controls.Add(this.ElimWinner);
@@ -327,6 +384,11 @@
         private System.Windows.Forms.Button ElimWinner;
         private System.Windows.Forms.TextBox ElimAmount;
         private System.Windows.Forms.Button OK;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
 

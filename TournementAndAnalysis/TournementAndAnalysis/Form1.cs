@@ -99,13 +99,13 @@ namespace TournementAndAnalysis
 
         private void CupButton_Click(object sender, EventArgs e)
         {
-
+            scene1 = MENUSCENE.Elim;
+            TournementHolder.Instance.AskForAmount();
         }
 
         private void LeagueButton_Click(object sender, EventArgs e)
         {
-            scene1 = MENUSCENE.Elim;
-            TournementHolder.Instance.AskForAmount();
+           
         }
 
         #region ElimButtons
@@ -220,5 +220,15 @@ namespace TournementAndAnalysis
         }
 
         #endregion
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.SetupForEight();
+        }
     }
 }
