@@ -24,8 +24,9 @@ namespace TournementAndAnalysis
         private List<int[]> teamPositions = new List<int[]>();
         private List<int[]> extraMatchesList = new List<int[]>();
         private int leagueRound = 1;
-        private int leagueExtraRound = 0;
         private bool extraMatches;
+        private int extraMatchTeamOne;
+        private int extraMatchTeamTwo;
 
         private List<string> ColumnHeaders;
         private List<Button> LeagueTeamButtons = new List<Button>();
@@ -204,27 +205,27 @@ namespace TournementAndAnalysis
             {
                 if (ElimRound() == 0)
                 {
-                    int pos = int.Parse(tableLayoutPanel1.GetControlFromPosition(5, extraMatchesList[0][0]).Text);
+                    int pos = int.Parse(tableLayoutPanel1.GetControlFromPosition(5, extraMatchTeamOne).Text);
                     pos++;
-                    tableLayoutPanel1.GetControlFromPosition(5, extraMatchesList[0][0]).Text = pos.ToString();
-                    int test = teamPositions[extraMatchesList[0][0] - 1][1];
-                    test++;
-                    teamPositions[extraMatchesList[0][0] - 1][1] = test;
+                    tableLayoutPanel1.GetControlFromPosition(5, extraMatchTeamOne).Text = pos.ToString();
                 }
                 else
                 {
-                    int pos = int.Parse(tableLayoutPanel1.GetControlFromPosition(5, extraMatchesList[0][1]).Text);
+                    int pos = int.Parse(tableLayoutPanel1.GetControlFromPosition(5, extraMatchTeamTwo).Text);
                     pos++;
-                    tableLayoutPanel1.GetControlFromPosition(5, extraMatchesList[0][1]).Text = pos.ToString();
-                    int test = teamPositions[extraMatchesList[0][1] - 1][1];
-                    test++;
-                    teamPositions[extraMatchesList[0][1] - 1][1] = test;
+                    tableLayoutPanel1.GetControlFromPosition(5, extraMatchTeamTwo).Text = pos.ToString();
                 }
-                leagueExtraRound++;
-                extraMatchesList.RemoveAt(0);
-                //extraMatchesList.Clear();
-                LeagueNextRound.Visible = false;
-                //CheckDraws();
+                int[] temp = CheckDraws();
+                if (temp != null)
+                {
+                    extraMatches = true;
+                    LeagueNextRound.Visible = true;
+                }
+                else
+                {
+                    LeagueNextRound.Visible = false;
+                    extraMatches = false;
+                }
             }
             else
             {
@@ -291,58 +292,33 @@ namespace TournementAndAnalysis
                 if (CheckWin())
                 {
                     LeagueNextRound.Visible = false;
-                    CheckDraws();
-                }
-            }
-        }
-
-        public void TestDraws()
-        {
-            for (int i = 0; i < LeagueTeamList.Count; i++)
-            {
-                for (int x = 0; x < LeagueTeamList.Count; x++)
-                {
-                    if (tableLayoutPanel1.GetControlFromPosition(5, i) != tableLayoutPanel1.GetControlFromPosition(5, x))
+                    if (CheckDraws() != null)
                     {
-                        if (true)
-                        {
-
-                        }
-                        if (LeagueRound() == 0)
-                        {
-                            int temp = int.Parse(tableLayoutPanel1.GetControlFromPosition(5, i).Text);
-                            temp--;
-                            tableLayoutPanel1.GetControlFromPosition(5, i).Text = temp.ToString();
-                        }
-                        else
-                        {
-
-                        }
+                        extraMatches = true;
+                        LeagueNextRound.Visible = true;
                     }
                 }
             }
         }
 
-        public void CheckDraws()
+        public int[] CheckDraws()
         {
-            for (int i = 0; i < teamPositions.Count; i++)
+            for (int i = 1; i < LeagueTeamList.Count + 1; i++)
             {
-                for (int x = 0; x < teamPositions.Count; x++)
+                for (int x = 1; x < LeagueTeamList.Count + 1; x++)
                 {
-                    if (teamPositions[i] != teamPositions[x] && teamPositions[i][1] == teamPositions[x][1])
+                    string temp1 = tableLayoutPanel1.GetControlFromPosition(5, i).Text;
+                    string temp2 = tableLayoutPanel1.GetControlFromPosition(5, x).Text;
+
+                    if (temp1 == temp2 && x != i)
                     {
-                        LeagueNextRound.Text = "Play extra match";
-                        int[] test = new int[] { teamPositions[i][0], teamPositions[x][0] };
-                        int[] test2 = new int[] { teamPositions[x][0], teamPositions[i][0] };
-                        if (!extraMatchesList.Exists(temp => temp != test) && !extraMatchesList.Exists(temp => temp != test2))
-                        {
-                            extraMatchesList.Add(new int[] { teamPositions[i][0], teamPositions[x][0] });
-                            LeagueNextRound.Visible = true;
-                            extraMatches = true;
-                        }
+                        extraMatchTeamOne = i;
+                        extraMatchTeamTwo = x;
+                        return new int[] { i, x };
                     }
                 }
             }
+            return null;
         }
 
         public bool CheckWin()
