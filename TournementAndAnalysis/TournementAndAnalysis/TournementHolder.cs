@@ -89,10 +89,13 @@ namespace TournementAndAnalysis
                 case ELIMSCENE.AskForAmount:
                     {
                         var okButton = buttons.Find(x => x.Name == "OK");
+                        var backButton = buttons.Find(x=>x.Name == "Back");
                         okButton.Location = new Point(frm.Width - frm.Width / 3 - okButton.Width / 2, frm.Height / 2 - okButton.Height / 2);
                         amount.Location = new Point(frm.Width / 3 - amount.Width / 2, frm.Height / 2 - amount.Height / 2);
+                        backButton.Location = new Point(frm.Width / 2 - backButton.Width / 2, (frm.Height / 3) * 2);
                         if (!amount.Visible) { amount.Show(); }
                         if (!okButton.Visible) { okButton.Show(); }
+                        if (!backButton.Visible) { backButton.Show(); }
                         break;
                     }
                 case ELIMSCENE.Two:
@@ -142,6 +145,15 @@ namespace TournementAndAnalysis
                         break;
                     }
             }
+        }
+
+        public void GoBackToMenu()
+        {
+            scene = ELIMSCENE.None;
+            foreach (Button btn in buttons) { btn.Hide(); }
+            amount.Text = "Antal Deltagere";
+            amount.Hide();
+            frm.Scene1 = MENUSCENE.Menu;
         }
 
         private void ColourButtons(Button a, Button b, Button t)
@@ -272,6 +284,12 @@ namespace TournementAndAnalysis
                         {
                             if (!btn.Visible) { btn.Show(); }
                             btn.Location = new Point((frm.Width / 8) * 4 - btn.Width / 2, (frm.Height / 8) * 7 - btn.Height);
+                            break;
+                        }
+                    case "Back":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 8) * 3 - btn.Width / 2, (frm.Height / 8) * 7 - btn.Height);
                             break;
                         }
                 }
