@@ -38,6 +38,7 @@
             this.StartTournament = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.LeagueNextRound = new System.Windows.Forms.Button();
+            this.ErrorMessage = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // timer1
@@ -126,11 +127,20 @@
             this.LeagueNextRound.Visible = false;
             this.LeagueNextRound.Click += new System.EventHandler(this.LeagueNextRound_Click);
             // 
+            // ErrorMessage
+            // 
+            this.ErrorMessage.AutoSize = true;
+            this.ErrorMessage.Location = new System.Drawing.Point(594, 262);
+            this.ErrorMessage.Name = "ErrorMessage";
+            this.ErrorMessage.Size = new System.Drawing.Size(0, 13);
+            this.ErrorMessage.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(947, 455);
+            this.Controls.Add(this.ErrorMessage);
             this.Controls.Add(this.LeagueNextRound);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.StartTournament);
@@ -158,6 +168,7 @@
         private System.Windows.Forms.Button StartTournament;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button LeagueNextRound;
+        private System.Windows.Forms.Label ErrorMessage;
     }
 }
 
