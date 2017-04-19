@@ -15,6 +15,7 @@ namespace TournementAndAnalysis
     {
         private MENUSCENE scene1;
         private Graphics dc;
+        private BufferedGraphics backBuffer;
         private Font f; //til alt eventuel tekst
         private Random rnd = new Random();
 
@@ -28,8 +29,11 @@ namespace TournementAndAnalysis
             LeagueButton.Location = new Point(Width - Width / 3 - LeagueButton.Width / 2, Height / 2 - LeagueButton.Height / 2);
             CupButton.Location = new Point(Width / 3 - CupButton.Width / 2, Height / 2 - CupButton.Height / 2);
             scene1 = MENUSCENE.Menu;
+            dc = CreateGraphics();
 
-            TournementHolder.Instance.Load(this);
+            //backBuffer = BufferedGraphicsManager.Current.Allocate(dc, DisplayRectangle);
+            //dc = backBuffer.Graphics;
+            TournementHolder.Instance.Load(this, dc);
 
 
 
@@ -43,6 +47,8 @@ namespace TournementAndAnalysis
             LeagueButton.Location = new Point(Width - Width / 3 - LeagueButton.Width / 2, Height / 2 - LeagueButton.Height / 2);
             CupButton.Location = new Point(Width / 3 - CupButton.Width / 2, Height / 2 - CupButton.Height / 2);
 
+
+            dc.Clear(this.BackColor);
             switch (scene1)
             {
                 case MENUSCENE.Menu:
@@ -56,6 +62,9 @@ namespace TournementAndAnalysis
                         break;
                     }
             }
+            //backBuffer = BufferedGraphicsManager.Current.Allocate(dc, DisplayRectangle);
+            //backBuffer.Render();
+            
         }
 
         public int TestMethod()

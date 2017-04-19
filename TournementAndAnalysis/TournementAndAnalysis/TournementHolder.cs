@@ -24,6 +24,8 @@ namespace TournementAndAnalysis
             }
         }
 
+        private Graphics dc;
+
         private ELIMSCENE scene;
         private Form1 frm;
         private List<Button> buttons;
@@ -34,12 +36,13 @@ namespace TournementAndAnalysis
             buttons = new List<Button>();
         }
 
-        
 
-        public void Load(Form1 x)
+
+        public void Load(Form1 x, Graphics dc)
         {
             scene = ELIMSCENE.None;
             frm = x;
+            this.dc = dc;
             foreach (object obj in frm.Controls)
             {
                 if (obj is Button)
@@ -205,6 +208,33 @@ namespace TournementAndAnalysis
                             break;
                         }
                 }
+            }
+
+            DrawLines(buttons.Find(x => x.Name == "Elimbutton1"), buttons.Find(x => x.Name == "Elimbutton2"), buttons.Find(x => x.Name == "ElimA1v2"));
+            DrawLines(buttons.Find(x => x.Name == "Elimbutton3"), buttons.Find(x => x.Name == "Elimbutton4"), buttons.Find(x => x.Name == "ElimB3v4"));
+            DrawLines(buttons.Find(x => x.Name == "ElimA1v2"), buttons.Find(x => x.Name == "ElimB3v4"), buttons.Find(x => x.Name == "ElimAvB"));
+            DrawLines(buttons.Find(x => x.Name == "Elimbutton5"), buttons.Find(x => x.Name == "Elimbutton6"), buttons.Find(x => x.Name == "ElimC5v6"));
+            DrawLines(buttons.Find(x => x.Name == "Elimbutton7"), buttons.Find(x => x.Name == "Elimbutton8"), buttons.Find(x => x.Name == "ElimD7v8"));
+            DrawLines(buttons.Find(x => x.Name == "ElimC5v6"), buttons.Find(x => x.Name == "ElimD7v8"), buttons.Find(x => x.Name == "ElimCvD"));
+        }
+
+        private Pen blackP = new Pen(Color.Black, 3);
+        private void DrawLines(Button a, Button b, Button t)
+        {
+            if (t.Location.X > a.Location.X && t.Location.X > b.Location.X)
+            {
+                dc.DrawLine(blackP, new Point(a.Location.X + a.Width, a.Location.Y + (a.Height / 2)), new Point(a.Location.X + a.Width + (t.Location.X - (a.Location.X + a.Width)) / 2, a.Location.Y + (a.Height / 2)));
+                dc.DrawLine(blackP, new Point(b.Location.X + b.Width, b.Location.Y + (b.Height / 2)), new Point(b.Location.X + b.Width + (t.Location.X - (b.Location.X + b.Width)) / 2, b.Location.Y + (b.Height / 2)));
+                dc.DrawLine(blackP, new Point(a.Location.X + a.Width + (t.Location.X - (a.Location.X + a.Width)) / 2, a.Location.Y + (a.Height / 2)), new Point(a.Location.X + a.Width + (t.Location.X - (a.Location.X + a.Width)) / 2, a.Location.Y + (a.Height / 2) + ((b.Location.Y - a.Location.Y) / 2)));
+                dc.DrawLine(blackP, new Point(b.Location.X + b.Width + (t.Location.X - (b.Location.X + b.Width)) / 2, b.Location.Y + (b.Height / 2)), new Point(b.Location.X + b.Width + (t.Location.X - (b.Location.X + b.Width)) / 2, b.Location.Y + (b.Height / 2) - ((b.Location.Y - a.Location.Y) / 2)));
+                dc.DrawLine(blackP, new Point(a.Location.X + a.Width + (t.Location.X - (a.Location.X + a.Width)) / 2, a.Location.Y + (a.Height / 2) + ((b.Location.Y - a.Location.Y) / 2)), new Point(t.Location.X, t.Location.Y + (t.Height / 2)));
+            } else if (t.Location.X < a.Location.X && t.Location.X < b.Location.X)
+            {
+                dc.DrawLine(blackP, new Point(a.Location.X, a.Location.Y + (a.Height / 2)), new Point(a.Location.X - ((a.Location.X - (t.Location.X + t.Width)) / 2), a.Location.Y + (a.Height / 2)));
+                dc.DrawLine(blackP, new Point(b.Location.X, b.Location.Y + (b.Height / 2)), new Point(b.Location.X - ((b.Location.X - (t.Location.X + t.Width)) / 2), b.Location.Y + (b.Height / 2)));
+                dc.DrawLine(blackP, new Point(a.Location.X - ((a.Location.X - (t.Location.X + t.Width)) / 2), a.Location.Y + (a.Height / 2)), new Point(a.Location.X - ((a.Location.X - (t.Location.X + t.Width)) / 2), t.Location.Y + (t.Height / 2)));
+                dc.DrawLine(blackP, new Point(b.Location.X - ((b.Location.X - (t.Location.X + t.Width)) / 2), b.Location.Y + (b.Height / 2)), new Point(b.Location.X - ((b.Location.X - (t.Location.X + t.Width)) / 2), t.Location.Y + (t.Height / 2)));
+                dc.DrawLine(blackP, new Point(a.Location.X - ((a.Location.X - (t.Location.X + t.Width)) / 2), t.Location.Y + (t.Height / 2)), new Point(t.Location.X + t.Width, t.Location.Y + (t.Height / 2)));
             }
         }
     }

@@ -248,7 +248,7 @@
             this.ElimWinner.Size = new System.Drawing.Size(75, 23);
             this.ElimWinner.TabIndex = 19;
             this.ElimWinner.Tag = "Elimbutton";
-            this.ElimWinner.Text = "ElimWinner";
+            this.ElimWinner.Text = "NextRound";
             this.ElimWinner.UseVisualStyleBackColor = true;
             this.ElimWinner.Click += new System.EventHandler(this.ElimWinner_Click);
             // 
