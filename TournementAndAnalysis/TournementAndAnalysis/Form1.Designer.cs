@@ -388,6 +388,7 @@
             this.Hold9.Tag = "Elimbutton";
             this.Hold9.Text = "Hold 9";
             this.Hold9.UseVisualStyleBackColor = true;
+            this.Hold9.Click += new System.EventHandler(this.Hold9_Click);
             // 
             // Hold10
             // 
@@ -398,6 +399,7 @@
             this.Hold10.Tag = "Elimbutton";
             this.Hold10.Text = "Hold 10";
             this.Hold10.UseVisualStyleBackColor = true;
+            this.Hold10.Click += new System.EventHandler(this.Hold10_Click);
             // 
             // Hold11
             // 
@@ -419,6 +421,7 @@
             this.Hold12.Tag = "Elimbutton";
             this.Hold12.Text = "Hold 12";
             this.Hold12.UseVisualStyleBackColor = true;
+            this.Hold12.Click += new System.EventHandler(this.Hold12_Click);
             // 
             // Hold13
             // 
@@ -429,6 +432,7 @@
             this.Hold13.Tag = "Elimbutton";
             this.Hold13.Text = "Hold 13";
             this.Hold13.UseVisualStyleBackColor = true;
+            this.Hold13.Click += new System.EventHandler(this.Hold13_Click);
             // 
             // Hold14
             // 
@@ -439,6 +443,7 @@
             this.Hold14.Tag = "Elimbutton";
             this.Hold14.Text = "Hold 14";
             this.Hold14.UseVisualStyleBackColor = true;
+            this.Hold14.Click += new System.EventHandler(this.Hold14_Click);
             // 
             // Hold15
             // 
@@ -449,6 +454,7 @@
             this.Hold15.Tag = "Elimbutton";
             this.Hold15.Text = "Hold 15";
             this.Hold15.UseVisualStyleBackColor = true;
+            this.Hold15.Click += new System.EventHandler(this.Hold15_Click);
             // 
             // Hold16
             // 
@@ -459,6 +465,7 @@
             this.Hold16.Tag = "Elimbutton";
             this.Hold16.Text = "Hold 16";
             this.Hold16.UseVisualStyleBackColor = true;
+            this.Hold16.Click += new System.EventHandler(this.Hold16_Click);
             // 
             // Hold17
             // 
@@ -469,6 +476,7 @@
             this.Hold17.Tag = "Elimbutton";
             this.Hold17.Text = "Hold 17";
             this.Hold17.UseVisualStyleBackColor = true;
+            this.Hold17.Click += new System.EventHandler(this.Hold17_Click);
             // 
             // Hold18
             // 
@@ -479,6 +487,7 @@
             this.Hold18.Tag = "Elimbutton";
             this.Hold18.Text = "Hold 18";
             this.Hold18.UseVisualStyleBackColor = true;
+            this.Hold18.Click += new System.EventHandler(this.Hold18_Click);
             // 
             // Hold19
             // 
@@ -489,6 +498,7 @@
             this.Hold19.Tag = "Elimbutton";
             this.Hold19.Text = "Hold 19";
             this.Hold19.UseVisualStyleBackColor = true;
+            this.Hold19.Click += new System.EventHandler(this.Hold19_Click);
             // 
             // Hold20
             // 
@@ -499,6 +509,7 @@
             this.Hold20.Tag = "Elimbutton";
             this.Hold20.Text = "Hold 20";
             this.Hold20.UseVisualStyleBackColor = true;
+            this.Hold20.Click += new System.EventHandler(this.Hold20_Click);
             // 
             // Hold21
             // 
@@ -509,6 +520,7 @@
             this.Hold21.Tag = "Elimbutton";
             this.Hold21.Text = "Hold 21";
             this.Hold21.UseVisualStyleBackColor = true;
+            this.Hold21.Click += new System.EventHandler(this.Hold21_Click);
             // 
             // Hold22
             // 
@@ -519,6 +531,7 @@
             this.Hold22.Tag = "Elimbutton";
             this.Hold22.Text = "Hold 22";
             this.Hold22.UseVisualStyleBackColor = true;
+            this.Hold22.Click += new System.EventHandler(this.Hold22_Click);
             // 
             // Hold23
             // 
@@ -529,6 +542,7 @@
             this.Hold23.Tag = "Elimbutton";
             this.Hold23.Text = "Hold 23";
             this.Hold23.UseVisualStyleBackColor = true;
+            this.Hold23.Click += new System.EventHandler(this.Hold23_Click);
             // 
             // Hold24
             // 
@@ -539,6 +553,7 @@
             this.Hold24.Tag = "Elimbutton";
             this.Hold24.Text = "Hold 24";
             this.Hold24.UseVisualStyleBackColor = true;
+            this.Hold24.Click += new System.EventHandler(this.Hold24_Click);
             // 
             // Hold25
             // 
@@ -549,6 +564,7 @@
             this.Hold25.Tag = "Elimbutton";
             this.Hold25.Text = "Hold 25";
             this.Hold25.UseVisualStyleBackColor = true;
+            this.Hold25.Click += new System.EventHandler(this.Hold25_Click);
             // 
             // Hold26
             // 
@@ -559,6 +575,7 @@
             this.Hold26.Tag = "Elimbutton";
             this.Hold26.Text = "Hold 26";
             this.Hold26.UseVisualStyleBackColor = true;
+            this.Hold26.Click += new System.EventHandler(this.Hold26_Click);
             // 
             // Hold27
             // 
@@ -569,6 +586,7 @@
             this.Hold27.Tag = "Elimbutton";
             this.Hold27.Text = "Hold 27";
             this.Hold27.UseVisualStyleBackColor = true;
+            this.Hold27.Click += new System.EventHandler(this.Hold27_Click);
             // 
             // Hold28
             // 
@@ -579,6 +597,7 @@
             this.Hold28.Tag = "Elimbutton";
             this.Hold28.Text = "Hold 28";
             this.Hold28.UseVisualStyleBackColor = true;
+            this.Hold28.Click += new System.EventHandler(this.Hold28_Click);
             // 
             // Hold29
             // 
@@ -589,6 +608,7 @@
             this.Hold29.Tag = "Elimbutton";
             this.Hold29.Text = "Hold 29";
             this.Hold29.UseVisualStyleBackColor = true;
+            this.Hold29.Click += new System.EventHandler(this.Hold29_Click);
             // 
             // Hold30
             // 
@@ -599,6 +619,7 @@
             this.Hold30.Tag = "Elimbutton";
             this.Hold30.Text = "Hold 30";
             this.Hold30.UseVisualStyleBackColor = true;
+            this.Hold30.Click += new System.EventHandler(this.Hold30_Click);
             // 
             // Hold31
             // 
@@ -609,6 +630,7 @@
             this.Hold31.Tag = "Elimbutton";
             this.Hold31.Text = "Hold 31";
             this.Hold31.UseVisualStyleBackColor = true;
+            this.Hold31.Click += new System.EventHandler(this.Hold31_Click);
             // 
             // Hold32
             // 
@@ -619,6 +641,7 @@
             this.Hold32.Tag = "Elimbutton";
             this.Hold32.Text = "Hold 32";
             this.Hold32.UseVisualStyleBackColor = true;
+            this.Hold32.Click += new System.EventHandler(this.Hold32_Click);
             // 
             // ElimE9v10
             // 
@@ -706,6 +729,7 @@
             this.ElimM25v26.Name = "ElimM25v26";
             this.ElimM25v26.Size = new System.Drawing.Size(75, 23);
             this.ElimM25v26.TabIndex = 59;
+            this.ElimM25v26.Tag = "Elimbutton";
             this.ElimM25v26.Text = "ElimM25v26";
             this.ElimM25v26.UseVisualStyleBackColor = true;
             // 
@@ -715,6 +739,7 @@
             this.ElimN27v28.Name = "ElimN27v28";
             this.ElimN27v28.Size = new System.Drawing.Size(75, 23);
             this.ElimN27v28.TabIndex = 60;
+            this.ElimN27v28.Tag = "Elimbutton";
             this.ElimN27v28.Text = "ElimN27v28";
             this.ElimN27v28.UseVisualStyleBackColor = true;
             // 
@@ -724,6 +749,7 @@
             this.ElimO29v30.Name = "ElimO29v30";
             this.ElimO29v30.Size = new System.Drawing.Size(75, 23);
             this.ElimO29v30.TabIndex = 61;
+            this.ElimO29v30.Tag = "Elimbutton";
             this.ElimO29v30.Text = "ElimO29v30";
             this.ElimO29v30.UseVisualStyleBackColor = true;
             // 
@@ -733,6 +759,7 @@
             this.ElimP31v32.Name = "ElimP31v32";
             this.ElimP31v32.Size = new System.Drawing.Size(75, 23);
             this.ElimP31v32.TabIndex = 62;
+            this.ElimP31v32.Tag = "Elimbutton";
             this.ElimP31v32.Text = "ElimP31v32";
             this.ElimP31v32.UseVisualStyleBackColor = true;
             // 
@@ -742,6 +769,7 @@
             this.ElimEvF.Name = "ElimEvF";
             this.ElimEvF.Size = new System.Drawing.Size(75, 23);
             this.ElimEvF.TabIndex = 63;
+            this.ElimEvF.Tag = "Elimbutton";
             this.ElimEvF.Text = "ElimEvF";
             this.ElimEvF.UseVisualStyleBackColor = true;
             // 
@@ -751,6 +779,7 @@
             this.ElimGvH.Name = "ElimGvH";
             this.ElimGvH.Size = new System.Drawing.Size(75, 23);
             this.ElimGvH.TabIndex = 64;
+            this.ElimGvH.Tag = "Elimbutton";
             this.ElimGvH.Text = "ElimGvH";
             this.ElimGvH.UseVisualStyleBackColor = true;
             // 
@@ -760,6 +789,7 @@
             this.ElimIvJ.Name = "ElimIvJ";
             this.ElimIvJ.Size = new System.Drawing.Size(75, 23);
             this.ElimIvJ.TabIndex = 65;
+            this.ElimIvJ.Tag = "Elimbutton";
             this.ElimIvJ.Text = "ElimIvJ";
             this.ElimIvJ.UseVisualStyleBackColor = true;
             // 
@@ -769,6 +799,7 @@
             this.ElimKvL.Name = "ElimKvL";
             this.ElimKvL.Size = new System.Drawing.Size(75, 23);
             this.ElimKvL.TabIndex = 66;
+            this.ElimKvL.Tag = "Elimbutton";
             this.ElimKvL.Text = "ElimKvL";
             this.ElimKvL.UseVisualStyleBackColor = true;
             // 
@@ -778,6 +809,7 @@
             this.ElimMvN.Name = "ElimMvN";
             this.ElimMvN.Size = new System.Drawing.Size(75, 23);
             this.ElimMvN.TabIndex = 67;
+            this.ElimMvN.Tag = "Elimbutton";
             this.ElimMvN.Text = "ElimMvN";
             this.ElimMvN.UseVisualStyleBackColor = true;
             // 
@@ -787,6 +819,7 @@
             this.ElimOvP.Name = "ElimOvP";
             this.ElimOvP.Size = new System.Drawing.Size(75, 23);
             this.ElimOvP.TabIndex = 68;
+            this.ElimOvP.Tag = "Elimbutton";
             this.ElimOvP.Text = "ElimOvP";
             this.ElimOvP.UseVisualStyleBackColor = true;
             // 
@@ -796,6 +829,7 @@
             this.ElimEvH.Name = "ElimEvH";
             this.ElimEvH.Size = new System.Drawing.Size(75, 23);
             this.ElimEvH.TabIndex = 69;
+            this.ElimEvH.Tag = "Elimbutton";
             this.ElimEvH.Text = "ElimEvH";
             this.ElimEvH.UseVisualStyleBackColor = true;
             // 
@@ -805,6 +839,7 @@
             this.ElimIvL.Name = "ElimIvL";
             this.ElimIvL.Size = new System.Drawing.Size(75, 23);
             this.ElimIvL.TabIndex = 70;
+            this.ElimIvL.Tag = "Elimbutton";
             this.ElimIvL.Text = "ElimIvL";
             this.ElimIvL.UseVisualStyleBackColor = true;
             // 
@@ -814,6 +849,7 @@
             this.ElimMvP.Name = "ElimMvP";
             this.ElimMvP.Size = new System.Drawing.Size(75, 23);
             this.ElimMvP.TabIndex = 71;
+            this.ElimMvP.Tag = "Elimbutton";
             this.ElimMvP.Text = "ElimMvP";
             this.ElimMvP.UseVisualStyleBackColor = true;
             // 
@@ -823,6 +859,7 @@
             this.ElimAvH.Name = "ElimAvH";
             this.ElimAvH.Size = new System.Drawing.Size(75, 23);
             this.ElimAvH.TabIndex = 72;
+            this.ElimAvH.Tag = "Elimbutton";
             this.ElimAvH.Text = "ElimAvH";
             this.ElimAvH.UseVisualStyleBackColor = true;
             // 
@@ -832,6 +869,7 @@
             this.ElimIvP.Name = "ElimIvP";
             this.ElimIvP.Size = new System.Drawing.Size(75, 23);
             this.ElimIvP.TabIndex = 73;
+            this.ElimIvP.Tag = "Elimbutton";
             this.ElimIvP.Text = "ElimIvP";
             this.ElimIvP.UseVisualStyleBackColor = true;
             // 
@@ -841,6 +879,7 @@
             this.ElimAvP.Name = "ElimAvP";
             this.ElimAvP.Size = new System.Drawing.Size(75, 23);
             this.ElimAvP.TabIndex = 74;
+            this.ElimAvP.Tag = "Elimbutton";
             this.ElimAvP.Text = "ElimAvP";
             this.ElimAvP.UseVisualStyleBackColor = true;
             // 

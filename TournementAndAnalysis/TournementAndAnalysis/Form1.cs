@@ -257,12 +257,127 @@ namespace TournementAndAnalysis
 
         private void ElimGroupsOf20_Click(object sender, EventArgs e)
         {
-
+            TournementHolder.Instance.SetupForThirtyTwo();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            TournementHolder.Instance.ChangeElimButtonText(sender);
+        }
 
+        private void Hold9_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.ChangeElimButtonText(sender);
+        }
+
+        private void Hold10_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.ChangeElimButtonText(sender);
+        }
+
+        private void Hold12_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.ChangeElimButtonText(sender);
+        }
+
+        private void Hold25_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.ChangeElimButtonText(sender);
+        }
+
+        private void Hold26_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.ChangeElimButtonText(sender);
+        }
+
+        private void Hold27_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.ChangeElimButtonText(sender);
+        }
+
+        private void Hold28_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.ChangeElimButtonText(sender);
+        }
+
+        private void Hold29_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.ChangeElimButtonText(sender);
+        }
+
+        private void Hold30_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.ChangeElimButtonText(sender);
+        }
+
+        private void Hold31_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.ChangeElimButtonText(sender);
+        }
+
+        private void Hold32_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.ChangeElimButtonText(sender);
+        }
+
+        private void Hold13_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.ChangeElimButtonText(sender);
+        }
+
+        private void Hold14_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.ChangeElimButtonText(sender);
+        }
+
+        private void Hold15_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.ChangeElimButtonText(sender);
+        }
+
+        private void Hold16_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.ChangeElimButtonText(sender);
+        }
+
+        private void Hold17_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.ChangeElimButtonText(sender);
+        }
+
+        private void Hold18_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.ChangeElimButtonText(sender);
+        }
+
+        private void Hold19_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.ChangeElimButtonText(sender);
+        }
+
+        private void Hold20_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.ChangeElimButtonText(sender);
+        }
+
+        private void Hold21_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.ChangeElimButtonText(sender);
+        }
+
+        private void Hold22_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.ChangeElimButtonText(sender);
+        }
+
+        private void Hold23_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.ChangeElimButtonText(sender);
+        }
+
+        private void Hold24_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.ChangeElimButtonText(sender);
         }
     }
 }
