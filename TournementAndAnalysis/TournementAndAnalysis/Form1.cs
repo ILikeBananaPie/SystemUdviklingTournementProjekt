@@ -15,6 +15,7 @@ namespace TournementAndAnalysis
     {
         private MENUSCENE scene1;
         public MENUSCENE Scene1 { get { return scene1; } set { scene1 = value; } }
+        private Graphics dcX;
         private Graphics dc;
         private BufferedGraphics backBuffer;
         private Font f; //til alt eventuel tekst

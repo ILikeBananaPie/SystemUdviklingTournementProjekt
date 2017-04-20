@@ -79,6 +79,11 @@ namespace TournementAndAnalysis
             Hide();
         }
 
+        public void SetupForFour()
+        {
+
+        }
+
         public void SetupForEight()
         {
             foreach (Button btn in buttons)
