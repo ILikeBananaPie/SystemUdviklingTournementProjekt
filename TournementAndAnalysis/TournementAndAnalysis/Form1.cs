@@ -237,14 +237,22 @@ namespace TournementAndAnalysis
 
         #endregion
 
-        private void button4_Click(object sender, EventArgs e)
-        {
 
+        private void ElimGroupsOf4_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.SetupForFour();
         }
+
+       
 
         private void button2_Click(object sender, EventArgs e)
         {
             TournementHolder.Instance.SetupForEight();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            TournementHolder.Instance.SetupForFour();
         }
     }
 }
