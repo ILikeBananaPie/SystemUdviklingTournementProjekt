@@ -422,6 +422,7 @@ namespace TournementAndAnalysis
         public void GoBackToMenu()
         {
             started = false;
+            changingName = false;
             scene = ELIMSCENE.None;
             foreach (Button btn in buttons) { btn.Hide(); }
             amount.Text = "Antal Deltagere";
