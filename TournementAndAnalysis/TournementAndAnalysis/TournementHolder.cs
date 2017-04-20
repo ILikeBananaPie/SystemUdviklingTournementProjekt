@@ -172,26 +172,14 @@ namespace TournementAndAnalysis
                             {
                                 ColourButtons(buttons.Find(x => x.Name == "Elimbutton3"), buttons.Find(x => x.Name == "Elimbutton4"), buttons.Find(x => x.Name == "ElimB3v4"));
                             }
-                            else if ((buttons.Find(x => x.Name == "Elimbutton5") as Button).BackColor == backCol)
-                            {
-                                ColourButtons(buttons.Find(x => x.Name == "Elimbutton5"), buttons.Find(x => x.Name == "Elimbutton6"), buttons.Find(x => x.Name == "ElimC5v6"));
-                            }
-                            else if ((buttons.Find(x => x.Name == "Elimbutton7") as Button).BackColor == backCol)
-                            {
-                                ColourButtons(buttons.Find(x => x.Name == "Elimbutton7"), buttons.Find(x => x.Name == "Elimbutton8"), buttons.Find(x => x.Name == "ElimD7v8"));
-                            }
+                           
+                           
                             else if ((buttons.Find(x => x.Name == "ElimA1v2") as Button).BackColor == backCol)
                             {
                                 ColourButtons(buttons.Find(x => x.Name == "ElimA1v2"), buttons.Find(x => x.Name == "ElimB3v4"), buttons.Find(x => x.Name == "ElimAvB"));
                             }
-                            else if ((buttons.Find(x => x.Name == "ElimC5v6") as Button).BackColor == backCol)
-                            {
-                                ColourButtons(buttons.Find(x => x.Name == "ElimC5v6"), buttons.Find(x => x.Name == "ElimD7v8"), buttons.Find(x => x.Name == "ElimCvD"));
-                            }
-                            else if ((buttons.Find(x => x.Name == "ElimAvB") as Button).BackColor == backCol)
-                            {
-                                ColourButtons(buttons.Find(x => x.Name == "ElimAvB"), buttons.Find(x => x.Name == "ElimCvD"), buttons.Find(x => x.Name == "ElimFinalABvCD"));
-                            }
+                           
+                           
                             break;
                         }
 
@@ -300,6 +288,10 @@ namespace TournementAndAnalysis
             {
                 t.BackColor = Color.Gold;
             }
+            if(t.Name == "ElimAvB" && (scene != ELIMSCENE.Eight))
+            {
+                t.BackColor = Color.Gold;
+            }
         }
 
         private void Hide()
@@ -311,6 +303,7 @@ namespace TournementAndAnalysis
         //
         private void ElimFour()
         {
+
             if (changingName)
             {
                 amount.Location = new Point((frm.Width / 8) * 4 - amount.Width / 2, (frm.Height / 8) * 1 - amount.Height);
@@ -348,30 +341,7 @@ namespace TournementAndAnalysis
                             btn.Location = new Point((frm.Width / 8) * 1 - btn.Width / 2, (frm.Height / 8) * 7 - btn.Height);
                             break;
                         }
-                    case "Elimbutton5":
-                        {
-                            if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 8) * 7 - btn.Width / 2, (frm.Height / 8) * 1 - btn.Height);
-                            break;
-                        }
-                    case "Elimbutton6":
-                        {
-                            if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 8) * 7 - btn.Width / 2, (frm.Height / 8) * 3 - btn.Height);
-                            break;
-                        }
-                    case "Elimbutton7":
-                        {
-                            if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 8) * 7 - btn.Width / 2, (frm.Height / 8) * 5 - btn.Height);
-                            break;
-                        }
-                    case "Elimbutton8":
-                        {
-                            if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 8) * 7 - btn.Width / 2, (frm.Height / 8) * 7 - btn.Height);
-                            break;
-                        }
+                  
                     case "ElimA1v2":
                         {
                             if (!btn.Visible) { btn.Show(); }
@@ -384,36 +354,14 @@ namespace TournementAndAnalysis
                             btn.Location = new Point((frm.Width / 8) * 2 - btn.Width / 2, (frm.Height / 8) * 6 - btn.Height);
                             break;
                         }
-                    case "ElimC5v6":
-                        {
-                            if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 8) * 6 - btn.Width / 2, (frm.Height / 8) * 2 - btn.Height);
-                            break;
-                        }
-                    case "ElimD7v8":
-                        {
-                            if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 8) * 6 - btn.Width / 2, (frm.Height / 8) * 6 - btn.Height);
-                            break;
-                        }
+                   
                     case "ElimAvB":
                         {
                             if (!btn.Visible) { btn.Show(); }
                             btn.Location = new Point((frm.Width / 8) * 3 - btn.Width / 2, (frm.Height / 8) * 4 - btn.Height);
                             break;
                         }
-                    case "ElimCvD":
-                        {
-                            if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 8) * 5 - btn.Width / 2, (frm.Height / 8) * 4 - btn.Height);
-                            break;
-                        }
-                    case "ElimFinalABvCD":
-                        {
-                            if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 8) * 4 - btn.Width / 2, (frm.Height / 8) * 4 - btn.Height);
-                            break;
-                        }
+                   
                     case "ElimWinner":
                         {
                             if (!btn.Visible) { btn.Show(); }
