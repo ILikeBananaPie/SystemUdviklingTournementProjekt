@@ -55,6 +55,54 @@
             this.ElimGroupsOf8 = new System.Windows.Forms.Button();
             this.ElimGroupsOf16 = new System.Windows.Forms.Button();
             this.ElimGroupsOf20 = new System.Windows.Forms.Button();
+            this.Hold9 = new System.Windows.Forms.Button();
+            this.Hold10 = new System.Windows.Forms.Button();
+            this.Hold11 = new System.Windows.Forms.Button();
+            this.Hold12 = new System.Windows.Forms.Button();
+            this.Hold13 = new System.Windows.Forms.Button();
+            this.Hold14 = new System.Windows.Forms.Button();
+            this.Hold15 = new System.Windows.Forms.Button();
+            this.Hold16 = new System.Windows.Forms.Button();
+            this.Hold17 = new System.Windows.Forms.Button();
+            this.Hold18 = new System.Windows.Forms.Button();
+            this.Hold19 = new System.Windows.Forms.Button();
+            this.Hold20 = new System.Windows.Forms.Button();
+            this.Hold21 = new System.Windows.Forms.Button();
+            this.Hold22 = new System.Windows.Forms.Button();
+            this.Hold23 = new System.Windows.Forms.Button();
+            this.Hold24 = new System.Windows.Forms.Button();
+            this.Hold25 = new System.Windows.Forms.Button();
+            this.Hold26 = new System.Windows.Forms.Button();
+            this.Hold27 = new System.Windows.Forms.Button();
+            this.Hold28 = new System.Windows.Forms.Button();
+            this.Hold29 = new System.Windows.Forms.Button();
+            this.Hold30 = new System.Windows.Forms.Button();
+            this.Hold31 = new System.Windows.Forms.Button();
+            this.Hold32 = new System.Windows.Forms.Button();
+            this.ElimE9v10 = new System.Windows.Forms.Button();
+            this.ElimF11v12 = new System.Windows.Forms.Button();
+            this.ElimG13v14 = new System.Windows.Forms.Button();
+            this.ElimH15v16 = new System.Windows.Forms.Button();
+            this.ElimI17v18 = new System.Windows.Forms.Button();
+            this.ElimJ19v20 = new System.Windows.Forms.Button();
+            this.ElimK21v22 = new System.Windows.Forms.Button();
+            this.ElimL23v24 = new System.Windows.Forms.Button();
+            this.ElimM25v26 = new System.Windows.Forms.Button();
+            this.ElimN27v28 = new System.Windows.Forms.Button();
+            this.ElimO29v30 = new System.Windows.Forms.Button();
+            this.ElimP31v32 = new System.Windows.Forms.Button();
+            this.ElimEvF = new System.Windows.Forms.Button();
+            this.ElimGvH = new System.Windows.Forms.Button();
+            this.ElimIvJ = new System.Windows.Forms.Button();
+            this.ElimKvL = new System.Windows.Forms.Button();
+            this.ElimMvN = new System.Windows.Forms.Button();
+            this.ElimOvP = new System.Windows.Forms.Button();
+            this.ElimEvH = new System.Windows.Forms.Button();
+            this.ElimIvL = new System.Windows.Forms.Button();
+            this.ElimMvP = new System.Windows.Forms.Button();
+            this.ElimAvH = new System.Windows.Forms.Button();
+            this.ElimIvP = new System.Windows.Forms.Button();
+            this.ElimAvP = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // timer1
@@ -329,12 +377,526 @@
             this.ElimGroupsOf20.Tag = "Elimbutton";
             this.ElimGroupsOf20.Text = "32";
             this.ElimGroupsOf20.UseVisualStyleBackColor = true;
+            this.ElimGroupsOf20.Click += new System.EventHandler(this.ElimGroupsOf20_Click);
+            // 
+            // Hold9
+            // 
+            this.Hold9.Location = new System.Drawing.Point(685, 12);
+            this.Hold9.Name = "Hold9";
+            this.Hold9.Size = new System.Drawing.Size(75, 23);
+            this.Hold9.TabIndex = 27;
+            this.Hold9.Tag = "Elimbutton";
+            this.Hold9.Text = "Hold 9";
+            this.Hold9.UseVisualStyleBackColor = true;
+            // 
+            // Hold10
+            // 
+            this.Hold10.Location = new System.Drawing.Point(685, 41);
+            this.Hold10.Name = "Hold10";
+            this.Hold10.Size = new System.Drawing.Size(75, 23);
+            this.Hold10.TabIndex = 28;
+            this.Hold10.Tag = "Elimbutton";
+            this.Hold10.Text = "Hold 10";
+            this.Hold10.UseVisualStyleBackColor = true;
+            // 
+            // Hold11
+            // 
+            this.Hold11.Location = new System.Drawing.Point(685, 70);
+            this.Hold11.Name = "Hold11";
+            this.Hold11.Size = new System.Drawing.Size(75, 23);
+            this.Hold11.TabIndex = 29;
+            this.Hold11.Tag = "Elimbutton";
+            this.Hold11.Text = "Hold 11";
+            this.Hold11.UseVisualStyleBackColor = true;
+            this.Hold11.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // Hold12
+            // 
+            this.Hold12.Location = new System.Drawing.Point(685, 99);
+            this.Hold12.Name = "Hold12";
+            this.Hold12.Size = new System.Drawing.Size(75, 23);
+            this.Hold12.TabIndex = 30;
+            this.Hold12.Tag = "Elimbutton";
+            this.Hold12.Text = "Hold 12";
+            this.Hold12.UseVisualStyleBackColor = true;
+            // 
+            // Hold13
+            // 
+            this.Hold13.Location = new System.Drawing.Point(766, 12);
+            this.Hold13.Name = "Hold13";
+            this.Hold13.Size = new System.Drawing.Size(75, 23);
+            this.Hold13.TabIndex = 31;
+            this.Hold13.Tag = "Elimbutton";
+            this.Hold13.Text = "Hold 13";
+            this.Hold13.UseVisualStyleBackColor = true;
+            // 
+            // Hold14
+            // 
+            this.Hold14.Location = new System.Drawing.Point(766, 41);
+            this.Hold14.Name = "Hold14";
+            this.Hold14.Size = new System.Drawing.Size(75, 23);
+            this.Hold14.TabIndex = 32;
+            this.Hold14.Tag = "Elimbutton";
+            this.Hold14.Text = "Hold 14";
+            this.Hold14.UseVisualStyleBackColor = true;
+            // 
+            // Hold15
+            // 
+            this.Hold15.Location = new System.Drawing.Point(766, 72);
+            this.Hold15.Name = "Hold15";
+            this.Hold15.Size = new System.Drawing.Size(75, 23);
+            this.Hold15.TabIndex = 33;
+            this.Hold15.Tag = "Elimbutton";
+            this.Hold15.Text = "Hold 15";
+            this.Hold15.UseVisualStyleBackColor = true;
+            // 
+            // Hold16
+            // 
+            this.Hold16.Location = new System.Drawing.Point(766, 99);
+            this.Hold16.Name = "Hold16";
+            this.Hold16.Size = new System.Drawing.Size(75, 23);
+            this.Hold16.TabIndex = 34;
+            this.Hold16.Tag = "Elimbutton";
+            this.Hold16.Text = "Hold 16";
+            this.Hold16.UseVisualStyleBackColor = true;
+            // 
+            // Hold17
+            // 
+            this.Hold17.Location = new System.Drawing.Point(847, 12);
+            this.Hold17.Name = "Hold17";
+            this.Hold17.Size = new System.Drawing.Size(75, 23);
+            this.Hold17.TabIndex = 35;
+            this.Hold17.Tag = "Elimbutton";
+            this.Hold17.Text = "Hold 17";
+            this.Hold17.UseVisualStyleBackColor = true;
+            // 
+            // Hold18
+            // 
+            this.Hold18.Location = new System.Drawing.Point(847, 41);
+            this.Hold18.Name = "Hold18";
+            this.Hold18.Size = new System.Drawing.Size(75, 23);
+            this.Hold18.TabIndex = 36;
+            this.Hold18.Tag = "Elimbutton";
+            this.Hold18.Text = "Hold 18";
+            this.Hold18.UseVisualStyleBackColor = true;
+            // 
+            // Hold19
+            // 
+            this.Hold19.Location = new System.Drawing.Point(847, 72);
+            this.Hold19.Name = "Hold19";
+            this.Hold19.Size = new System.Drawing.Size(75, 23);
+            this.Hold19.TabIndex = 37;
+            this.Hold19.Tag = "Elimbutton";
+            this.Hold19.Text = "Hold 19";
+            this.Hold19.UseVisualStyleBackColor = true;
+            // 
+            // Hold20
+            // 
+            this.Hold20.Location = new System.Drawing.Point(847, 98);
+            this.Hold20.Name = "Hold20";
+            this.Hold20.Size = new System.Drawing.Size(75, 23);
+            this.Hold20.TabIndex = 38;
+            this.Hold20.Tag = "Elimbutton";
+            this.Hold20.Text = "Hold 20";
+            this.Hold20.UseVisualStyleBackColor = true;
+            // 
+            // Hold21
+            // 
+            this.Hold21.Location = new System.Drawing.Point(928, 12);
+            this.Hold21.Name = "Hold21";
+            this.Hold21.Size = new System.Drawing.Size(75, 23);
+            this.Hold21.TabIndex = 39;
+            this.Hold21.Tag = "Elimbutton";
+            this.Hold21.Text = "Hold 21";
+            this.Hold21.UseVisualStyleBackColor = true;
+            // 
+            // Hold22
+            // 
+            this.Hold22.Location = new System.Drawing.Point(928, 40);
+            this.Hold22.Name = "Hold22";
+            this.Hold22.Size = new System.Drawing.Size(75, 23);
+            this.Hold22.TabIndex = 40;
+            this.Hold22.Tag = "Elimbutton";
+            this.Hold22.Text = "Hold 22";
+            this.Hold22.UseVisualStyleBackColor = true;
+            // 
+            // Hold23
+            // 
+            this.Hold23.Location = new System.Drawing.Point(928, 72);
+            this.Hold23.Name = "Hold23";
+            this.Hold23.Size = new System.Drawing.Size(75, 23);
+            this.Hold23.TabIndex = 41;
+            this.Hold23.Tag = "Elimbutton";
+            this.Hold23.Text = "Hold 23";
+            this.Hold23.UseVisualStyleBackColor = true;
+            // 
+            // Hold24
+            // 
+            this.Hold24.Location = new System.Drawing.Point(928, 99);
+            this.Hold24.Name = "Hold24";
+            this.Hold24.Size = new System.Drawing.Size(75, 23);
+            this.Hold24.TabIndex = 42;
+            this.Hold24.Tag = "Elimbutton";
+            this.Hold24.Text = "Hold 24";
+            this.Hold24.UseVisualStyleBackColor = true;
+            // 
+            // Hold25
+            // 
+            this.Hold25.Location = new System.Drawing.Point(685, 128);
+            this.Hold25.Name = "Hold25";
+            this.Hold25.Size = new System.Drawing.Size(75, 23);
+            this.Hold25.TabIndex = 43;
+            this.Hold25.Tag = "Elimbutton";
+            this.Hold25.Text = "Hold 25";
+            this.Hold25.UseVisualStyleBackColor = true;
+            // 
+            // Hold26
+            // 
+            this.Hold26.Location = new System.Drawing.Point(685, 159);
+            this.Hold26.Name = "Hold26";
+            this.Hold26.Size = new System.Drawing.Size(75, 23);
+            this.Hold26.TabIndex = 44;
+            this.Hold26.Tag = "Elimbutton";
+            this.Hold26.Text = "Hold 26";
+            this.Hold26.UseVisualStyleBackColor = true;
+            // 
+            // Hold27
+            // 
+            this.Hold27.Location = new System.Drawing.Point(685, 188);
+            this.Hold27.Name = "Hold27";
+            this.Hold27.Size = new System.Drawing.Size(75, 23);
+            this.Hold27.TabIndex = 45;
+            this.Hold27.Tag = "Elimbutton";
+            this.Hold27.Text = "Hold 27";
+            this.Hold27.UseVisualStyleBackColor = true;
+            // 
+            // Hold28
+            // 
+            this.Hold28.Location = new System.Drawing.Point(685, 217);
+            this.Hold28.Name = "Hold28";
+            this.Hold28.Size = new System.Drawing.Size(75, 23);
+            this.Hold28.TabIndex = 46;
+            this.Hold28.Tag = "Elimbutton";
+            this.Hold28.Text = "Hold 28";
+            this.Hold28.UseVisualStyleBackColor = true;
+            // 
+            // Hold29
+            // 
+            this.Hold29.Location = new System.Drawing.Point(685, 246);
+            this.Hold29.Name = "Hold29";
+            this.Hold29.Size = new System.Drawing.Size(75, 23);
+            this.Hold29.TabIndex = 47;
+            this.Hold29.Tag = "Elimbutton";
+            this.Hold29.Text = "Hold 29";
+            this.Hold29.UseVisualStyleBackColor = true;
+            // 
+            // Hold30
+            // 
+            this.Hold30.Location = new System.Drawing.Point(685, 275);
+            this.Hold30.Name = "Hold30";
+            this.Hold30.Size = new System.Drawing.Size(75, 23);
+            this.Hold30.TabIndex = 48;
+            this.Hold30.Tag = "Elimbutton";
+            this.Hold30.Text = "Hold 30";
+            this.Hold30.UseVisualStyleBackColor = true;
+            // 
+            // Hold31
+            // 
+            this.Hold31.Location = new System.Drawing.Point(685, 304);
+            this.Hold31.Name = "Hold31";
+            this.Hold31.Size = new System.Drawing.Size(75, 23);
+            this.Hold31.TabIndex = 49;
+            this.Hold31.Tag = "Elimbutton";
+            this.Hold31.Text = "Hold 31";
+            this.Hold31.UseVisualStyleBackColor = true;
+            // 
+            // Hold32
+            // 
+            this.Hold32.Location = new System.Drawing.Point(685, 333);
+            this.Hold32.Name = "Hold32";
+            this.Hold32.Size = new System.Drawing.Size(75, 23);
+            this.Hold32.TabIndex = 50;
+            this.Hold32.Tag = "Elimbutton";
+            this.Hold32.Text = "Hold 32";
+            this.Hold32.UseVisualStyleBackColor = true;
+            // 
+            // ElimE9v10
+            // 
+            this.ElimE9v10.Location = new System.Drawing.Point(766, 128);
+            this.ElimE9v10.Name = "ElimE9v10";
+            this.ElimE9v10.Size = new System.Drawing.Size(75, 23);
+            this.ElimE9v10.TabIndex = 51;
+            this.ElimE9v10.Tag = "Elimbutton";
+            this.ElimE9v10.Text = "ElimE9v10";
+            this.ElimE9v10.UseVisualStyleBackColor = true;
+            // 
+            // ElimF11v12
+            // 
+            this.ElimF11v12.Location = new System.Drawing.Point(766, 157);
+            this.ElimF11v12.Name = "ElimF11v12";
+            this.ElimF11v12.Size = new System.Drawing.Size(75, 23);
+            this.ElimF11v12.TabIndex = 52;
+            this.ElimF11v12.Tag = "Elimbutton";
+            this.ElimF11v12.Text = "ElimF11v12";
+            this.ElimF11v12.UseVisualStyleBackColor = true;
+            // 
+            // ElimG13v14
+            // 
+            this.ElimG13v14.Location = new System.Drawing.Point(766, 186);
+            this.ElimG13v14.Name = "ElimG13v14";
+            this.ElimG13v14.Size = new System.Drawing.Size(75, 23);
+            this.ElimG13v14.TabIndex = 53;
+            this.ElimG13v14.Tag = "Elimbutton";
+            this.ElimG13v14.Text = "ElimG13v14";
+            this.ElimG13v14.UseVisualStyleBackColor = true;
+            // 
+            // ElimH15v16
+            // 
+            this.ElimH15v16.Location = new System.Drawing.Point(766, 215);
+            this.ElimH15v16.Name = "ElimH15v16";
+            this.ElimH15v16.Size = new System.Drawing.Size(75, 23);
+            this.ElimH15v16.TabIndex = 54;
+            this.ElimH15v16.Tag = "Elimbutton";
+            this.ElimH15v16.Text = "ElimH15v16";
+            this.ElimH15v16.UseVisualStyleBackColor = true;
+            // 
+            // ElimI17v18
+            // 
+            this.ElimI17v18.Location = new System.Drawing.Point(766, 244);
+            this.ElimI17v18.Name = "ElimI17v18";
+            this.ElimI17v18.Size = new System.Drawing.Size(75, 23);
+            this.ElimI17v18.TabIndex = 55;
+            this.ElimI17v18.Tag = "Elimbutton";
+            this.ElimI17v18.Text = "ElimI17v18";
+            this.ElimI17v18.UseVisualStyleBackColor = true;
+            // 
+            // ElimJ19v20
+            // 
+            this.ElimJ19v20.Location = new System.Drawing.Point(766, 273);
+            this.ElimJ19v20.Name = "ElimJ19v20";
+            this.ElimJ19v20.Size = new System.Drawing.Size(75, 23);
+            this.ElimJ19v20.TabIndex = 56;
+            this.ElimJ19v20.Tag = "Elimbutton";
+            this.ElimJ19v20.Text = "ElimJ19v20";
+            this.ElimJ19v20.UseVisualStyleBackColor = true;
+            // 
+            // ElimK21v22
+            // 
+            this.ElimK21v22.Location = new System.Drawing.Point(766, 302);
+            this.ElimK21v22.Name = "ElimK21v22";
+            this.ElimK21v22.Size = new System.Drawing.Size(75, 23);
+            this.ElimK21v22.TabIndex = 57;
+            this.ElimK21v22.Tag = "Elimbutton";
+            this.ElimK21v22.Text = "ElimK21v22";
+            this.ElimK21v22.UseVisualStyleBackColor = true;
+            // 
+            // ElimL23v24
+            // 
+            this.ElimL23v24.Location = new System.Drawing.Point(766, 331);
+            this.ElimL23v24.Name = "ElimL23v24";
+            this.ElimL23v24.Size = new System.Drawing.Size(75, 23);
+            this.ElimL23v24.TabIndex = 58;
+            this.ElimL23v24.Tag = "Elimbutton";
+            this.ElimL23v24.Text = "ElimL23v24";
+            this.ElimL23v24.UseVisualStyleBackColor = true;
+            // 
+            // ElimM25v26
+            // 
+            this.ElimM25v26.Location = new System.Drawing.Point(847, 128);
+            this.ElimM25v26.Name = "ElimM25v26";
+            this.ElimM25v26.Size = new System.Drawing.Size(75, 23);
+            this.ElimM25v26.TabIndex = 59;
+            this.ElimM25v26.Text = "ElimM25v26";
+            this.ElimM25v26.UseVisualStyleBackColor = true;
+            // 
+            // ElimN27v28
+            // 
+            this.ElimN27v28.Location = new System.Drawing.Point(847, 157);
+            this.ElimN27v28.Name = "ElimN27v28";
+            this.ElimN27v28.Size = new System.Drawing.Size(75, 23);
+            this.ElimN27v28.TabIndex = 60;
+            this.ElimN27v28.Text = "ElimN27v28";
+            this.ElimN27v28.UseVisualStyleBackColor = true;
+            // 
+            // ElimO29v30
+            // 
+            this.ElimO29v30.Location = new System.Drawing.Point(847, 186);
+            this.ElimO29v30.Name = "ElimO29v30";
+            this.ElimO29v30.Size = new System.Drawing.Size(75, 23);
+            this.ElimO29v30.TabIndex = 61;
+            this.ElimO29v30.Text = "ElimO29v30";
+            this.ElimO29v30.UseVisualStyleBackColor = true;
+            // 
+            // ElimP31v32
+            // 
+            this.ElimP31v32.Location = new System.Drawing.Point(847, 215);
+            this.ElimP31v32.Name = "ElimP31v32";
+            this.ElimP31v32.Size = new System.Drawing.Size(75, 23);
+            this.ElimP31v32.TabIndex = 62;
+            this.ElimP31v32.Text = "ElimP31v32";
+            this.ElimP31v32.UseVisualStyleBackColor = true;
+            // 
+            // ElimEvF
+            // 
+            this.ElimEvF.Location = new System.Drawing.Point(847, 244);
+            this.ElimEvF.Name = "ElimEvF";
+            this.ElimEvF.Size = new System.Drawing.Size(75, 23);
+            this.ElimEvF.TabIndex = 63;
+            this.ElimEvF.Text = "ElimEvF";
+            this.ElimEvF.UseVisualStyleBackColor = true;
+            // 
+            // ElimGvH
+            // 
+            this.ElimGvH.Location = new System.Drawing.Point(847, 273);
+            this.ElimGvH.Name = "ElimGvH";
+            this.ElimGvH.Size = new System.Drawing.Size(75, 23);
+            this.ElimGvH.TabIndex = 64;
+            this.ElimGvH.Text = "ElimGvH";
+            this.ElimGvH.UseVisualStyleBackColor = true;
+            // 
+            // ElimIvJ
+            // 
+            this.ElimIvJ.Location = new System.Drawing.Point(847, 302);
+            this.ElimIvJ.Name = "ElimIvJ";
+            this.ElimIvJ.Size = new System.Drawing.Size(75, 23);
+            this.ElimIvJ.TabIndex = 65;
+            this.ElimIvJ.Text = "ElimIvJ";
+            this.ElimIvJ.UseVisualStyleBackColor = true;
+            // 
+            // ElimKvL
+            // 
+            this.ElimKvL.Location = new System.Drawing.Point(847, 331);
+            this.ElimKvL.Name = "ElimKvL";
+            this.ElimKvL.Size = new System.Drawing.Size(75, 23);
+            this.ElimKvL.TabIndex = 66;
+            this.ElimKvL.Text = "ElimKvL";
+            this.ElimKvL.UseVisualStyleBackColor = true;
+            // 
+            // ElimMvN
+            // 
+            this.ElimMvN.Location = new System.Drawing.Point(928, 128);
+            this.ElimMvN.Name = "ElimMvN";
+            this.ElimMvN.Size = new System.Drawing.Size(75, 23);
+            this.ElimMvN.TabIndex = 67;
+            this.ElimMvN.Text = "ElimMvN";
+            this.ElimMvN.UseVisualStyleBackColor = true;
+            // 
+            // ElimOvP
+            // 
+            this.ElimOvP.Location = new System.Drawing.Point(928, 157);
+            this.ElimOvP.Name = "ElimOvP";
+            this.ElimOvP.Size = new System.Drawing.Size(75, 23);
+            this.ElimOvP.TabIndex = 68;
+            this.ElimOvP.Text = "ElimOvP";
+            this.ElimOvP.UseVisualStyleBackColor = true;
+            // 
+            // ElimEvH
+            // 
+            this.ElimEvH.Location = new System.Drawing.Point(927, 186);
+            this.ElimEvH.Name = "ElimEvH";
+            this.ElimEvH.Size = new System.Drawing.Size(75, 23);
+            this.ElimEvH.TabIndex = 69;
+            this.ElimEvH.Text = "ElimEvH";
+            this.ElimEvH.UseVisualStyleBackColor = true;
+            // 
+            // ElimIvL
+            // 
+            this.ElimIvL.Location = new System.Drawing.Point(928, 215);
+            this.ElimIvL.Name = "ElimIvL";
+            this.ElimIvL.Size = new System.Drawing.Size(75, 23);
+            this.ElimIvL.TabIndex = 70;
+            this.ElimIvL.Text = "ElimIvL";
+            this.ElimIvL.UseVisualStyleBackColor = true;
+            // 
+            // ElimMvP
+            // 
+            this.ElimMvP.Location = new System.Drawing.Point(928, 244);
+            this.ElimMvP.Name = "ElimMvP";
+            this.ElimMvP.Size = new System.Drawing.Size(75, 23);
+            this.ElimMvP.TabIndex = 71;
+            this.ElimMvP.Text = "ElimMvP";
+            this.ElimMvP.UseVisualStyleBackColor = true;
+            // 
+            // ElimAvH
+            // 
+            this.ElimAvH.Location = new System.Drawing.Point(928, 275);
+            this.ElimAvH.Name = "ElimAvH";
+            this.ElimAvH.Size = new System.Drawing.Size(75, 23);
+            this.ElimAvH.TabIndex = 72;
+            this.ElimAvH.Text = "ElimAvH";
+            this.ElimAvH.UseVisualStyleBackColor = true;
+            // 
+            // ElimIvP
+            // 
+            this.ElimIvP.Location = new System.Drawing.Point(928, 306);
+            this.ElimIvP.Name = "ElimIvP";
+            this.ElimIvP.Size = new System.Drawing.Size(75, 23);
+            this.ElimIvP.TabIndex = 73;
+            this.ElimIvP.Text = "ElimIvP";
+            this.ElimIvP.UseVisualStyleBackColor = true;
+            // 
+            // ElimAvP
+            // 
+            this.ElimAvP.Location = new System.Drawing.Point(928, 335);
+            this.ElimAvP.Name = "ElimAvP";
+            this.ElimAvP.Size = new System.Drawing.Size(75, 23);
+            this.ElimAvP.TabIndex = 74;
+            this.ElimAvP.Text = "ElimAvP";
+            this.ElimAvP.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1181, 481);
+            this.ClientSize = new System.Drawing.Size(1034, 481);
+            this.Controls.Add(this.ElimAvP);
+            this.Controls.Add(this.ElimIvP);
+            this.Controls.Add(this.ElimAvH);
+            this.Controls.Add(this.ElimMvP);
+            this.Controls.Add(this.ElimIvL);
+            this.Controls.Add(this.ElimEvH);
+            this.Controls.Add(this.ElimOvP);
+            this.Controls.Add(this.ElimMvN);
+            this.Controls.Add(this.ElimKvL);
+            this.Controls.Add(this.ElimIvJ);
+            this.Controls.Add(this.ElimGvH);
+            this.Controls.Add(this.ElimEvF);
+            this.Controls.Add(this.ElimP31v32);
+            this.Controls.Add(this.ElimO29v30);
+            this.Controls.Add(this.ElimN27v28);
+            this.Controls.Add(this.ElimM25v26);
+            this.Controls.Add(this.ElimL23v24);
+            this.Controls.Add(this.ElimK21v22);
+            this.Controls.Add(this.ElimJ19v20);
+            this.Controls.Add(this.ElimI17v18);
+            this.Controls.Add(this.ElimH15v16);
+            this.Controls.Add(this.ElimG13v14);
+            this.Controls.Add(this.ElimF11v12);
+            this.Controls.Add(this.ElimE9v10);
+            this.Controls.Add(this.Hold32);
+            this.Controls.Add(this.Hold31);
+            this.Controls.Add(this.Hold30);
+            this.Controls.Add(this.Hold29);
+            this.Controls.Add(this.Hold28);
+            this.Controls.Add(this.Hold27);
+            this.Controls.Add(this.Hold26);
+            this.Controls.Add(this.Hold25);
+            this.Controls.Add(this.Hold24);
+            this.Controls.Add(this.Hold23);
+            this.Controls.Add(this.Hold22);
+            this.Controls.Add(this.Hold21);
+            this.Controls.Add(this.Hold20);
+            this.Controls.Add(this.Hold19);
+            this.Controls.Add(this.Hold18);
+            this.Controls.Add(this.Hold17);
+            this.Controls.Add(this.Hold16);
+            this.Controls.Add(this.Hold15);
+            this.Controls.Add(this.Hold14);
+            this.Controls.Add(this.Hold13);
+            this.Controls.Add(this.Hold12);
+            this.Controls.Add(this.Hold11);
+            this.Controls.Add(this.Hold10);
+            this.Controls.Add(this.Hold9);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.ElimGroupsOf20);
             this.Controls.Add(this.ElimGroupsOf16);
@@ -396,6 +958,54 @@
         private System.Windows.Forms.Button ElimGroupsOf8;
         private System.Windows.Forms.Button ElimGroupsOf16;
         private System.Windows.Forms.Button ElimGroupsOf20;
+        private System.Windows.Forms.Button Hold9;
+        private System.Windows.Forms.Button Hold10;
+        private System.Windows.Forms.Button Hold11;
+        private System.Windows.Forms.Button Hold12;
+        private System.Windows.Forms.Button Hold13;
+        private System.Windows.Forms.Button Hold14;
+        private System.Windows.Forms.Button Hold15;
+        private System.Windows.Forms.Button Hold16;
+        private System.Windows.Forms.Button Hold17;
+        private System.Windows.Forms.Button Hold18;
+        private System.Windows.Forms.Button Hold19;
+        private System.Windows.Forms.Button Hold20;
+        private System.Windows.Forms.Button Hold21;
+        private System.Windows.Forms.Button Hold22;
+        private System.Windows.Forms.Button Hold23;
+        private System.Windows.Forms.Button Hold24;
+        private System.Windows.Forms.Button Hold25;
+        private System.Windows.Forms.Button Hold26;
+        private System.Windows.Forms.Button Hold27;
+        private System.Windows.Forms.Button Hold28;
+        private System.Windows.Forms.Button Hold29;
+        private System.Windows.Forms.Button Hold30;
+        private System.Windows.Forms.Button Hold31;
+        private System.Windows.Forms.Button Hold32;
+        private System.Windows.Forms.Button ElimE9v10;
+        private System.Windows.Forms.Button ElimF11v12;
+        private System.Windows.Forms.Button ElimG13v14;
+        private System.Windows.Forms.Button ElimH15v16;
+        private System.Windows.Forms.Button ElimI17v18;
+        private System.Windows.Forms.Button ElimJ19v20;
+        private System.Windows.Forms.Button ElimK21v22;
+        private System.Windows.Forms.Button ElimL23v24;
+        private System.Windows.Forms.Button ElimM25v26;
+        private System.Windows.Forms.Button ElimN27v28;
+        private System.Windows.Forms.Button ElimO29v30;
+        private System.Windows.Forms.Button ElimP31v32;
+        private System.Windows.Forms.Button ElimEvF;
+        private System.Windows.Forms.Button ElimGvH;
+        private System.Windows.Forms.Button ElimIvJ;
+        private System.Windows.Forms.Button ElimKvL;
+        private System.Windows.Forms.Button ElimMvN;
+        private System.Windows.Forms.Button ElimOvP;
+        private System.Windows.Forms.Button ElimEvH;
+        private System.Windows.Forms.Button ElimIvL;
+        private System.Windows.Forms.Button ElimMvP;
+        private System.Windows.Forms.Button ElimAvH;
+        private System.Windows.Forms.Button ElimIvP;
+        private System.Windows.Forms.Button ElimAvP;
     }
 }
 
