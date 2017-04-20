@@ -51,11 +51,11 @@
             this.ElimAmount = new System.Windows.Forms.TextBox();
             this.OK = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.ElimGroupsOf4 = new System.Windows.Forms.Button();
+            this.ElimGroupsOf8 = new System.Windows.Forms.Button();
+            this.ElimGroupsOf12 = new System.Windows.Forms.Button();
+            this.ElimGroupsOf16 = new System.Windows.Forms.Button();
+            this.ElimGroupsOf20 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // timer1
@@ -89,7 +89,7 @@
             this.Elimbutton1.Size = new System.Drawing.Size(75, 23);
             this.Elimbutton1.TabIndex = 2;
             this.Elimbutton1.Tag = "Elimbutton";
-            this.Elimbutton1.Text = "Elimbutton1";
+            this.Elimbutton1.Text = "Hold 1";
             this.Elimbutton1.UseVisualStyleBackColor = true;
             this.Elimbutton1.Click += new System.EventHandler(this.Elimbutton1_Click);
             // 
@@ -166,7 +166,7 @@
             this.Elimbutton8.Size = new System.Drawing.Size(75, 23);
             this.Elimbutton8.TabIndex = 11;
             this.Elimbutton8.Tag = "Elimbutton";
-            this.Elimbutton8.Text = "Elimbutton8";
+            this.Elimbutton8.Text = "Hold 8";
             this.Elimbutton8.UseVisualStyleBackColor = true;
             this.Elimbutton8.Click += new System.EventHandler(this.Elimbutton8_Click);
             // 
@@ -177,7 +177,7 @@
             this.Elimbutton7.Size = new System.Drawing.Size(75, 23);
             this.Elimbutton7.TabIndex = 12;
             this.Elimbutton7.Tag = "Elimbutton";
-            this.Elimbutton7.Text = "Elimbutton7";
+            this.Elimbutton7.Text = "Hold 7";
             this.Elimbutton7.UseVisualStyleBackColor = true;
             this.Elimbutton7.Click += new System.EventHandler(this.Elimbutton7_Click);
             // 
@@ -188,7 +188,7 @@
             this.Elimbutton6.Size = new System.Drawing.Size(75, 23);
             this.Elimbutton6.TabIndex = 13;
             this.Elimbutton6.Tag = "Elimbutton";
-            this.Elimbutton6.Text = "Elimbutton6";
+            this.Elimbutton6.Text = "Hold 6";
             this.Elimbutton6.UseVisualStyleBackColor = true;
             this.Elimbutton6.Click += new System.EventHandler(this.Elimbutton6_Click);
             // 
@@ -199,7 +199,7 @@
             this.Elimbutton5.Size = new System.Drawing.Size(75, 23);
             this.Elimbutton5.TabIndex = 14;
             this.Elimbutton5.Tag = "Elimbutton";
-            this.Elimbutton5.Text = "Elimbutton5";
+            this.Elimbutton5.Text = "Hold 5";
             this.Elimbutton5.UseVisualStyleBackColor = true;
             this.Elimbutton5.Click += new System.EventHandler(this.Elimbutton5_Click);
             // 
@@ -210,7 +210,7 @@
             this.Elimbutton4.Size = new System.Drawing.Size(75, 23);
             this.Elimbutton4.TabIndex = 15;
             this.Elimbutton4.Tag = "Elimbutton";
-            this.Elimbutton4.Text = "Elimbutton4";
+            this.Elimbutton4.Text = "Hold 4";
             this.Elimbutton4.UseVisualStyleBackColor = true;
             this.Elimbutton4.Click += new System.EventHandler(this.Elimbutton4_Click);
             // 
@@ -221,7 +221,7 @@
             this.Elimbutton3.Size = new System.Drawing.Size(75, 23);
             this.Elimbutton3.TabIndex = 16;
             this.Elimbutton3.Tag = "Elimbutton";
-            this.Elimbutton3.Text = "Elimbutton3";
+            this.Elimbutton3.Text = "Hold 3";
             this.Elimbutton3.UseVisualStyleBackColor = true;
             this.Elimbutton3.Click += new System.EventHandler(this.Elimbutton3_Click);
             // 
@@ -232,7 +232,7 @@
             this.Elimbutton2.Size = new System.Drawing.Size(75, 23);
             this.Elimbutton2.TabIndex = 17;
             this.Elimbutton2.Tag = "Elimbutton";
-            this.Elimbutton2.Text = "Elimbutton2";
+            this.Elimbutton2.Text = "Hold 2";
             this.Elimbutton2.UseVisualStyleBackColor = true;
             this.Elimbutton2.Click += new System.EventHandler(this.Elimbutton2_Click);
             // 
@@ -254,7 +254,7 @@
             this.ElimWinner.Size = new System.Drawing.Size(75, 23);
             this.ElimWinner.TabIndex = 19;
             this.ElimWinner.Tag = "Elimbutton";
-            this.ElimWinner.Text = "NextRound";
+            this.ElimWinner.Text = "Start";
             this.ElimWinner.UseVisualStyleBackColor = true;
             this.ElimWinner.Click += new System.EventHandler(this.ElimWinner_Click);
             // 
@@ -288,52 +288,57 @@
             this.Back.UseVisualStyleBackColor = true;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
-            // button1
+            // ElimGroupsOf4
             // 
-            this.button1.Location = new System.Drawing.Point(3, 99);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "4 ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ElimGroupsOf4.Location = new System.Drawing.Point(3, 99);
+            this.ElimGroupsOf4.Name = "ElimGroupsOf4";
+            this.ElimGroupsOf4.Size = new System.Drawing.Size(75, 23);
+            this.ElimGroupsOf4.TabIndex = 22;
+            this.ElimGroupsOf4.Tag = "Elimbutton";
+            this.ElimGroupsOf4.Text = "4 ";
+            this.ElimGroupsOf4.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // ElimGroupsOf8
             // 
-            this.button2.Location = new System.Drawing.Point(3, 128);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "8";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.ElimGroupsOf8.Location = new System.Drawing.Point(3, 128);
+            this.ElimGroupsOf8.Name = "ElimGroupsOf8";
+            this.ElimGroupsOf8.Size = new System.Drawing.Size(75, 23);
+            this.ElimGroupsOf8.TabIndex = 23;
+            this.ElimGroupsOf8.Tag = "Elimbutton";
+            this.ElimGroupsOf8.Text = "8";
+            this.ElimGroupsOf8.UseVisualStyleBackColor = true;
+            this.ElimGroupsOf8.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // ElimGroupsOf12
             // 
-            this.button3.Location = new System.Drawing.Point(3, 156);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 24;
-            this.button3.Text = "12";
-            this.button3.UseVisualStyleBackColor = true;
+            this.ElimGroupsOf12.Location = new System.Drawing.Point(3, 156);
+            this.ElimGroupsOf12.Name = "ElimGroupsOf12";
+            this.ElimGroupsOf12.Size = new System.Drawing.Size(75, 23);
+            this.ElimGroupsOf12.TabIndex = 24;
+            this.ElimGroupsOf12.Tag = "Elimbutton";
+            this.ElimGroupsOf12.Text = "12";
+            this.ElimGroupsOf12.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // ElimGroupsOf16
             // 
-            this.button4.Location = new System.Drawing.Point(3, 185);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 25;
-            this.button4.Text = "16";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.ElimGroupsOf16.Location = new System.Drawing.Point(3, 185);
+            this.ElimGroupsOf16.Name = "ElimGroupsOf16";
+            this.ElimGroupsOf16.Size = new System.Drawing.Size(75, 23);
+            this.ElimGroupsOf16.TabIndex = 25;
+            this.ElimGroupsOf16.Tag = "Elimbutton";
+            this.ElimGroupsOf16.Text = "16";
+            this.ElimGroupsOf16.UseVisualStyleBackColor = true;
+            this.ElimGroupsOf16.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // ElimGroupsOf20
             // 
-            this.button5.Location = new System.Drawing.Point(3, 214);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 26;
-            this.button5.Text = "20";
-            this.button5.UseVisualStyleBackColor = true;
+            this.ElimGroupsOf20.Location = new System.Drawing.Point(3, 214);
+            this.ElimGroupsOf20.Name = "ElimGroupsOf20";
+            this.ElimGroupsOf20.Size = new System.Drawing.Size(75, 23);
+            this.ElimGroupsOf20.TabIndex = 26;
+            this.ElimGroupsOf20.Tag = "Elimbutton";
+            this.ElimGroupsOf20.Text = "20";
+            this.ElimGroupsOf20.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -341,11 +346,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(691, 481);
             this.Controls.Add(this.Back);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ElimGroupsOf20);
+            this.Controls.Add(this.ElimGroupsOf16);
+            this.Controls.Add(this.ElimGroupsOf12);
+            this.Controls.Add(this.ElimGroupsOf8);
+            this.Controls.Add(this.ElimGroupsOf4);
             this.Controls.Add(this.OK);
             this.Controls.Add(this.ElimAmount);
             this.Controls.Add(this.ElimWinner);
@@ -398,11 +403,11 @@
         private System.Windows.Forms.TextBox ElimAmount;
         private System.Windows.Forms.Button OK;
         private System.Windows.Forms.Button Back;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button ElimGroupsOf4;
+        private System.Windows.Forms.Button ElimGroupsOf8;
+        private System.Windows.Forms.Button ElimGroupsOf12;
+        private System.Windows.Forms.Button ElimGroupsOf16;
+        private System.Windows.Forms.Button ElimGroupsOf20;
     }
 }
 

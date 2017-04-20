@@ -30,7 +30,15 @@ namespace TournementAndAnalysis
             LeagueButton.Location = new Point(Width - Width / 3 - LeagueButton.Width / 2, Height / 2 - LeagueButton.Height / 2);
             CupButton.Location = new Point(Width / 3 - CupButton.Width / 2, Height / 2 - CupButton.Height / 2);
             scene1 = MENUSCENE.Menu;
+
+            //En gaffa løsning til noget grafisk
+            Point p = Location;
+            Size oriSize = this.Size;
+            Size temp = new Size(40000, 40000);
+            Size = temp;
             dc = CreateGraphics();
+            Size = oriSize;
+            Location = p;
 
             TournementHolder.Instance.Load(this, dc);
 
@@ -113,42 +121,42 @@ namespace TournementAndAnalysis
         #region ElimButtons
         private void Elimbutton1_Click(object sender, EventArgs e)
         {
-            
+            TournementHolder.Instance.ChangeElimButtonText(sender);
         }
 
         private void Elimbutton2_Click(object sender, EventArgs e)
         {
-
+            TournementHolder.Instance.ChangeElimButtonText(sender);
         }
 
         private void Elimbutton3_Click(object sender, EventArgs e)
         {
-
+            TournementHolder.Instance.ChangeElimButtonText(sender);
         }
 
         private void Elimbutton4_Click(object sender, EventArgs e)
         {
-
+            TournementHolder.Instance.ChangeElimButtonText(sender);
         }
 
         private void Elimbutton5_Click(object sender, EventArgs e)
         {
-
+            TournementHolder.Instance.ChangeElimButtonText(sender);
         }
 
         private void Elimbutton6_Click(object sender, EventArgs e)
         {
-
+            TournementHolder.Instance.ChangeElimButtonText(sender);
         }
 
         private void Elimbutton7_Click(object sender, EventArgs e)
         {
-
+            TournementHolder.Instance.ChangeElimButtonText(sender);
         }
 
         private void Elimbutton8_Click(object sender, EventArgs e)
         {
-
+            TournementHolder.Instance.ChangeElimButtonText(sender);
         }
 
         private void ElimA1v2_Click(object sender, EventArgs e)
