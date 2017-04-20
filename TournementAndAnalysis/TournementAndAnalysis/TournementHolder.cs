@@ -107,6 +107,21 @@ namespace TournementAndAnalysis
             Hide();
         }
 
+        public void SetupForSixTeen()
+        {
+            foreach (Button btn in buttons)
+            {
+                btn.BackColor = backCol; btn.ForeColor = foreCol;
+                if (!btn.Name.Contains("button") && !btn.Name.Contains("Amount") && !btn.Name.Contains("Winner") && !btn.Name.Contains("GroupsOf") && !btn.Name.Contains("Hold") && btn.Name.Contains("Elim"))
+                {
+                    btn.Text = "";
+                }
+            }
+            scene = ELIMSCENE.Sixteen;
+            Hide();
+        }
+
+
         public void SetupForThirtyTwo()
         {
             foreach (Button btn in buttons)
@@ -157,8 +172,7 @@ namespace TournementAndAnalysis
                     }
                 case ELIMSCENE.Sixteen:
                     {
-
-
+                        ElimSixTeen();
                         break;
                     }
                 case ELIMSCENE.ThirtyTwo:
@@ -222,7 +236,72 @@ namespace TournementAndAnalysis
 
                     case ELIMSCENE.Sixteen:
                         {
-                            //kode
+                            if ((buttons.Find(x => x.Name == "Elimbutton1") as Button).BackColor == backCol)
+                            {
+                                ColourButtons(buttons.Find(x => x.Name == "Elimbutton1"), buttons.Find(x => x.Name == "Elimbutton2"), buttons.Find(x => x.Name == "ElimA1v2"));
+                            }
+                            else if ((buttons.Find(x => x.Name == "Elimbutton3") as Button).BackColor == backCol)
+                            {
+                                ColourButtons(buttons.Find(x => x.Name == "Elimbutton3"), buttons.Find(x => x.Name == "Elimbutton4"), buttons.Find(x => x.Name == "ElimB3v4"));
+                            }
+                            else if ((buttons.Find(x => x.Name == "Elimbutton5") as Button).BackColor == backCol)
+                            {
+                                ColourButtons(buttons.Find(x => x.Name == "Elimbutton5"), buttons.Find(x => x.Name == "Elimbutton6"), buttons.Find(x => x.Name == "ElimC5v6"));
+                            }
+                            else if ((buttons.Find(x => x.Name == "Elimbutton7") as Button).BackColor == backCol)
+                            {
+                                ColourButtons(buttons.Find(x => x.Name == "Elimbutton7"), buttons.Find(x => x.Name == "Elimbutton8"), buttons.Find(x => x.Name == "ElimD7v8"));
+                            }
+                           
+                            else if ((buttons.Find(x => x.Name == "Hold17") as Button).BackColor == backCol)
+                            {
+                                ColourButtons(buttons.Find(x => x.Name == "Hold17"), buttons.Find(x => x.Name == "Hold18"), buttons.Find(x => x.Name == "ElimI17v18"));
+                            }
+                            else if ((buttons.Find(x => x.Name == "Hold19") as Button).BackColor == backCol)
+                            {
+                                ColourButtons(buttons.Find(x => x.Name == "Hold19"), buttons.Find(x => x.Name == "Hold20"), buttons.Find(x => x.Name == "ElimJ19v20"));
+                            }
+                            else if ((buttons.Find(x => x.Name == "Hold21") as Button).BackColor == backCol)
+                            {
+                                ColourButtons(buttons.Find(x => x.Name == "Hold21"), buttons.Find(x => x.Name == "Hold22"), buttons.Find(x => x.Name == "ElimK21v22"));
+                            }
+                            else if ((buttons.Find(x => x.Name == "Hold23") as Button).BackColor == backCol)
+                            {
+                                ColourButtons(buttons.Find(x => x.Name == "Hold23"), buttons.Find(x => x.Name == "Hold24"), buttons.Find(x => x.Name == "ElimL23v24"));
+                            }
+                           
+                            else if ((buttons.Find(x => x.Name == "ElimA1v2") as Button).BackColor == backCol)
+                            {
+                                ColourButtons(buttons.Find(x => x.Name == "ElimA1v2"), buttons.Find(x => x.Name == "ElimB3v4"), buttons.Find(x => x.Name == "ElimAvB"));
+                            }
+                            else if ((buttons.Find(x => x.Name == "ElimC5v6") as Button).BackColor == backCol)
+                            {
+                                ColourButtons(buttons.Find(x => x.Name == "ElimC5v6"), buttons.Find(x => x.Name == "ElimD7v8"), buttons.Find(x => x.Name == "ElimCvD"));
+                            }
+                           
+                            else if ((buttons.Find(x => x.Name == "ElimI17v18") as Button).BackColor == backCol)
+                            {
+                                ColourButtons(buttons.Find(x => x.Name == "ElimI17v18"), buttons.Find(x => x.Name == "ElimJ19v20"), buttons.Find(x => x.Name == "ElimIvJ"));
+                            }
+                            else if ((buttons.Find(x => x.Name == "ElimK21v22") as Button).BackColor == backCol)
+                            {
+                                ColourButtons(buttons.Find(x => x.Name == "ElimK21v22"), buttons.Find(x => x.Name == "ElimL23v24"), buttons.Find(x => x.Name == "ElimKvL"));
+                            }
+                            else if ((buttons.Find(x => x.Name == "ElimAvB") as Button).BackColor == backCol)
+                            {
+                                ColourButtons(buttons.Find(x => x.Name == "ElimAvB"), buttons.Find(x => x.Name == "ElimCvD"), buttons.Find(x => x.Name == "ElimFinalABvCD"));
+                            }
+                            
+                            else if ((buttons.Find(x => x.Name == "ElimIvJ") as Button).BackColor == backCol)
+                            {
+                                ColourButtons(buttons.Find(x => x.Name == "ElimIvJ"), buttons.Find(x => x.Name == "ElimKvL"), buttons.Find(x => x.Name == "ElimIvL"));
+                            }
+                          
+                            else if ((buttons.Find(x => x.Name == "ElimIvL") as Button).BackColor == backCol)
+                            {
+                                ColourButtons(buttons.Find(x => x.Name == "ElimIvL"), buttons.Find(x => x.Name == "ElimFinalABvCD"), buttons.Find(x => x.Name == "ElimAvH"));
+                            }
+                           
                             break;
                         }
 
@@ -404,6 +483,10 @@ namespace TournementAndAnalysis
                 t.BackColor = Color.Gold;
             }
             if (t.Name == "ElimAvB" && (scene == ELIMSCENE.Four))
+            {
+                t.BackColor = Color.Gold;
+            }
+            if (t.Name == "ElimAvH" && (scene == ELIMSCENE.Sixteen))
             {
                 t.BackColor = Color.Gold;
             }
@@ -623,6 +706,232 @@ namespace TournementAndAnalysis
             DrawLines(buttons.Find(x => x.Name == "ElimC5v6"), buttons.Find(x => x.Name == "ElimD7v8"), buttons.Find(x => x.Name == "ElimCvD"));
         }
 
+        private void ElimSixTeen()
+        {
+            if (changingName)
+            {
+                amount.Location = new Point((frm.Width / 10) * 5 - amount.Width / 2, (frm.Height / 10) * 1 - amount.Height);
+                if (!amount.Visible) { amount.Show(); }
+            }
+            else
+            {
+                if (amount.Visible) { amount.Hide(); }
+            }
+            foreach (Button btn in buttons)
+            {
+                switch (btn.Name)
+                {
+                    case "Elimbutton1":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 1 - btn.Width / 2, (frm.Height / 32) * 1 - btn.Height);
+                            break;
+                        }
+                    case "Elimbutton2":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 1 - btn.Width / 2, (frm.Height / 32) * 3 - btn.Height);
+                            break;
+                        }
+                    case "Elimbutton3":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 1 - btn.Width / 2, (frm.Height / 32) * 5 - btn.Height);
+                            break;
+                        }
+                    case "Elimbutton4":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 1 - btn.Width / 2, (frm.Height / 32) * 7 - btn.Height);
+                            break;
+                        }
+                    case "Elimbutton5":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 1 - btn.Width / 2, (frm.Height / 32) * 9 - btn.Height);
+                            break;
+                        }
+                    case "Elimbutton6":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 1 - btn.Width / 2, (frm.Height / 32) * 11 - btn.Height);
+                            break;
+                        }
+                    case "Elimbutton7":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 1 - btn.Width / 2, (frm.Height / 32) * 13 - btn.Height);
+                            break;
+                        }
+                    case "Elimbutton8":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 1 - btn.Width / 2, (frm.Height / 32) * 15 - btn.Height);
+                            break;
+                        }
+                    
+                    case "Hold17":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 12 - btn.Width / 2, (frm.Height / 32) * 1 - btn.Height);
+                            break;
+                        }
+                    case "Hold18":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 12 - btn.Width / 2, (frm.Height / 32) * 3 - btn.Height);
+                            break;
+                        }
+                    case "Hold19":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 12 - btn.Width / 2, (frm.Height / 32) * 5 - btn.Height);
+                            break;
+                        }
+                    case "Hold20":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 12 - btn.Width / 2, (frm.Height / 32) * 7 - btn.Height);
+                            break;
+                        }
+                    case "Hold21":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 12 - btn.Width / 2, (frm.Height / 32) * 9 - btn.Height);
+                            break;
+                        }
+                    case "Hold22":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 12 - btn.Width / 2, (frm.Height / 32) * 11 - btn.Height);
+                            break;
+                        }
+                    case "Hold23":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 12 - btn.Width / 2, (frm.Height / 32) * 13 - btn.Height);
+                            break;
+                        }
+                    case "Hold24":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 12 - btn.Width / 2, (frm.Height / 32) * 15 - btn.Height);
+                            break;
+                        }
+                   
+                    case "ElimA1v2":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 2 - btn.Width / 2, (frm.Height / 32) * 2 - btn.Height);
+                            break;
+                        }
+                    case "ElimB3v4":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 2 - btn.Width / 2, (frm.Height / 32) * 6 - btn.Height);
+                            break;
+                        }
+                    case "ElimC5v6":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 2 - btn.Width / 2, (frm.Height / 32) * 10 - btn.Height);
+                            break;
+                        }
+                    case "ElimD7v8":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 2 - btn.Width / 2, (frm.Height / 32) * 14 - btn.Height);
+                            break;
+                        }
+                   
+                    case "ElimI17v18":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 11 - btn.Width / 2, (frm.Height / 32) * 2 - btn.Height);
+                            break;
+                        }
+                    case "ElimJ19v20":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 11 - btn.Width / 2, (frm.Height / 32) * 6 - btn.Height);
+                            break;
+                        }
+                    case "ElimK21v22":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 11 - btn.Width / 2, (frm.Height / 32) * 10 - btn.Height);
+                            break;
+                        }
+                    case "ElimL23v24":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 11 - btn.Width / 2, (frm.Height / 32) * 14 - btn.Height);
+                            break;
+                        }
+                
+                    case "ElimAvB":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 3 - btn.Width / 2, (frm.Height / 32) * 4 - btn.Height);
+                            break;
+                        }
+                    case "ElimCvD":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 3 - btn.Width / 2, (frm.Height / 32) * 12 - btn.Height);
+                            break;
+                        }
+                   
+                    case "ElimIvJ":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 10 - btn.Width / 2, (frm.Height / 32) * 4 - btn.Height);
+                            break;
+                        }
+                    case "ElimKvL":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 10 - btn.Width / 2, (frm.Height / 32) * 12 - btn.Height);
+                            break;
+                        }
+                   
+                    case "ElimFinalABvCD":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 4 - btn.Width / 2, (frm.Height / 32) * 8 - btn.Height);
+                            break;
+                        }
+                
+                    case "ElimIvL":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 8 - btn.Width / 2, (frm.Height / 32) * 8 - btn.Height);
+                            break;
+                        }
+               
+                    case "ElimAvH":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 13) * 5 - btn.Width / 2, (frm.Height / 32) * 16 - btn.Height);
+                            break;
+                        }
+                  
+                    case "ElimWinner":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 8) * 4 - btn.Width / 2, (frm.Height / 8) * 7 - btn.Height);
+                            break;
+                        }
+                    case "Back":
+                        {
+                            if (!btn.Visible) { btn.Show(); }
+                            btn.Location = new Point((frm.Width / 8) * 3 - btn.Width / 2, (frm.Height / 8) * 7 - btn.Height);
+                            break;
+                        }
+
+                }
+            }
+        }
         private void ElimThirtyTwo()
         {
             if (changingName)

@@ -252,7 +252,7 @@ namespace TournementAndAnalysis
 
         private void button4_Click(object sender, EventArgs e)
         {
-            TournementHolder.Instance.SetupForFour();
+            TournementHolder.Instance.SetupForSixTeen();
         }
 
         private void ElimGroupsOf20_Click(object sender, EventArgs e)
