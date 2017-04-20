@@ -288,7 +288,7 @@ namespace TournementAndAnalysis
             {
                 t.BackColor = Color.Gold;
             }
-            if(t.Name == "ElimAvB" && (scene != ELIMSCENE.Eight))
+            if(t.Name == "ElimAvB" && (scene == ELIMSCENE.Four))
             {
                 t.BackColor = Color.Gold;
             }
