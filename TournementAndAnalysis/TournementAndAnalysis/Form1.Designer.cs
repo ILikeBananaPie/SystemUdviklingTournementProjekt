@@ -39,6 +39,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.LeagueNextRound = new System.Windows.Forms.Button();
             this.ErrorMessage = new System.Windows.Forms.Label();
+            this.LeagueBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // timer1
@@ -135,11 +136,23 @@
             this.ErrorMessage.Size = new System.Drawing.Size(0, 13);
             this.ErrorMessage.TabIndex = 8;
             // 
+            // LeagueBack
+            // 
+            this.LeagueBack.Location = new System.Drawing.Point(477, 349);
+            this.LeagueBack.Name = "LeagueBack";
+            this.LeagueBack.Size = new System.Drawing.Size(84, 23);
+            this.LeagueBack.TabIndex = 9;
+            this.LeagueBack.Text = "Back to Main Menu";
+            this.LeagueBack.UseVisualStyleBackColor = true;
+            this.LeagueBack.Visible = false;
+            this.LeagueBack.Click += new System.EventHandler(this.LeagueBack_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(947, 455);
+            this.Controls.Add(this.LeagueBack);
             this.Controls.Add(this.ErrorMessage);
             this.Controls.Add(this.LeagueNextRound);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -169,6 +182,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button LeagueNextRound;
         private System.Windows.Forms.Label ErrorMessage;
+        private System.Windows.Forms.Button LeagueBack;
     }
 }
 

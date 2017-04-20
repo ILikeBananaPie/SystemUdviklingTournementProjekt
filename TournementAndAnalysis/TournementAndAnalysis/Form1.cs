@@ -12,7 +12,7 @@ namespace TournementAndAnalysis
 {
     public partial class Form1 : Form
     {
-        
+
         private Graphics dc;
         private Font f;
         private Random rnd = new Random();
@@ -59,7 +59,7 @@ namespace TournementAndAnalysis
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            LeagueBack.Location = new Point((Width / 10) * 8, (Height / 10) * 8);
         }
 
         public int TestMethod()
@@ -84,6 +84,7 @@ namespace TournementAndAnalysis
 
         private void LeagueButton_Click(object sender, EventArgs e)
         {
+            LeagueBack.Visible = true;
             foreach (Button button in MainScreenButtons)
             {
                 button.Visible = false;
@@ -165,7 +166,7 @@ namespace TournementAndAnalysis
             tableLayoutPanel1.Visible = true;
 
             tableLayoutPanel1.AutoSize = true;
-            tableLayoutPanel1.ColumnStyles.RemoveAt(0);
+            //tableLayoutPanel1.ColumnStyles.RemoveAt(0);
             //tableLayoutPanel1.RowStyles.RemoveAt(0);
             tableLayoutPanel1.Padding = new Padding(3);
             tableLayoutPanel1.ColumnCount = 6;
@@ -382,6 +383,41 @@ namespace TournementAndAnalysis
                 {
                     tableLayoutPanel1.GetControlFromPosition(5, teamPositions[i][0]).Text = (teamPositions.IndexOf(teamPositions[i]) + 1).ToString();
                 }
+            }
+        }
+
+        private void LeagueBack_Click(object sender, EventArgs e)
+        {
+            LeagueNextRound.Visible = false;
+            tableLayoutPanel1.Visible = false;
+            LeagueBack.Visible = false;
+            AddTeamTextbox.Visible = false;
+            LeagueTeams.Visible = false;
+
+            tableLayoutPanel1.Controls.Clear();
+            //tableLayoutPanel1.RowStyles.Clear();
+            //tableLayoutPanel1.ColumnStyles.Clear();
+
+            //ColumnHeaders.Clear();
+            LeagueTeamButtons.Clear();
+            leagueRound = 1;
+            TeamNumber = 1;
+
+            LeagueTeams.Items.Clear();
+            LeagueTeamList.Clear();
+            LeagueTeamNumbers.Clear();
+            LeagueTeamCombinations.Clear();
+            teamPositions.Clear();
+            extraMatchesList.Clear();
+
+            foreach (Button button in LeagueAddTeamButtons)
+            {
+                button.Visible = false;
+            }
+
+            foreach (Button button in MainScreenButtons)
+            {
+                button.Visible = true;
             }
         }
     }
