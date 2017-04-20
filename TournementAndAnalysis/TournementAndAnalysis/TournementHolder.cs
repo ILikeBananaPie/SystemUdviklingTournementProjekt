@@ -724,195 +724,195 @@ namespace TournementAndAnalysis
                     case "Elimbutton1":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 1 - btn.Width / 2, (frm.Height / 32) * 1 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 1 - btn.Width / 2, (frm.Height / 16) * 1 - btn.Height);
                             break;
                         }
                     case "Elimbutton2":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 1 - btn.Width / 2, (frm.Height / 32) * 3 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 1 - btn.Width / 2, (frm.Height / 16) * 3 - btn.Height);
                             break;
                         }
                     case "Elimbutton3":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 1 - btn.Width / 2, (frm.Height / 32) * 5 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 1 - btn.Width / 2, (frm.Height / 16) * 5 - btn.Height);
                             break;
                         }
                     case "Elimbutton4":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 1 - btn.Width / 2, (frm.Height / 32) * 7 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 1 - btn.Width / 2, (frm.Height / 16) * 7 - btn.Height);
                             break;
                         }
                     case "Elimbutton5":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 1 - btn.Width / 2, (frm.Height / 32) * 9 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 1 - btn.Width / 2, (frm.Height / 16) * 9 - btn.Height);
                             break;
                         }
                     case "Elimbutton6":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 1 - btn.Width / 2, (frm.Height / 32) * 11 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 1 - btn.Width / 2, (frm.Height / 16) * 11 - btn.Height);
                             break;
                         }
                     case "Elimbutton7":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 1 - btn.Width / 2, (frm.Height / 32) * 13 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 1 - btn.Width / 2, (frm.Height / 16) * 13 - btn.Height);
                             break;
                         }
                     case "Elimbutton8":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 1 - btn.Width / 2, (frm.Height / 32) * 15 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 1 - btn.Width / 2, (frm.Height / 16) * 15 - btn.Height);
                             break;
                         }
                     
                     case "Hold17":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 12 - btn.Width / 2, (frm.Height / 32) * 1 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 9 - btn.Width / 2, (frm.Height / 16) * 1 - btn.Height);
                             break;
                         }
                     case "Hold18":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 12 - btn.Width / 2, (frm.Height / 32) * 3 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 9 - btn.Width / 2, (frm.Height / 16) * 3 - btn.Height);
                             break;
                         }
                     case "Hold19":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 12 - btn.Width / 2, (frm.Height / 32) * 5 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 9 - btn.Width / 2, (frm.Height / 16) * 5 - btn.Height);
                             break;
                         }
                     case "Hold20":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 12 - btn.Width / 2, (frm.Height / 32) * 7 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 9 - btn.Width / 2, (frm.Height / 16) * 7 - btn.Height);
                             break;
                         }
                     case "Hold21":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 12 - btn.Width / 2, (frm.Height / 32) * 9 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 9 - btn.Width / 2, (frm.Height / 16) * 9 - btn.Height);
                             break;
                         }
                     case "Hold22":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 12 - btn.Width / 2, (frm.Height / 32) * 11 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 9 - btn.Width / 2, (frm.Height / 16) * 11 - btn.Height);
                             break;
                         }
                     case "Hold23":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 12 - btn.Width / 2, (frm.Height / 32) * 13 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 9 - btn.Width / 2, (frm.Height / 16) * 13 - btn.Height);
                             break;
                         }
                     case "Hold24":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 12 - btn.Width / 2, (frm.Height / 32) * 15 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 9 - btn.Width / 2, (frm.Height / 16) * 15 - btn.Height);
                             break;
                         }
                    
                     case "ElimA1v2":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 2 - btn.Width / 2, (frm.Height / 32) * 2 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 2 - btn.Width / 2, (frm.Height / 16) * 2 - btn.Height);
                             break;
                         }
                     case "ElimB3v4":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 2 - btn.Width / 2, (frm.Height / 32) * 6 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 2 - btn.Width / 2, (frm.Height / 16) * 6 - btn.Height);
                             break;
                         }
                     case "ElimC5v6":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 2 - btn.Width / 2, (frm.Height / 32) * 10 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 2 - btn.Width / 2, (frm.Height / 16) * 10 - btn.Height);
                             break;
                         }
                     case "ElimD7v8":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 2 - btn.Width / 2, (frm.Height / 32) * 14 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 2 - btn.Width / 2, (frm.Height / 16) * 14 - btn.Height);
                             break;
                         }
                    
                     case "ElimI17v18":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 11 - btn.Width / 2, (frm.Height / 32) * 2 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 8 - btn.Width / 2, (frm.Height / 16) * 2 - btn.Height);
                             break;
                         }
                     case "ElimJ19v20":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 11 - btn.Width / 2, (frm.Height / 32) * 6 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 8 - btn.Width / 2, (frm.Height / 16) * 6 - btn.Height);
                             break;
                         }
                     case "ElimK21v22":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 11 - btn.Width / 2, (frm.Height / 32) * 10 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 8 - btn.Width / 2, (frm.Height / 16) * 10 - btn.Height);
                             break;
                         }
                     case "ElimL23v24":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 11 - btn.Width / 2, (frm.Height / 32) * 14 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 8 - btn.Width / 2, (frm.Height / 16) * 14 - btn.Height);
                             break;
                         }
                 
                     case "ElimAvB":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 3 - btn.Width / 2, (frm.Height / 32) * 4 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 3 - btn.Width / 2, (frm.Height / 16) * 4 - btn.Height);
                             break;
                         }
                     case "ElimCvD":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 3 - btn.Width / 2, (frm.Height / 32) * 12 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 3 - btn.Width / 2, (frm.Height / 16) * 12 - btn.Height);
                             break;
                         }
                    
                     case "ElimIvJ":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 10 - btn.Width / 2, (frm.Height / 32) * 4 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 7 - btn.Width / 2, (frm.Height / 16) * 4 - btn.Height);
                             break;
                         }
                     case "ElimKvL":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 10 - btn.Width / 2, (frm.Height / 32) * 12 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 7 - btn.Width / 2, (frm.Height / 16) * 12 - btn.Height);
                             break;
                         }
                    
                     case "ElimFinalABvCD":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 4 - btn.Width / 2, (frm.Height / 32) * 8 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 4 - btn.Width / 2, (frm.Height / 16) * 8 - btn.Height);
                             break;
                         }
                 
                     case "ElimIvL":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 8 - btn.Width / 2, (frm.Height / 32) * 8 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 6 - btn.Width / 2, (frm.Height / 16) * 8 - btn.Height);
                             break;
                         }
                
                     case "ElimAvH":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 13) * 5 - btn.Width / 2, (frm.Height / 32) * 16 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 5 - btn.Width / 2, (frm.Height / 16) * 8 - btn.Height);
                             break;
                         }
                   
