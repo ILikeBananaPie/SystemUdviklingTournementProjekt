@@ -53,6 +53,7 @@ namespace TournementAndAnalysis
             LeagueTeams.Location = new Point(Width / 2 - LeagueTeams.Width / 2, Height / 2 + (LeagueTeams.Height / 2));
             AddTeamTextbox.Location = new Point(Width - Width / 2 - AddTeamTextbox.Width / 2, Height / 2 - AddTeamTextbox.Height / 2);
 
+            button1.Visible = false;
             timer1.Enabled = true;
             TestMethod();
         }
@@ -123,6 +124,7 @@ namespace TournementAndAnalysis
                 AddTeamTextbox.Visible = false;
                 LeagueTeams.Visible = false;
                 LeagueNextRound.Visible = true;
+                button1.Visible = true;
                 CreateCombinations();
                 SetupTable();
             }
@@ -419,6 +421,11 @@ namespace TournementAndAnalysis
             {
                 button.Visible = true;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
