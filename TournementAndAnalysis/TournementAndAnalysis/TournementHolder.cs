@@ -25,6 +25,7 @@ namespace TournementAndAnalysis
         }
 
         private Graphics dc;
+        private Image trophy;
 
         private Color backCol;
         private Color foreCol;
@@ -47,6 +48,7 @@ namespace TournementAndAnalysis
 
         public void Load(Form1 x, Graphics dc)
         {
+            trophy = Image.FromFile("Pokal.png");
             rnd = new Random();
             scene = ELIMSCENE.None;
             frm = x;
@@ -76,6 +78,13 @@ namespace TournementAndAnalysis
                             (obj as Button).BackgroundImage = Image.FromFile("ButtonTest5.png");
                             (obj as Button).BackgroundImageLayout = ImageLayout.Stretch;
                         }
+                    }
+                    if ((obj as Button).Name == "ElimWinner" || (obj as Button).Name == "Back")
+                    {
+                        (obj as Button).FlatStyle = FlatStyle.Flat;
+                        (obj as Button).FlatAppearance.BorderSize = 0;
+                        (obj as Button).BackgroundImage = Image.FromFile("ButtonTest6.png");
+                        (obj as Button).BackgroundImageLayout = ImageLayout.Stretch;
                     }
                 }
                 if (obj is TextBox)
@@ -518,13 +527,13 @@ namespace TournementAndAnalysis
                 a.BackColor = Color.Red;
                 //a.BackgroundImage = Image.FromFile("ButtonTest9.png");
                 b.BackColor = Color.Green;
-                //b.BackgroundImage = Image.FromFile("ButtonTest4.png");
+                b.BackgroundImage = Image.FromFile("ButtonTest53.png");
                 t.Text = b.Text;
                 return false;
             } else if (a.Text != "- empty -" && b.Text == "- empty -")
             {
                 a.BackColor = Color.Green;
-                //a.BackgroundImage = Image.FromFile("ButtonTest4.png");
+                a.BackgroundImage = Image.FromFile("ButtonTest53.png");
                 b.BackColor = Color.Red;
                 //b.BackgroundImage = Image.FromFile("ButtonTest9.png");
                 t.Text = a.Text;
@@ -542,7 +551,7 @@ namespace TournementAndAnalysis
                 if (rnd.Next(2) == 0)
                 {
                     a.BackColor = Color.Green;
-                    //a.BackgroundImage = Image.FromFile("ButtonTest4.png");
+                    a.BackgroundImage = Image.FromFile("ButtonTest53.png");
                     b.BackColor = Color.Red;
                     //b.BackgroundImage = Image.FromFile("ButtonTest9.png");
                     t.Text = a.Text;
@@ -551,28 +560,28 @@ namespace TournementAndAnalysis
                     a.BackColor = Color.Red;
                     //a.BackgroundImage = Image.FromFile("ButtonTest9.png");
                     b.BackColor = Color.Green;
-                    //b.BackgroundImage = Image.FromFile("ButtonTest4.png");
+                    b.BackgroundImage = Image.FromFile("ButtonTest53.png");
                     t.Text = b.Text;
                 }
                 if (t.Name == "ElimFinalABvCD" && scene == ELIMSCENE.Eight)
                 {
                     t.BackColor = Color.Gold;
-                    //t.BackgroundImage = Image.FromFile("ButtonTest7.png");
+                    t.BackgroundImage = Image.FromFile("ButtonTest53.png");
                 }
                 if (t.Name == "ElimAvB" && (scene == ELIMSCENE.Four))
                 {
                     t.BackColor = Color.Gold;
-                    //t.BackgroundImage = Image.FromFile("ButtonTest7.png");
+                    t.BackgroundImage = Image.FromFile("ButtonTest53.png");
                 }
                 if (t.Name == "ElimAvH" && (scene == ELIMSCENE.Sixteen))
                 {
                     t.BackColor = Color.Gold;
-                    //t.BackgroundImage = Image.FromFile("ButtonTest7.png");
+                    t.BackgroundImage = Image.FromFile("ButtonTest53.png");
                 }
                 if (t.Name == "ElimAvP" && (scene == ELIMSCENE.ThirtyTwo))
                 {
                     t.BackColor = Color.Gold;
-                    //t.BackgroundImage = Image.FromFile("ButtonTest7.png");
+                    t.BackgroundImage = Image.FromFile("ButtonTest53.png");
                 }
             }
         }
@@ -641,6 +650,7 @@ namespace TournementAndAnalysis
                         {
                             if (!btn.Visible) { btn.Show(); }
                             btn.Location = new Point((frm.Width / 8) * 3 - btn.Width / 2, (frm.Height / 8) * 4 - btn.Height);
+                            dc.DrawImage(trophy, new Rectangle((frm.Width / 8) * 3 - btn.Width / 2, (frm.Height / 8) * 4 - btn.Height - (int)((float)trophy.Height * ((float)btn.Width / (float)trophy.Height)), btn.Width , (int)((float)trophy.Height * ((float)btn.Width / (float)trophy.Height))));
                             break;
                         }
 
@@ -765,6 +775,7 @@ namespace TournementAndAnalysis
                         {
                             if (!btn.Visible) { btn.Show(); }
                             btn.Location = new Point((frm.Width / 8) * 4 - btn.Width / 2, (frm.Height / 8) * 4 - btn.Height);
+                            dc.DrawImage(trophy, new Rectangle((frm.Width / 8) * 4 - btn.Width / 2, (frm.Height / 8) * 4 - btn.Height - (int)((float)trophy.Height * ((float)btn.Width / (float)trophy.Height)), btn.Width, (int)((float)trophy.Height * ((float)btn.Width / (float)trophy.Height))));
                             break;
                         }
                     case "ElimWinner":
@@ -997,6 +1008,7 @@ namespace TournementAndAnalysis
                         {
                             if (!btn.Visible) { btn.Show(); }
                             btn.Location = new Point((frm.Width / 10) * 5 - btn.Width / 2, (frm.Height / 16) * 8 - btn.Height);
+                            dc.DrawImage(trophy, new Rectangle((frm.Width / 10) * 5 - btn.Width / 2, (frm.Height / 16) * 8 - btn.Height - (int)((float)trophy.Height * ((float)btn.Width / (float)trophy.Height)), btn.Width, (int)((float)trophy.Height * ((float)btn.Width / (float)trophy.Height))));
                             break;
                         }
                   
@@ -1422,6 +1434,7 @@ namespace TournementAndAnalysis
                         {
                             if (!btn.Visible) { btn.Show(); }
                             btn.Location = new Point((frm.Width / 13) * 6 - btn.Width / 2, (frm.Height / 32) * 16 - btn.Height);
+                            dc.DrawImage(trophy, new Rectangle((frm.Width / 13) * 6 - btn.Width / 2, (frm.Height / 32) * 16 - btn.Height - (int)((float)trophy.Height * ((float)btn.Width / (float)trophy.Height)), btn.Width, (int)((float)trophy.Height * ((float)btn.Width / (float)trophy.Height))));
                             break;
                         }
                     case "ElimWinner":
