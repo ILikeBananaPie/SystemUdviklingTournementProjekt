@@ -312,6 +312,7 @@
             this.ElimAmount.Size = new System.Drawing.Size(156, 20);
             this.ElimAmount.TabIndex = 20;
             this.ElimAmount.Text = "Antal Deltagere";
+            this.ElimAmount.TextChanged += new System.EventHandler(this.ElimAmount_TextChanged);
             // 
             // OK
             // 

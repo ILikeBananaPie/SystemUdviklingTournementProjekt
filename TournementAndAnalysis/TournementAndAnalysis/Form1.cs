@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,7 @@ namespace TournementAndAnalysis
         public Form1()
         {
             InitializeComponent();
+            ElimAmount.KeyPress += new KeyPressEventHandler(ElimAmount_KeyPress);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -37,9 +39,12 @@ namespace TournementAndAnalysis
             Size oriSize = this.Size;
             Size temp = new Size(40000, 40000);
             Size = temp;
-            dc = CreateGraphics();
+            backBuffer = BufferedGraphicsManager.Current.Allocate(CreateGraphics(), new Rectangle(new Point(0), Size));
+            dc = backBuffer.Graphics;
             Size = oriSize;
             Location = p;
+
+
 
             TournementHolder.Instance.Load(this, dc);
 
@@ -70,7 +75,7 @@ namespace TournementAndAnalysis
                         break;
                     }
             }
-            
+            backBuffer.Render();
         }
 
         public int TestMethod()
@@ -378,6 +383,23 @@ namespace TournementAndAnalysis
         private void Hold24_Click(object sender, EventArgs e)
         {
             TournementHolder.Instance.ChangeElimButtonText(sender);
+        }
+
+        private void ElimAmount_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ElimAmount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                if (ElimWinner.Text == "Skift Deltager")
+                {
+                    ElimWinner.Focus();
+                    ElimWinner_Click(this, new EventArgs());
+                }
+            }
         }
     }
 }
