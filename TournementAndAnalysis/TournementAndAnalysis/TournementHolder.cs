@@ -1448,7 +1448,9 @@ namespace TournementAndAnalysis
             DrawLines(buttons.Find(x => x.Name == "ElimO29v30"), buttons.Find(x => x.Name == "ElimP31v32"), buttons.Find(x => x.Name == "ElimOvP"));
             DrawLines(buttons.Find(x => x.Name == "ElimMvN"), buttons.Find(x => x.Name == "ElimOvP"), buttons.Find(x => x.Name == "ElimMvP"));
 
-
+            DrawLines(buttons.Find(x => x.Name == "ElimAvB"), buttons.Find(x => x.Name == "ElimCvD"), buttons.Find(x => x.Name == "ElimFinalABvCD"));
+            DrawLines(buttons.Find(x => x.Name == "ElimFinalABvCD"), buttons.Find(x => x.Name == "ElimEvH"), buttons.Find(x => x.Name == "ElimAvH"));
+            //DrawLines(buttons.Find(x => x.Name == "xxx"), buttons.Find(x => x.Name == "xxx"), buttons.Find(x => x.Name == "xxx"));
         }
 
         private Pen blackP = new Pen(Color.Black, 3);
