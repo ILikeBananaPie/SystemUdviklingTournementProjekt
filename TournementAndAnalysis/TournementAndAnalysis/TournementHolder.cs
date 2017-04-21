@@ -33,7 +33,7 @@ namespace TournementAndAnalysis
 
         private ELIMSCENE scene;
         private Form1 frm;
-        private List<Button> buttons;
+        public List<Button> buttons;
         private TextBox amount;
         private bool changingName;
         private bool started;
