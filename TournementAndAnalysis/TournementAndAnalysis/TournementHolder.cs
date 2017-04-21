@@ -61,6 +61,10 @@ namespace TournementAndAnalysis
                     {
                         buttons.Add((obj as Button));
                         (obj as Button).Hide();
+                        if ((obj as Button).Name.Contains("Elimbutton") || (obj as Button).Name.Contains("Hold"))
+                        {
+                            (obj as Button).Text = "- empty -";
+                        }
                     }
                 }
                 if (obj is TextBox)
@@ -202,8 +206,6 @@ namespace TournementAndAnalysis
                             {
                                 ColourButtons(buttons.Find(x => x.Name == "ElimA1v2"), buttons.Find(x => x.Name == "ElimB3v4"), buttons.Find(x => x.Name == "ElimAvB"));
                             }
-
-
                             break;
                         }
 
@@ -424,7 +426,14 @@ namespace TournementAndAnalysis
             started = false;
             changingName = false;
             scene = ELIMSCENE.None;
-            foreach (Button btn in buttons) { btn.Hide(); }
+            foreach (Button btn in buttons)
+            {
+                btn.Hide();
+                if (btn.Name.Contains("Elimbutton") || btn.Name.Contains("Hold"))
+                {
+                    btn.Text = "- empty -";
+                }
+            }
             amount.Text = "Antal Deltagere";
             amount.Hide();
             frm.Scene1 = MENUSCENE.Menu;
@@ -466,34 +475,63 @@ namespace TournementAndAnalysis
             }
         }
 
-        private void ColourButtons(Button a, Button b, Button t)
+        private bool CheckForSeed(Button a, Button b, Button t)
         {
-            if (rnd.Next(2) == 0)
+            if (a.Text == "- empty -" && b.Text == "- empty -")
             {
-                a.BackColor = Color.Green;
+                a.BackColor = Color.Red;
                 b.BackColor = Color.Red;
-                t.Text = a.Text;
-            } else
+                t.Text = "- empty -";
+                return false;
+            } else if (a.Text == "- empty -" && b.Text != "- empty -")
             {
                 a.BackColor = Color.Red;
                 b.BackColor = Color.Green;
                 t.Text = b.Text;
-            }
-            if (t.Name == "ElimFinalABvCD" && scene == ELIMSCENE.Eight)
+                return false;
+            } else if (a.Text != "- empty -" && b.Text == "- empty -")
             {
-                t.BackColor = Color.Gold;
-            }
-            if (t.Name == "ElimAvB" && (scene == ELIMSCENE.Four))
+                a.BackColor = Color.Green;
+                b.BackColor = Color.Red;
+                t.Text = a.Text;
+                return false;
+            } else
             {
-                t.BackColor = Color.Gold;
+                return true;
             }
-            if (t.Name == "ElimAvH" && (scene == ELIMSCENE.Sixteen))
+        }
+
+        private void ColourButtons(Button a, Button b, Button t)
+        {
+            if (CheckForSeed(a, b, t))
             {
-                t.BackColor = Color.Gold;
-            }
-            if (t.Name == "ElimAvP" && (scene == ELIMSCENE.ThirtyTwo))
-            {
-                t.BackColor = Color.Gold;
+                if (rnd.Next(2) == 0)
+                {
+                    a.BackColor = Color.Green;
+                    b.BackColor = Color.Red;
+                    t.Text = a.Text;
+                } else
+                {
+                    a.BackColor = Color.Red;
+                    b.BackColor = Color.Green;
+                    t.Text = b.Text;
+                }
+                if (t.Name == "ElimFinalABvCD" && scene == ELIMSCENE.Eight)
+                {
+                    t.BackColor = Color.Gold;
+                }
+                if (t.Name == "ElimAvB" && (scene == ELIMSCENE.Four))
+                {
+                    t.BackColor = Color.Gold;
+                }
+                if (t.Name == "ElimAvH" && (scene == ELIMSCENE.Sixteen))
+                {
+                    t.BackColor = Color.Gold;
+                }
+                if (t.Name == "ElimAvP" && (scene == ELIMSCENE.ThirtyTwo))
+                {
+                    t.BackColor = Color.Gold;
+                }
             }
         }
 
@@ -1341,11 +1379,12 @@ namespace TournementAndAnalysis
                 }
             }
 
+            //DrawLines(buttons.Find(x => x.Name == "xxx"), buttons.Find(x => x.Name == "xxx"), buttons.Find(x => x.Name == "xxx"));
             //DrawLines(buttons.Find(x => x.Name == "Elimbutton1"), buttons.Find(x => x.Name == "Elimbutton2"), buttons.Find(x => x.Name == "ElimA1v2"));
             //DrawLines(buttons.Find(x => x.Name == "Elimbutton3"), buttons.Find(x => x.Name == "Elimbutton4"), buttons.Find(x => x.Name == "ElimB3v4"));
-            //DrawLines(buttons.Find(x => x.Name == "ElimA1v2"), buttons.Find(x => x.Name == "ElimB3v4"), buttons.Find(x => x.Name == "ElimAvB"));
             //DrawLines(buttons.Find(x => x.Name == "Elimbutton5"), buttons.Find(x => x.Name == "Elimbutton6"), buttons.Find(x => x.Name == "ElimC5v6"));
             //DrawLines(buttons.Find(x => x.Name == "Elimbutton7"), buttons.Find(x => x.Name == "Elimbutton8"), buttons.Find(x => x.Name == "ElimD7v8"));
+            //DrawLines(buttons.Find(x => x.Name == "ElimA1v2"), buttons.Find(x => x.Name == "ElimB3v4"), buttons.Find(x => x.Name == "ElimAvB"));
             //DrawLines(buttons.Find(x => x.Name == "ElimC5v6"), buttons.Find(x => x.Name == "ElimD7v8"), buttons.Find(x => x.Name == "ElimCvD"));
         }
 
