@@ -1379,7 +1379,7 @@ namespace TournementAndAnalysis
                 }
             }
 
-            DrawLines(buttons.Find(x => x.Name == "xxx"), buttons.Find(x => x.Name == "xxx"), buttons.Find(x => x.Name == "xxx"));
+            //DrawLines(buttons.Find(x => x.Name == "xxx"), buttons.Find(x => x.Name == "xxx"), buttons.Find(x => x.Name == "xxx"));
             DrawLines(buttons.Find(x => x.Name == "Elimbutton1"), buttons.Find(x => x.Name == "Elimbutton2"), buttons.Find(x => x.Name == "ElimA1v2"));
             DrawLines(buttons.Find(x => x.Name == "Elimbutton3"), buttons.Find(x => x.Name == "Elimbutton4"), buttons.Find(x => x.Name == "ElimB3v4"));
             DrawLines(buttons.Find(x => x.Name == "Elimbutton5"), buttons.Find(x => x.Name == "Elimbutton6"), buttons.Find(x => x.Name == "ElimC5v6"));
