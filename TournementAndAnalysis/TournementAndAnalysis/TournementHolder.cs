@@ -616,6 +616,9 @@ namespace TournementAndAnalysis
                         }
                 }
             }
+            DrawLines(buttons.Find(x => x.Name == "Elimbutton1"), buttons.Find(x => x.Name == "Elimbutton2"), buttons.Find(x => x.Name == "ElimA1v2"));
+            DrawLines(buttons.Find(x => x.Name == "Elimbutton3"), buttons.Find(x => x.Name == "Elimbutton4"), buttons.Find(x => x.Name == "ElimB3v4"));
+            DrawLines(buttons.Find(x => x.Name == "ElimA1v2"), buttons.Find(x => x.Name == "ElimB3v4"), buttons.Find(x => x.Name == "ElimAvB"));
         }
 
         private void ElimEight()
@@ -970,6 +973,22 @@ namespace TournementAndAnalysis
 
                 }
             }
+            DrawLines(buttons.Find(x => x.Name == "Elimbutton1"), buttons.Find(x => x.Name == "Elimbutton2"), buttons.Find(x => x.Name == "ElimA1v2"));
+            DrawLines(buttons.Find(x => x.Name == "Elimbutton3"), buttons.Find(x => x.Name == "Elimbutton4"), buttons.Find(x => x.Name == "ElimB3v4"));
+            DrawLines(buttons.Find(x => x.Name == "ElimA1v2"), buttons.Find(x => x.Name == "ElimB3v4"), buttons.Find(x => x.Name == "ElimAvB"));
+            DrawLines(buttons.Find(x => x.Name == "Elimbutton5"), buttons.Find(x => x.Name == "Elimbutton6"), buttons.Find(x => x.Name == "ElimC5v6"));
+            DrawLines(buttons.Find(x => x.Name == "Elimbutton7"), buttons.Find(x => x.Name == "Elimbutton8"), buttons.Find(x => x.Name == "ElimD7v8"));
+            DrawLines(buttons.Find(x => x.Name == "ElimC5v6"), buttons.Find(x => x.Name == "ElimD7v8"), buttons.Find(x => x.Name == "ElimCvD"));
+            DrawLines(buttons.Find(x => x.Name == "ElimAvB"), buttons.Find(x => x.Name == "ElimCvD"), buttons.Find(x => x.Name == "ElimAvH"));
+
+            DrawLines(buttons.Find(x => x.Name == "Hold17"), buttons.Find(x => x.Name == "Hold18"), buttons.Find(x => x.Name == "ElimI17v18"));
+            DrawLines(buttons.Find(x => x.Name == "Hold19"), buttons.Find(x => x.Name == "Hold20"), buttons.Find(x => x.Name == "ElimJ19v20"));
+            DrawLines(buttons.Find(x => x.Name == "ElimI17v18"), buttons.Find(x => x.Name == "ElimJ19v20"), buttons.Find(x => x.Name == "ElimIvJ"));
+            DrawLines(buttons.Find(x => x.Name == "Hold21"), buttons.Find(x => x.Name == "Hold22"), buttons.Find(x => x.Name == "ElimK21v22"));
+            DrawLines(buttons.Find(x => x.Name == "Hold23"), buttons.Find(x => x.Name == "Hold24"), buttons.Find(x => x.Name == "ElimL23v24"));
+            DrawLines(buttons.Find(x => x.Name == "ElimK21v22"), buttons.Find(x => x.Name == "ElimL23v24"), buttons.Find(x => x.Name == "ElimKvL"));
+            DrawLines(buttons.Find(x => x.Name == "ElimIvJ"), buttons.Find(x => x.Name == "ElimKvL"), buttons.Find(x => x.Name == "ElimIvL"));
+            DrawLines(buttons.Find(x => x.Name == "ElimIvL"), buttons.Find(x => x.Name == "ElimIvL"), buttons.Find(x => x.Name == "ElimAvH"));
         }
         private void ElimThirtyTwo()
         {
@@ -1380,12 +1399,40 @@ namespace TournementAndAnalysis
             }
 
             //DrawLines(buttons.Find(x => x.Name == "xxx"), buttons.Find(x => x.Name == "xxx"), buttons.Find(x => x.Name == "xxx"));
+            //DrawLines(buttons.Find(x => x.Name == "Elimbutton1"), buttons.Find(x => x.Name == "Elimbutton2"), buttons.Find(x => x.Name == "ElimA1v2"));
+            //DrawLines(buttons.Find(x => x.Name == "Elimbutton3"), buttons.Find(x => x.Name == "Elimbutton4"), buttons.Find(x => x.Name == "ElimB3v4"));
+            //DrawLines(buttons.Find(x => x.Name == "Elimbutton5"), buttons.Find(x => x.Name == "Elimbutton6"), buttons.Find(x => x.Name == "ElimC5v6"));
+            //DrawLines(buttons.Find(x => x.Name == "Elimbutton7"), buttons.Find(x => x.Name == "Elimbutton8"), buttons.Find(x => x.Name == "ElimD7v8"));
+            //DrawLines(buttons.Find(x => x.Name == "ElimA1v2"), buttons.Find(x => x.Name == "ElimB3v4"), buttons.Find(x => x.Name == "ElimAvB"));
+            //DrawLines(buttons.Find(x => x.Name == "ElimC5v6"), buttons.Find(x => x.Name == "ElimD7v8"), buttons.Find(x => x.Name == "ElimCvD"));
+
             DrawLines(buttons.Find(x => x.Name == "Elimbutton1"), buttons.Find(x => x.Name == "Elimbutton2"), buttons.Find(x => x.Name == "ElimA1v2"));
             DrawLines(buttons.Find(x => x.Name == "Elimbutton3"), buttons.Find(x => x.Name == "Elimbutton4"), buttons.Find(x => x.Name == "ElimB3v4"));
+            DrawLines(buttons.Find(x => x.Name == "ElimA1v2"), buttons.Find(x => x.Name == "ElimB3v4"), buttons.Find(x => x.Name == "ElimAvB"));
             DrawLines(buttons.Find(x => x.Name == "Elimbutton5"), buttons.Find(x => x.Name == "Elimbutton6"), buttons.Find(x => x.Name == "ElimC5v6"));
             DrawLines(buttons.Find(x => x.Name == "Elimbutton7"), buttons.Find(x => x.Name == "Elimbutton8"), buttons.Find(x => x.Name == "ElimD7v8"));
-            DrawLines(buttons.Find(x => x.Name == "ElimA1v2"), buttons.Find(x => x.Name == "ElimB3v4"), buttons.Find(x => x.Name == "ElimAvB"));
             DrawLines(buttons.Find(x => x.Name == "ElimC5v6"), buttons.Find(x => x.Name == "ElimD7v8"), buttons.Find(x => x.Name == "ElimCvD"));
+            DrawLines(buttons.Find(x => x.Name == "ElimAvB"), buttons.Find(x => x.Name == "ElimCvD"), buttons.Find(x => x.Name == "ElimAvH"));
+
+            DrawLines(buttons.Find(x => x.Name == "Hold9"), buttons.Find(x => x.Name == "Hold10"), buttons.Find(x => x.Name == "ElimE9v10"));
+            DrawLines(buttons.Find(x => x.Name == "Hold11"), buttons.Find(x => x.Name == "Hold12"), buttons.Find(x => x.Name == "ElimF11v12"));
+            DrawLines(buttons.Find(x => x.Name == "ElimE9v10"), buttons.Find(x => x.Name == "ElimF11v12"), buttons.Find(x => x.Name == "ElimEvF"));
+            DrawLines(buttons.Find(x => x.Name == "Hold13"), buttons.Find(x => x.Name == "Hold14"), buttons.Find(x => x.Name == "ElimG13v14"));
+            DrawLines(buttons.Find(x => x.Name == "Hold15"), buttons.Find(x => x.Name == "Hold16"), buttons.Find(x => x.Name == "ElimH15v16"));
+            DrawLines(buttons.Find(x => x.Name == "ElimG13v14"), buttons.Find(x => x.Name == "ElimH15v16"), buttons.Find(x => x.Name == "ElimGvH"));
+            DrawLines(buttons.Find(x => x.Name == "ElimEvF"), buttons.Find(x => x.Name == "ElimGvH"), buttons.Find(x => x.Name == "ElimEvH"));
+            DrawLines(buttons.Find(x => x.Name == "ElimAvH"), buttons.Find(x => x.Name == "ElimEvH"), buttons.Find(x => x.Name == "ElimAvP"));
+
+
+            DrawLines(buttons.Find(x => x.Name == "Hold17"), buttons.Find(x => x.Name == "Hold18"), buttons.Find(x => x.Name == "ElimI17v18"));
+            DrawLines(buttons.Find(x => x.Name == "Hold19"), buttons.Find(x => x.Name == "Hold20"), buttons.Find(x => x.Name == "ElimJ19v20"));
+            DrawLines(buttons.Find(x => x.Name == "ElimI17v18"), buttons.Find(x => x.Name == "ElimJ19v20"), buttons.Find(x => x.Name == "ElimIvJ"));
+            DrawLines(buttons.Find(x => x.Name == "Hold21"), buttons.Find(x => x.Name == "Hold22"), buttons.Find(x => x.Name == "ElimK21v22"));
+            DrawLines(buttons.Find(x => x.Name == "Hold23"), buttons.Find(x => x.Name == "Hold24"), buttons.Find(x => x.Name == "ElimL23v24"));
+            DrawLines(buttons.Find(x => x.Name == "ElimK21v22"), buttons.Find(x => x.Name == "ElimL23v24"), buttons.Find(x => x.Name == "ElimKvL"));
+            DrawLines(buttons.Find(x => x.Name == "ElimIvJ"), buttons.Find(x => x.Name == "ElimKvL"), buttons.Find(x => x.Name == "ElimIvL"));
+            DrawLines(buttons.Find(x => x.Name == "ElimIvL"), buttons.Find(x => x.Name == "ElimIvL"), buttons.Find(x => x.Name == "ElimAvH"));
+
         }
 
         private Pen blackP = new Pen(Color.Black, 3);
