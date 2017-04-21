@@ -27,6 +27,7 @@ namespace TournementAndAnalysis
         private bool extraMatches;
         private int extraMatchTeamOne;
         private int extraMatchTeamTwo;
+        private int timer = 0;
 
         private List<string> ColumnHeaders;
         private List<Button> LeagueTeamButtons = new List<Button>();
@@ -52,6 +53,10 @@ namespace TournementAndAnalysis
 
             LeagueTeams.Location = new Point(Width / 2 - LeagueTeams.Width / 2, Height / 2 + (LeagueTeams.Height / 2));
             AddTeamTextbox.Location = new Point(Width - Width / 2 - AddTeamTextbox.Width / 2, Height / 2 - AddTeamTextbox.Height / 2);
+            LeagueNextRound.AutoSize = true;
+            LeagueNextRound.AutoSizeMode = AutoSizeMode.GrowOnly;
+            LeagueNextRound.TextAlign = ContentAlignment.MiddleLeft;
+            LeagueNextRound.Padding = new Padding(0, 0, 0, 0);
 
             timer1.Enabled = true;
             TestMethod();
@@ -202,19 +207,36 @@ namespace TournementAndAnalysis
 
         private void LeagueNextRound_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < tableLayoutPanel1.ColumnCount; i++)
+            {
+                for (int x = 0; x < LeagueTeamList.Count + 1; x++)
+                {
+                    tableLayoutPanel1.GetControlFromPosition(i, x).BackColor = Color.Transparent;
+                }
+            }
             if (extraMatches)
             {
+                foreach (Button button in LeagueTeamButtons)
+                {
+                    button.BackColor = Color.Transparent;
+                }
+                LeagueTeamButtons[extraMatchTeamOne - 1].BackColor = Color.Gray;
+                LeagueTeamButtons[extraMatchTeamTwo - 1].BackColor = Color.Gray;
+
                 if (ElimRound() == 0)
                 {
                     int pos = int.Parse(tableLayoutPanel1.GetControlFromPosition(5, extraMatchTeamOne).Text);
                     pos++;
                     tableLayoutPanel1.GetControlFromPosition(5, extraMatchTeamOne).Text = pos.ToString();
+                    tableLayoutPanel1.GetControlFromPosition(5, extraMatchTeamOne).BackColor = Color.LightGray;
+
                 }
                 else
                 {
                     int pos = int.Parse(tableLayoutPanel1.GetControlFromPosition(5, extraMatchTeamTwo).Text);
                     pos++;
                     tableLayoutPanel1.GetControlFromPosition(5, extraMatchTeamTwo).Text = pos.ToString();
+                    tableLayoutPanel1.GetControlFromPosition(5, extraMatchTeamTwo).BackColor = Color.LightGray;
                 }
                 int[] temp = CheckDraws();
                 if (temp != null)
@@ -224,6 +246,8 @@ namespace TournementAndAnalysis
                 }
                 else
                 {
+                    LeagueNextRound.Text = "Play Next Round";
+                    LeagueNextRound.Left -= LeagueNextRound.Width;
                     LeagueNextRound.Visible = false;
                     extraMatches = false;
                 }
@@ -242,6 +266,12 @@ namespace TournementAndAnalysis
                 LeagueTeamCombinations.RemoveAt(combination);
                 int team1 = int.Parse(teams[0]) - 1;
                 int team2 = int.Parse(teams[1]) - 1;
+                foreach (Button button in LeagueTeamButtons)
+                {
+                    button.BackColor = Color.Transparent;
+                }
+                LeagueTeamButtons[team1].BackColor = Color.Gray;
+                LeagueTeamButtons[team2].BackColor = Color.Gray;
                 int winLose = LeagueRound();
                 int y;
                 if (winLose == 0)
@@ -250,10 +280,13 @@ namespace TournementAndAnalysis
                     int first = int.Parse(tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team1][1])).Text);
                     first++;
                     tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team1][1])).Text = first.ToString();
+                    tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team1][1])).BackColor = Color.LightGray;
 
                     int second = int.Parse(tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team2][1])).Text);
                     second++;
                     tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team2][1])).Text = second.ToString();
+                    tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team2][1])).BackColor = Color.LightGray;
+
 
                 }
                 else if (winLose == 1)
@@ -262,11 +295,15 @@ namespace TournementAndAnalysis
                     int first = int.Parse(tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team1][1])).Text);
                     first++;
                     tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team1][1])).Text = first.ToString();
+                    tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team1][1])).BackColor = Color.LightGray;
+
 
                     y = 3;
                     int second = int.Parse(tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team2][1])).Text);
                     second++;
                     tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team2][1])).Text = second.ToString();
+                    tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team2][1])).BackColor = Color.LightGray;
+
                 }
                 else
                 {
@@ -274,20 +311,28 @@ namespace TournementAndAnalysis
                     int first = int.Parse(tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team1][1])).Text);
                     first++;
                     tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team1][1])).Text = first.ToString();
+                    tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team1][1])).BackColor = Color.LightGray;
+
 
                     y = 2;
                     int second = int.Parse(tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team2][1])).Text);
                     second++;
                     tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team2][1])).Text = second.ToString();
+                    tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team2][1])).BackColor = Color.LightGray;
+
                 }
                 y = 1;
                 int played = int.Parse(tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team1][1])).Text);
                 played++;
                 tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team1][1])).Text = played.ToString();
+                tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team1][1])).BackColor = Color.LightGray;
+
 
                 played = int.Parse(tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team2][1])).Text);
                 played++;
                 tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team2][1])).Text = played.ToString();
+                tableLayoutPanel1.GetControlFromPosition(y, int.Parse(LeagueTeamList[team2][1])).BackColor = Color.LightGray;
+
 
                 UpdatePositions();
                 if (CheckWin())
@@ -295,6 +340,8 @@ namespace TournementAndAnalysis
                     LeagueNextRound.Visible = false;
                     if (CheckDraws() != null)
                     {
+                        LeagueNextRound.Text = "Play Extra Round";
+                        LeagueNextRound.Left += LeagueNextRound.Width;
                         extraMatches = true;
                         LeagueNextRound.Visible = true;
                     }
@@ -318,6 +365,17 @@ namespace TournementAndAnalysis
                         return new int[] { i, x };
                     }
                 }
+            }
+            for (int i = 0; i < tableLayoutPanel1.ColumnCount; i++)
+            {
+                for (int x = 0; x < LeagueTeamList.Count + 1; x++)
+                {
+                    tableLayoutPanel1.GetControlFromPosition(i, x).BackColor = Color.Transparent;
+                }
+            }
+            foreach (Button button in LeagueTeamButtons)
+            {
+                button.BackColor = Color.Transparent;
             }
             return null;
         }
