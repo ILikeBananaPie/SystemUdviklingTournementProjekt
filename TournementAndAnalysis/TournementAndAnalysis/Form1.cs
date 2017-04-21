@@ -37,9 +37,12 @@ namespace TournementAndAnalysis
             Size oriSize = this.Size;
             Size temp = new Size(40000, 40000);
             Size = temp;
-            dc = CreateGraphics();
+            backBuffer = BufferedGraphicsManager.Current.Allocate(CreateGraphics(), new Rectangle(new Point(0), Size));
+            dc = backBuffer.Graphics;
             Size = oriSize;
             Location = p;
+
+
 
             TournementHolder.Instance.Load(this, dc);
 
@@ -70,7 +73,7 @@ namespace TournementAndAnalysis
                         break;
                     }
             }
-            
+            backBuffer.Render();
         }
 
         public int TestMethod()
