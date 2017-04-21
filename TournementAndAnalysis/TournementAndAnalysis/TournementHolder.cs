@@ -85,6 +85,7 @@ namespace TournementAndAnalysis
 
         public void SetupForFour()
         {
+            amount.Location = new Point((frm.Width / 8) * 4 - amount.Width / 2, (frm.Height / 8) * 1 - amount.Height);
             foreach (Button btn in buttons)
             {
                 btn.BackColor = backCol; btn.ForeColor = foreCol;
@@ -99,6 +100,7 @@ namespace TournementAndAnalysis
 
         public void SetupForEight()
         {
+            amount.Location = new Point((frm.Width / 8) * 4 - amount.Width / 2, (frm.Height / 8) * 1 - amount.Height);
             foreach (Button btn in buttons)
             {
                 btn.BackColor = backCol; btn.ForeColor = foreCol;
@@ -113,6 +115,7 @@ namespace TournementAndAnalysis
 
         public void SetupForSixTeen()
         {
+            amount.Location = new Point((frm.Width / 8) * 4 - amount.Width / 2, (frm.Height / 8) * 1 - amount.Height);
             foreach (Button btn in buttons)
             {
                 btn.BackColor = backCol; btn.ForeColor = foreCol;
@@ -128,6 +131,7 @@ namespace TournementAndAnalysis
 
         public void SetupForThirtyTwo()
         {
+            amount.Location = new Point((frm.Width / 8) * 4 - amount.Width / 2, (frm.Height / 8) * 1 - amount.Height);
             foreach (Button btn in buttons)
             {
                 btn.BackColor = backCol; btn.ForeColor = foreCol;
@@ -454,6 +458,8 @@ namespace TournementAndAnalysis
                 }
                 if (temp == null)
                 {
+                    if (amount.Visible == false){ amount.Show(); }
+                    amount.Focus();
                     (x as Button).BackColor = Color.Blue;
                     changingName = true;
                     buttons.Find(y => y.Name == "ElimWinner").Text = "Skift Deltager";
@@ -466,6 +472,7 @@ namespace TournementAndAnalysis
                     amount.Text = "";
                 } else
                 {
+                    
                     (x as Button).BackColor = Color.Blue;
                     temp.BackColor = backCol;
                     changingName = true;
