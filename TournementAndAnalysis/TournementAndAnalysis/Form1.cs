@@ -16,11 +16,11 @@ namespace TournementAndAnalysis
     {
         private MENUSCENE scene1;
         public MENUSCENE Scene1 { get { return scene1; } set { scene1 = value; } }
-        private Graphics dcX;
         private Graphics dc;
         private BufferedGraphics backBuffer;
         private Font f; //til alt eventuel tekst
         private Random rnd = new Random();
+        private Image backgroundImage;
 
         public Form1()
         {
@@ -33,6 +33,7 @@ namespace TournementAndAnalysis
             LeagueButton.Location = new Point(Width - Width / 3 - LeagueButton.Width / 2, Height / 2 - LeagueButton.Height / 2);
             CupButton.Location = new Point(Width / 3 - CupButton.Width / 2, Height / 2 - CupButton.Height / 2);
             scene1 = MENUSCENE.Menu;
+            backgroundImage = Image.FromFile("global-bg.jpg");
 
             //En gaffa løsning til noget grafisk
             Point p = Location;
@@ -62,6 +63,7 @@ namespace TournementAndAnalysis
 
 
             dc.Clear(this.BackColor);
+            dc.DrawImage(backgroundImage, new Rectangle(0, 0, Size.Width, Size.Height));
             switch (scene1)
             {
                 case MENUSCENE.Menu:

@@ -66,14 +66,14 @@ namespace TournementAndAnalysis
                             (obj as Button).Text = "- empty -";
                             (obj as Button).FlatStyle = FlatStyle.Flat;
                             (obj as Button).FlatAppearance.BorderSize = 0;
-                            (obj as Button).BackgroundImage = Image.FromFile("ButtonTest2.png");
+                            (obj as Button).BackgroundImage = Image.FromFile("ButtonTest5.png");
                             (obj as Button).BackgroundImageLayout = ImageLayout.Stretch;
                         }
                         if ((obj as Button).Name.Contains("Elim") && (obj as Button).Name.Contains("v"))
                         {
                             (obj as Button).FlatStyle = FlatStyle.Flat;
                             (obj as Button).FlatAppearance.BorderSize = 0;
-                            (obj as Button).BackgroundImage = Image.FromFile("ButtonTest2.png");
+                            (obj as Button).BackgroundImage = Image.FromFile("ButtonTest5.png");
                             (obj as Button).BackgroundImageLayout = ImageLayout.Stretch;
                         }
                     }
@@ -427,7 +427,7 @@ namespace TournementAndAnalysis
                 Button kort = buttons.Find(x => x.BackColor == Color.Blue);
                 kort.Text = amount.Text;
                 kort.BackColor = backCol;
-                kort.BackgroundImage = Image.FromFile("ButtonTest2.png");
+                kort.BackgroundImage = Image.FromFile("ButtonTest5.png");
                 buttons.Find(X => X.Name == "ElimWinner").Text = "Start";
                 changingName = false;
             } else
@@ -448,11 +448,11 @@ namespace TournementAndAnalysis
                 if (btn.Name.Contains("Elimbutton") || btn.Name.Contains("Hold"))
                 {
                     btn.Text = "- empty -";
-                    btn.BackgroundImage = Image.FromFile("ButtonTest2.png");
+                    btn.BackgroundImage = Image.FromFile("ButtonTest5.png");
                 }
                 if (btn.Name.Contains("Elim") && btn.Name.Contains("v"))
                 {
-                    btn.BackgroundImage = Image.FromFile("ButtonTest2.png");
+                    btn.BackgroundImage = Image.FromFile("ButtonTest5.png");
                 }
             }
             amount.Text = "Antal Deltagere";
@@ -478,14 +478,14 @@ namespace TournementAndAnalysis
                     if (amount.Visible == false){ amount.Show(); }
                     amount.Focus();
                     (x as Button).BackColor = Color.Blue;
-                    (x as Button).BackgroundImage = Image.FromFile("ButtonTest5.png");
+                    (x as Button).BackgroundImage = Image.FromFile("ButtonTest3.png");
                     changingName = true;
                     buttons.Find(y => y.Name == "ElimWinner").Text = "Skift Deltager";
                     amount.Text = "Ny deltagernavn";
                 } else if (temp == (x as Button))
                 {
                     (x as Button).BackColor = backCol;
-                    (x as Button).BackgroundImage = Image.FromFile("ButtonTest2.png");
+                    (x as Button).BackgroundImage = Image.FromFile("ButtonTest5.png");
                     changingName = false;
                     buttons.Find(y => y.Name == "ElimWinner").Text = "Start";
                     amount.Text = "";
@@ -493,9 +493,9 @@ namespace TournementAndAnalysis
                 {
                     
                     (x as Button).BackColor = Color.Blue;
-                    (x as Button).BackgroundImage = Image.FromFile("ButtonTest5.png");
+                    (x as Button).BackgroundImage = Image.FromFile("ButtonTest3.png");
                     temp.BackColor = backCol;
-                    temp.BackgroundImage = Image.FromFile("ButtonTest2.png");
+                    temp.BackgroundImage = Image.FromFile("ButtonTest5.png");
                     changingName = true;
                     buttons.Find(y => y.Name == "ElimWinner").Text = "Skift Deltager";
                     amount.Text = "Ny deltagernavn";
@@ -508,25 +508,25 @@ namespace TournementAndAnalysis
             if (a.Text == "- empty -" && b.Text == "- empty -")
             {
                 a.BackColor = Color.Red;
-                a.BackgroundImage = Image.FromFile("ButtonTest9.png");
+                //a.BackgroundImage = Image.FromFile("ButtonTest9.png");
                 b.BackColor = Color.Red;
-                b.BackgroundImage = Image.FromFile("ButtonTest9.png");
+                //b.BackgroundImage = Image.FromFile("ButtonTest9.png");
                 t.Text = "- empty -";
                 return false;
             } else if (a.Text == "- empty -" && b.Text != "- empty -")
             {
                 a.BackColor = Color.Red;
-                a.BackgroundImage = Image.FromFile("ButtonTest9.png");
+                //a.BackgroundImage = Image.FromFile("ButtonTest9.png");
                 b.BackColor = Color.Green;
-                b.BackgroundImage = Image.FromFile("ButtonTest4.png");
+                //b.BackgroundImage = Image.FromFile("ButtonTest4.png");
                 t.Text = b.Text;
                 return false;
             } else if (a.Text != "- empty -" && b.Text == "- empty -")
             {
                 a.BackColor = Color.Green;
-                a.BackgroundImage = Image.FromFile("ButtonTest4.png");
+                //a.BackgroundImage = Image.FromFile("ButtonTest4.png");
                 b.BackColor = Color.Red;
-                b.BackgroundImage = Image.FromFile("ButtonTest9.png");
+                //b.BackgroundImage = Image.FromFile("ButtonTest9.png");
                 t.Text = a.Text;
                 return false;
             } else
@@ -542,37 +542,37 @@ namespace TournementAndAnalysis
                 if (rnd.Next(2) == 0)
                 {
                     a.BackColor = Color.Green;
-                    a.BackgroundImage = Image.FromFile("ButtonTest4.png");
+                    //a.BackgroundImage = Image.FromFile("ButtonTest4.png");
                     b.BackColor = Color.Red;
-                    b.BackgroundImage = Image.FromFile("ButtonTest9.png");
+                    //b.BackgroundImage = Image.FromFile("ButtonTest9.png");
                     t.Text = a.Text;
                 } else
                 {
                     a.BackColor = Color.Red;
-                    a.BackgroundImage = Image.FromFile("ButtonTest9.png");
+                    //a.BackgroundImage = Image.FromFile("ButtonTest9.png");
                     b.BackColor = Color.Green;
-                    b.BackgroundImage = Image.FromFile("ButtonTest4.png");
+                    //b.BackgroundImage = Image.FromFile("ButtonTest4.png");
                     t.Text = b.Text;
                 }
                 if (t.Name == "ElimFinalABvCD" && scene == ELIMSCENE.Eight)
                 {
                     t.BackColor = Color.Gold;
-                    t.BackgroundImage = Image.FromFile("ButtonTest7.png");
+                    //t.BackgroundImage = Image.FromFile("ButtonTest7.png");
                 }
                 if (t.Name == "ElimAvB" && (scene == ELIMSCENE.Four))
                 {
                     t.BackColor = Color.Gold;
-                    t.BackgroundImage = Image.FromFile("ButtonTest7.png");
+                    //t.BackgroundImage = Image.FromFile("ButtonTest7.png");
                 }
                 if (t.Name == "ElimAvH" && (scene == ELIMSCENE.Sixteen))
                 {
                     t.BackColor = Color.Gold;
-                    t.BackgroundImage = Image.FromFile("ButtonTest7.png");
+                    //t.BackgroundImage = Image.FromFile("ButtonTest7.png");
                 }
                 if (t.Name == "ElimAvP" && (scene == ELIMSCENE.ThirtyTwo))
                 {
                     t.BackColor = Color.Gold;
-                    t.BackgroundImage = Image.FromFile("ButtonTest7.png");
+                    //t.BackgroundImage = Image.FromFile("ButtonTest7.png");
                 }
             }
         }
@@ -1021,7 +1021,7 @@ namespace TournementAndAnalysis
             DrawLines(buttons.Find(x => x.Name == "Elimbutton5"), buttons.Find(x => x.Name == "Elimbutton6"), buttons.Find(x => x.Name == "ElimC5v6"));
             DrawLines(buttons.Find(x => x.Name == "Elimbutton7"), buttons.Find(x => x.Name == "Elimbutton8"), buttons.Find(x => x.Name == "ElimD7v8"));
             DrawLines(buttons.Find(x => x.Name == "ElimC5v6"), buttons.Find(x => x.Name == "ElimD7v8"), buttons.Find(x => x.Name == "ElimCvD"));
-            DrawLines(buttons.Find(x => x.Name == "ElimAvB"), buttons.Find(x => x.Name == "ElimCvD"), buttons.Find(x => x.Name == "ElimAvH"));
+            DrawLines(buttons.Find(x => x.Name == "ElimAvB"), buttons.Find(x => x.Name == "ElimCvD"), buttons.Find(x => x.Name == "ElimFinalABvCD"));
 
             DrawLines(buttons.Find(x => x.Name == "Hold17"), buttons.Find(x => x.Name == "Hold18"), buttons.Find(x => x.Name == "ElimI17v18"));
             DrawLines(buttons.Find(x => x.Name == "Hold19"), buttons.Find(x => x.Name == "Hold20"), buttons.Find(x => x.Name == "ElimJ19v20"));
@@ -1030,7 +1030,7 @@ namespace TournementAndAnalysis
             DrawLines(buttons.Find(x => x.Name == "Hold23"), buttons.Find(x => x.Name == "Hold24"), buttons.Find(x => x.Name == "ElimL23v24"));
             DrawLines(buttons.Find(x => x.Name == "ElimK21v22"), buttons.Find(x => x.Name == "ElimL23v24"), buttons.Find(x => x.Name == "ElimKvL"));
             DrawLines(buttons.Find(x => x.Name == "ElimIvJ"), buttons.Find(x => x.Name == "ElimKvL"), buttons.Find(x => x.Name == "ElimIvL"));
-            DrawLines(buttons.Find(x => x.Name == "ElimIvL"), buttons.Find(x => x.Name == "ElimIvL"), buttons.Find(x => x.Name == "ElimAvH"));
+            DrawLines(buttons.Find(x => x.Name == "ElimFinalABvCD"), buttons.Find(x => x.Name == "ElimIvL"), buttons.Find(x => x.Name == "ElimAvH"));
         }
         private void ElimThirtyTwo()
         {
@@ -1488,7 +1488,7 @@ namespace TournementAndAnalysis
             //DrawLines(buttons.Find(x => x.Name == "xxx"), buttons.Find(x => x.Name == "xxx"), buttons.Find(x => x.Name == "xxx"));
         }
 
-        private Pen blackP = new Pen(Color.Black, 3);
+        private Pen blackP = new Pen(Color.Beige, 3);
         private void DrawLines(Button a, Button b, Button t)
         {
             if (t.Location.X > a.Location.X && t.Location.X > b.Location.X)
