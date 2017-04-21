@@ -653,17 +653,16 @@ namespace TournementAndAnalysis
                             dc.DrawImage(trophy, new Rectangle((frm.Width / 8) * 3 - btn.Width / 2, (frm.Height / 8) * 4 - btn.Height - (int)((float)trophy.Height * ((float)btn.Width / (float)trophy.Height)), btn.Width , (int)((float)trophy.Height * ((float)btn.Width / (float)trophy.Height))));
                             break;
                         }
-
                     case "ElimWinner":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 8) * 4 - btn.Width / 2, (frm.Height / 8) * 7 - btn.Height);
+                            btn.Location = new Point((frm.Width / 8) * 4 - btn.Width / 2 + btn.Width, (frm.Height / 8) * 7 - btn.Height);
                             break;
                         }
                     case "Back":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 8) * 3 - btn.Width / 2, (frm.Height / 8) * 7 - btn.Height);
+                            btn.Location = new Point((frm.Width / 8) * 4 - btn.Width / 2 - btn.Width, (frm.Height / 8) * 7 - btn.Height);
                             break;
                         }
                 }
@@ -781,13 +780,13 @@ namespace TournementAndAnalysis
                     case "ElimWinner":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 8) * 4 - btn.Width / 2, (frm.Height / 8) * 7 - btn.Height);
+                            btn.Location = new Point((frm.Width / 8) * 4 - btn.Width / 2 + btn.Width, (frm.Height / 8) * 7 - btn.Height);
                             break;
                         }
                     case "Back":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 8) * 3 - btn.Width / 2, (frm.Height / 8) * 7 - btn.Height);
+                            btn.Location = new Point((frm.Width / 8) * 4 - btn.Width / 2 - btn.Width, (frm.Height / 8) * 7 - btn.Height);
                             break;
                         }
                 }
@@ -1011,17 +1010,16 @@ namespace TournementAndAnalysis
                             dc.DrawImage(trophy, new Rectangle((frm.Width / 10) * 5 - btn.Width / 2, (frm.Height / 16) * 8 - btn.Height - (int)((float)trophy.Height * ((float)btn.Width / (float)trophy.Height)), btn.Width, (int)((float)trophy.Height * ((float)btn.Width / (float)trophy.Height))));
                             break;
                         }
-                  
                     case "ElimWinner":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 8) * 4 - btn.Width / 2, (frm.Height / 8) * 7 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 5 - btn.Width / 2 + btn.Width, (frm.Height / 8) * 7 - btn.Height);
                             break;
                         }
                     case "Back":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 8) * 3 - btn.Width / 2, (frm.Height / 8) * 7 - btn.Height);
+                            btn.Location = new Point((frm.Width / 10) * 5 - btn.Width / 2 - btn.Width, (frm.Height / 8) * 7 - btn.Height);
                             break;
                         }
 
@@ -1440,13 +1438,13 @@ namespace TournementAndAnalysis
                     case "ElimWinner":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 8) * 4 - btn.Width / 2, (frm.Height / 8) * 7 - btn.Height);
+                            btn.Location = new Point((frm.Width / 13) * 6 - btn.Width / 2 + btn.Width, (frm.Height / 8) * 7 - btn.Height);
                             break;
                         }
                     case "Back":
                         {
                             if (!btn.Visible) { btn.Show(); }
-                            btn.Location = new Point((frm.Width / 8) * 3 - btn.Width / 2, (frm.Height / 8) * 7 - btn.Height);
+                            btn.Location = new Point((frm.Width / 13) * 6 - btn.Width / 2 - btn.Width, (frm.Height / 8) * 7 - btn.Height);
                             break;
                         }
 

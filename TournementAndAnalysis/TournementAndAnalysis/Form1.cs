@@ -30,6 +30,14 @@ namespace TournementAndAnalysis
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            foreach (object btn in Controls)
+            {
+                if (btn is Button)
+                {
+                    (btn as Button).ForeColor = Color.White;
+                    (btn as Button).Font = new Font("Rockwell", 8, FontStyle.Bold, GraphicsUnit.Point);
+                }
+            }
             LeagueButton.Location = new Point(Width - Width / 3 - LeagueButton.Width / 2, Height / 2 - LeagueButton.Height / 2);
             CupButton.Location = new Point(Width / 3 - CupButton.Width / 2, Height / 2 - CupButton.Height / 2);
             scene1 = MENUSCENE.Menu;
