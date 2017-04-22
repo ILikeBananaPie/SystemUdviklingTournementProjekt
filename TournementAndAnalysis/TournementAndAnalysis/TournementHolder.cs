@@ -79,7 +79,7 @@ namespace TournementAndAnalysis
                             (obj as Button).BackgroundImageLayout = ImageLayout.Stretch;
                         }
                     }
-                    if ((obj as Button).Name == "ElimWinner" || (obj as Button).Name == "Back")
+                    if ((obj as Button).Name == "ElimWinner" || (obj as Button).Name == "Back" || (obj as Button).Name.Contains("Cup") || (obj as Button).Name.Contains("League") || (obj as Button).Name.Contains("ElimGroups"))
                     {
                         (obj as Button).FlatStyle = FlatStyle.Flat;
                         (obj as Button).FlatAppearance.BorderSize = 0;

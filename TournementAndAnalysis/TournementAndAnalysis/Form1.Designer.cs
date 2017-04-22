@@ -338,46 +338,50 @@
             // 
             // ElimGroupsOf4
             // 
-            this.ElimGroupsOf4.Location = new System.Drawing.Point(3, 99);
+            this.ElimGroupsOf4.Location = new System.Drawing.Point(3, 98);
             this.ElimGroupsOf4.Name = "ElimGroupsOf4";
             this.ElimGroupsOf4.Size = new System.Drawing.Size(75, 23);
             this.ElimGroupsOf4.TabIndex = 22;
             this.ElimGroupsOf4.Tag = "Elimbutton";
             this.ElimGroupsOf4.Text = "4 ";
             this.ElimGroupsOf4.UseVisualStyleBackColor = true;
+            this.ElimGroupsOf4.Visible = false;
             this.ElimGroupsOf4.Click += new System.EventHandler(this.ElimGroupsOf4_Click);
             // 
             // ElimGroupsOf8
             // 
-            this.ElimGroupsOf8.Location = new System.Drawing.Point(3, 128);
+            this.ElimGroupsOf8.Location = new System.Drawing.Point(3, 127);
             this.ElimGroupsOf8.Name = "ElimGroupsOf8";
             this.ElimGroupsOf8.Size = new System.Drawing.Size(75, 23);
             this.ElimGroupsOf8.TabIndex = 23;
             this.ElimGroupsOf8.Tag = "Elimbutton";
             this.ElimGroupsOf8.Text = "8";
             this.ElimGroupsOf8.UseVisualStyleBackColor = true;
+            this.ElimGroupsOf8.Visible = false;
             this.ElimGroupsOf8.Click += new System.EventHandler(this.button2_Click);
             // 
             // ElimGroupsOf16
             // 
-            this.ElimGroupsOf16.Location = new System.Drawing.Point(3, 159);
+            this.ElimGroupsOf16.Location = new System.Drawing.Point(3, 158);
             this.ElimGroupsOf16.Name = "ElimGroupsOf16";
             this.ElimGroupsOf16.Size = new System.Drawing.Size(75, 23);
             this.ElimGroupsOf16.TabIndex = 25;
             this.ElimGroupsOf16.Tag = "Elimbutton";
             this.ElimGroupsOf16.Text = "16";
             this.ElimGroupsOf16.UseVisualStyleBackColor = true;
+            this.ElimGroupsOf16.Visible = false;
             this.ElimGroupsOf16.Click += new System.EventHandler(this.button4_Click);
             // 
             // ElimGroupsOf20
             // 
-            this.ElimGroupsOf20.Location = new System.Drawing.Point(3, 188);
+            this.ElimGroupsOf20.Location = new System.Drawing.Point(3, 187);
             this.ElimGroupsOf20.Name = "ElimGroupsOf20";
             this.ElimGroupsOf20.Size = new System.Drawing.Size(75, 23);
             this.ElimGroupsOf20.TabIndex = 26;
             this.ElimGroupsOf20.Tag = "Elimbutton";
             this.ElimGroupsOf20.Text = "32";
             this.ElimGroupsOf20.UseVisualStyleBackColor = true;
+            this.ElimGroupsOf20.Visible = false;
             this.ElimGroupsOf20.Click += new System.EventHandler(this.ElimGroupsOf20_Click);
             // 
             // Hold9
