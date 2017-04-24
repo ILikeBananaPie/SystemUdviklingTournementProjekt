@@ -131,7 +131,7 @@
             // 
             // Elimbutton1
             // 
-            this.Elimbutton1.Location = new System.Drawing.Point(604, 12);
+            this.Elimbutton1.Location = new System.Drawing.Point(354, 85);
             this.Elimbutton1.Name = "Elimbutton1";
             this.Elimbutton1.Size = new System.Drawing.Size(75, 23);
             this.Elimbutton1.TabIndex = 2;
@@ -142,7 +142,7 @@
             // 
             // ElimCvD
             // 
-            this.ElimCvD.Location = new System.Drawing.Point(361, 41);
+            this.ElimCvD.Location = new System.Drawing.Point(111, 114);
             this.ElimCvD.Name = "ElimCvD";
             this.ElimCvD.Size = new System.Drawing.Size(75, 23);
             this.ElimCvD.TabIndex = 5;
@@ -153,7 +153,7 @@
             // 
             // ElimAvB
             // 
-            this.ElimAvB.Location = new System.Drawing.Point(361, 12);
+            this.ElimAvB.Location = new System.Drawing.Point(111, 85);
             this.ElimAvB.Name = "ElimAvB";
             this.ElimAvB.Size = new System.Drawing.Size(75, 23);
             this.ElimAvB.TabIndex = 6;
@@ -164,7 +164,7 @@
             // 
             // ElimD7v8
             // 
-            this.ElimD7v8.Location = new System.Drawing.Point(442, 99);
+            this.ElimD7v8.Location = new System.Drawing.Point(192, 172);
             this.ElimD7v8.Name = "ElimD7v8";
             this.ElimD7v8.Size = new System.Drawing.Size(75, 23);
             this.ElimD7v8.TabIndex = 7;
@@ -175,7 +175,7 @@
             // 
             // ElimC5v6
             // 
-            this.ElimC5v6.Location = new System.Drawing.Point(442, 70);
+            this.ElimC5v6.Location = new System.Drawing.Point(192, 143);
             this.ElimC5v6.Name = "ElimC5v6";
             this.ElimC5v6.Size = new System.Drawing.Size(75, 23);
             this.ElimC5v6.TabIndex = 8;
@@ -186,7 +186,7 @@
             // 
             // ElimB3v4
             // 
-            this.ElimB3v4.Location = new System.Drawing.Point(442, 41);
+            this.ElimB3v4.Location = new System.Drawing.Point(192, 114);
             this.ElimB3v4.Name = "ElimB3v4";
             this.ElimB3v4.Size = new System.Drawing.Size(75, 23);
             this.ElimB3v4.TabIndex = 9;
@@ -197,7 +197,7 @@
             // 
             // ElimA1v2
             // 
-            this.ElimA1v2.Location = new System.Drawing.Point(441, 12);
+            this.ElimA1v2.Location = new System.Drawing.Point(191, 85);
             this.ElimA1v2.Name = "ElimA1v2";
             this.ElimA1v2.Size = new System.Drawing.Size(75, 23);
             this.ElimA1v2.TabIndex = 10;
@@ -208,7 +208,7 @@
             // 
             // Elimbutton8
             // 
-            this.Elimbutton8.Location = new System.Drawing.Point(523, 99);
+            this.Elimbutton8.Location = new System.Drawing.Point(273, 172);
             this.Elimbutton8.Name = "Elimbutton8";
             this.Elimbutton8.Size = new System.Drawing.Size(75, 23);
             this.Elimbutton8.TabIndex = 11;
@@ -219,7 +219,7 @@
             // 
             // Elimbutton7
             // 
-            this.Elimbutton7.Location = new System.Drawing.Point(523, 70);
+            this.Elimbutton7.Location = new System.Drawing.Point(273, 143);
             this.Elimbutton7.Name = "Elimbutton7";
             this.Elimbutton7.Size = new System.Drawing.Size(75, 23);
             this.Elimbutton7.TabIndex = 12;
@@ -230,7 +230,7 @@
             // 
             // Elimbutton6
             // 
-            this.Elimbutton6.Location = new System.Drawing.Point(523, 41);
+            this.Elimbutton6.Location = new System.Drawing.Point(273, 114);
             this.Elimbutton6.Name = "Elimbutton6";
             this.Elimbutton6.Size = new System.Drawing.Size(75, 23);
             this.Elimbutton6.TabIndex = 13;
@@ -241,7 +241,7 @@
             // 
             // Elimbutton5
             // 
-            this.Elimbutton5.Location = new System.Drawing.Point(523, 12);
+            this.Elimbutton5.Location = new System.Drawing.Point(273, 85);
             this.Elimbutton5.Name = "Elimbutton5";
             this.Elimbutton5.Size = new System.Drawing.Size(75, 23);
             this.Elimbutton5.TabIndex = 14;
@@ -252,7 +252,7 @@
             // 
             // Elimbutton4
             // 
-            this.Elimbutton4.Location = new System.Drawing.Point(604, 99);
+            this.Elimbutton4.Location = new System.Drawing.Point(354, 172);
             this.Elimbutton4.Name = "Elimbutton4";
             this.Elimbutton4.Size = new System.Drawing.Size(75, 23);
             this.Elimbutton4.TabIndex = 15;
@@ -263,7 +263,7 @@
             // 
             // Elimbutton3
             // 
-            this.Elimbutton3.Location = new System.Drawing.Point(604, 70);
+            this.Elimbutton3.Location = new System.Drawing.Point(354, 143);
             this.Elimbutton3.Name = "Elimbutton3";
             this.Elimbutton3.Size = new System.Drawing.Size(75, 23);
             this.Elimbutton3.TabIndex = 16;
@@ -274,7 +274,7 @@
             // 
             // Elimbutton2
             // 
-            this.Elimbutton2.Location = new System.Drawing.Point(604, 41);
+            this.Elimbutton2.Location = new System.Drawing.Point(354, 114);
             this.Elimbutton2.Name = "Elimbutton2";
             this.Elimbutton2.Size = new System.Drawing.Size(75, 23);
             this.Elimbutton2.TabIndex = 17;
@@ -285,7 +285,7 @@
             // 
             // ElimFinalABvCD
             // 
-            this.ElimFinalABvCD.Location = new System.Drawing.Point(361, 70);
+            this.ElimFinalABvCD.Location = new System.Drawing.Point(111, 143);
             this.ElimFinalABvCD.Name = "ElimFinalABvCD";
             this.ElimFinalABvCD.Size = new System.Drawing.Size(75, 23);
             this.ElimFinalABvCD.TabIndex = 18;
@@ -296,7 +296,7 @@
             // 
             // ElimWinner
             // 
-            this.ElimWinner.Location = new System.Drawing.Point(361, 98);
+            this.ElimWinner.Location = new System.Drawing.Point(111, 171);
             this.ElimWinner.Name = "ElimWinner";
             this.ElimWinner.Size = new System.Drawing.Size(75, 23);
             this.ElimWinner.TabIndex = 19;
@@ -307,7 +307,7 @@
             // 
             // ElimAmount
             // 
-            this.ElimAmount.Location = new System.Drawing.Point(361, 159);
+            this.ElimAmount.Location = new System.Drawing.Point(91, 12);
             this.ElimAmount.Name = "ElimAmount";
             this.ElimAmount.Size = new System.Drawing.Size(156, 20);
             this.ElimAmount.TabIndex = 20;
@@ -316,7 +316,7 @@
             // 
             // OK
             // 
-            this.OK.Location = new System.Drawing.Point(523, 159);
+            this.OK.Location = new System.Drawing.Point(253, 12);
             this.OK.Name = "OK";
             this.OK.Size = new System.Drawing.Size(75, 23);
             this.OK.TabIndex = 21;
@@ -327,7 +327,7 @@
             // 
             // Back
             // 
-            this.Back.Location = new System.Drawing.Point(523, 188);
+            this.Back.Location = new System.Drawing.Point(253, 41);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(75, 23);
             this.Back.TabIndex = 22;
@@ -338,7 +338,7 @@
             // 
             // ElimGroupsOf4
             // 
-            this.ElimGroupsOf4.Location = new System.Drawing.Point(3, 98);
+            this.ElimGroupsOf4.Location = new System.Drawing.Point(453, 128);
             this.ElimGroupsOf4.Name = "ElimGroupsOf4";
             this.ElimGroupsOf4.Size = new System.Drawing.Size(75, 23);
             this.ElimGroupsOf4.TabIndex = 22;
@@ -350,7 +350,7 @@
             // 
             // ElimGroupsOf8
             // 
-            this.ElimGroupsOf8.Location = new System.Drawing.Point(3, 127);
+            this.ElimGroupsOf8.Location = new System.Drawing.Point(453, 201);
             this.ElimGroupsOf8.Name = "ElimGroupsOf8";
             this.ElimGroupsOf8.Size = new System.Drawing.Size(75, 23);
             this.ElimGroupsOf8.TabIndex = 23;
@@ -362,7 +362,7 @@
             // 
             // ElimGroupsOf16
             // 
-            this.ElimGroupsOf16.Location = new System.Drawing.Point(3, 158);
+            this.ElimGroupsOf16.Location = new System.Drawing.Point(453, 274);
             this.ElimGroupsOf16.Name = "ElimGroupsOf16";
             this.ElimGroupsOf16.Size = new System.Drawing.Size(75, 23);
             this.ElimGroupsOf16.TabIndex = 25;
@@ -374,7 +374,7 @@
             // 
             // ElimGroupsOf20
             // 
-            this.ElimGroupsOf20.Location = new System.Drawing.Point(3, 187);
+            this.ElimGroupsOf20.Location = new System.Drawing.Point(453, 346);
             this.ElimGroupsOf20.Name = "ElimGroupsOf20";
             this.ElimGroupsOf20.Size = new System.Drawing.Size(75, 23);
             this.ElimGroupsOf20.TabIndex = 26;
