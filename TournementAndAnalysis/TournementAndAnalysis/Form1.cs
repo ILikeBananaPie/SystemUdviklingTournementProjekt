@@ -11,8 +11,8 @@ using System.Windows.Forms;
 
 namespace TournementAndAnalysis
 {
-    public enum MENUSCENE { Menu, Elim, Cup}
-    public partial class Form1:Form
+    public enum MENUSCENE { Menu, Elim, Cup }
+    public partial class Form1 : Form
     {
         private MENUSCENE scene1;
         public MENUSCENE Scene1 { get { return scene1; } set { scene1 = value; } }
@@ -46,6 +46,17 @@ namespace TournementAndAnalysis
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            tableLayoutPanel1.BackgroundImage = Image.FromFile("ButtonTest5.png");
+            tableLayoutPanel1.BackgroundImageLayout = ImageLayout.Stretch;
+            //tableLayoutPanel1.BackColor = Color.Transparent;
+            AddTeam.BackgroundImage = Image.FromFile("ButtonTest5.png");
+            AddTeam.BackgroundImageLayout = ImageLayout.Stretch;
+            AddTeam.FlatStyle = FlatStyle.Flat;
+            AddTeam.FlatAppearance.BorderSize = 0;
+            StartTournament.BackgroundImage = Image.FromFile("ButtonTest5.png");
+            StartTournament.BackgroundImageLayout = ImageLayout.Stretch;
+            StartTournament.FlatStyle = FlatStyle.Flat;
+            StartTournament.FlatAppearance.BorderSize = 0;
             ErrorMessage.Visible = false;
             MainScreenButtons = new List<Button> { CupButton, LeagueButton };
             LeagueAddTeamButtons = new List<Button> { AddTeam, StartTournament };
@@ -117,7 +128,7 @@ namespace TournementAndAnalysis
                     }
             }
             backBuffer.Render();
-        }
+
             LeagueBack.Location = new Point((Width / 10) * 8, (Height / 10) * 8);
         }
 
@@ -154,8 +165,6 @@ namespace TournementAndAnalysis
             if (LeagueButton.Visible == true) { LeagueButton.Hide(); }
         }
 
-        //
-
         private void CupButton_Click(object sender, EventArgs e)
         {
             scene1 = MENUSCENE.Elim;
@@ -164,7 +173,20 @@ namespace TournementAndAnalysis
 
         private void LeagueButton_Click(object sender, EventArgs e)
         {
-           
+            LeagueBack.Visible = true;
+            scene1 = MENUSCENE.Cup;
+
+            foreach (Button button in MainScreenButtons)
+            {
+                button.Visible = false;
+            }
+
+            foreach (Button button in LeagueAddTeamButtons)
+            {
+                button.Visible = true;
+            }
+            AddTeamTextbox.Visible = true;
+            LeagueTeams.Visible = true;
         }
 
         #region ElimButtons
@@ -256,23 +278,28 @@ namespace TournementAndAnalysis
                 if (str < 2)
                 {
                     ElimAmount.Text = "For få deltagere";
-                } else if (str == 2)
+                }
+                else if (str == 2)
                 {
                     //start for 2
                     ElimAmount.Text = "2 Success";
-                } else if (str <= 4)
+                }
+                else if (str <= 4)
                 {
                     //start for 4
                     ElimAmount.Text = "4 Success";
-                } else if (str <= 8)
+                }
+                else if (str <= 8)
                 {
                     TournementHolder.Instance.SetupForEight();
                     ElimAmount.Text = "8 Success";
-                } else
+                }
+                else
                 {
                     ElimAmount.Text = "For mange deltager";
                 }
-            } else
+            }
+            else
             {
                 ElimAmount.Text = "Indtast tal";
             }
@@ -285,13 +312,10 @@ namespace TournementAndAnalysis
 
         #endregion
 
-
         private void ElimGroupsOf4_Click(object sender, EventArgs e)
         {
             TournementHolder.Instance.SetupForFour();
         }
-
-       
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -443,27 +467,26 @@ namespace TournementAndAnalysis
                     ElimWinner_Click(this, new EventArgs());
                 }
             }
-            LeagueBack.Visible = true;
-            foreach (Button button in MainScreenButtons)
-            {
-                button.Visible = false;
-            }
-
-            foreach (Button button in LeagueAddTeamButtons)
-            {
-                button.Visible = true;
-            }
-            AddTeamTextbox.Visible = true;
-            LeagueTeams.Visible = true;
         }
 
         private void AddTeam_Click(object sender, EventArgs e)
         {
-            LeagueTeamList.Add(new string[] { AddTeamTextbox.Text, TeamNumber.ToString(), "0" });
-            LeagueTeams.Items.Add(AddTeamTextbox.Text);
-            AddTeamTextbox.Text = "";
-            TeamNumber++;
-            ErrorMessage.Visible = false;
+            if (AddTeamTextbox.Text == "")
+            {
+                ErrorMessage.Text = "*Team name cannot be empty*";
+                ErrorMessage.ForeColor = Color.Red;
+                ErrorMessage.Location = new Point(AddTeamTextbox.Location.X - 20, AddTeamTextbox.Location.Y - 50);
+                ErrorMessage.Visible = true;
+            }
+            else
+            {
+                LeagueTeamList.Add(new string[] { AddTeamTextbox.Text, TeamNumber.ToString(), "0" });
+                LeagueTeams.Items.Add(AddTeamTextbox.Text);
+                AddTeamTextbox.Text = "";
+                TeamNumber++;
+                ErrorMessage.Visible = false;
+            }
+
         }
 
         private void StartTournament_Click(object sender, EventArgs e)
@@ -541,6 +564,10 @@ namespace TournementAndAnalysis
             for (int i = 0; i < LeagueTeamList.Count; i++)
             {
                 Button myButton = new Button();
+                myButton.BackgroundImage = Image.FromFile("ButtonTest5.png");
+                myButton.BackgroundImageLayout = ImageLayout.Stretch;
+                myButton.FlatStyle = FlatStyle.Flat;
+                myButton.FlatAppearance.BorderSize = 0;
                 myButton.Text = LeagueTeamList[i][0];
                 LeagueTeamButtons.Add(myButton);
                 tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 30));
@@ -731,6 +758,7 @@ namespace TournementAndAnalysis
             {
                 button.BackColor = Color.Transparent;
             }
+            SetPositions();
             return null;
         }
 
@@ -796,10 +824,63 @@ namespace TournementAndAnalysis
                     tableLayoutPanel1.GetControlFromPosition(5, teamPositions[i][0]).Text = (teamPositions.IndexOf(teamPositions[i]) + 1).ToString();
                 }
             }
+            
+        }
+
+        public void SetPositions()
+        {
+            for (int i = 1; i < teamPositions.Count + 1; i++)
+            {
+                string name = tableLayoutPanel1.GetControlFromPosition(0, i).Text;
+                string played = tableLayoutPanel1.GetControlFromPosition(1, i).Text;
+                string won = tableLayoutPanel1.GetControlFromPosition(2, i).Text;
+                string loss = tableLayoutPanel1.GetControlFromPosition(3, i).Text;
+                string draw = tableLayoutPanel1.GetControlFromPosition(4, i).Text;
+                string position = tableLayoutPanel1.GetControlFromPosition(5, i).Text;
+                int teamPos = teamPositions[i - 1][0];
+                //int test = team
+                /*
+                if (tableLayoutPanel1.GetControlFromPosition(5, i).Text == position && i != teamPositions.Count)
+                {
+                    tableLayoutPanel1.GetControlFromPosition(0, i + 1).Text = tableLayoutPanel1.GetControlFromPosition(0, int.Parse(position) + 1).Text;
+                    tableLayoutPanel1.GetControlFromPosition(1, i + 1).Text = tableLayoutPanel1.GetControlFromPosition(1, int.Parse(position) + 1).Text;
+                    tableLayoutPanel1.GetControlFromPosition(2, i + 1).Text = tableLayoutPanel1.GetControlFromPosition(2, int.Parse(position) + 1).Text;
+                    tableLayoutPanel1.GetControlFromPosition(3, i + 1).Text = tableLayoutPanel1.GetControlFromPosition(3, int.Parse(position) + 1).Text;
+                    tableLayoutPanel1.GetControlFromPosition(4, i + 1).Text = tableLayoutPanel1.GetControlFromPosition(4, int.Parse(position) + 1).Text;
+                    tableLayoutPanel1.GetControlFromPosition(5, i + 1).Text = tableLayoutPanel1.GetControlFromPosition(5, int.Parse(position) + 1).Text;
+
+                    tableLayoutPanel1.GetControlFromPosition(0, int.Parse(position) + 1).Text = name;
+                    tableLayoutPanel1.GetControlFromPosition(1, int.Parse(position) + 1).Text = played;
+                    tableLayoutPanel1.GetControlFromPosition(2, int.Parse(position) + 1).Text = won;
+                    tableLayoutPanel1.GetControlFromPosition(3, int.Parse(position) + 1).Text = loss;
+                    tableLayoutPanel1.GetControlFromPosition(4, int.Parse(position) + 1).Text = draw;
+                    tableLayoutPanel1.GetControlFromPosition(5, int.Parse(position) + 1).Text = position;
+                }
+                */
+
+                tableLayoutPanel1.GetControlFromPosition(0, i).Text = tableLayoutPanel1.GetControlFromPosition(0, int.Parse(position)).Text;
+                tableLayoutPanel1.GetControlFromPosition(1, i).Text = tableLayoutPanel1.GetControlFromPosition(1, int.Parse(position)).Text;
+                tableLayoutPanel1.GetControlFromPosition(2, i).Text = tableLayoutPanel1.GetControlFromPosition(2, int.Parse(position)).Text;
+                tableLayoutPanel1.GetControlFromPosition(3, i).Text = tableLayoutPanel1.GetControlFromPosition(3, int.Parse(position)).Text;
+                tableLayoutPanel1.GetControlFromPosition(4, i).Text = tableLayoutPanel1.GetControlFromPosition(4, int.Parse(position)).Text;
+                tableLayoutPanel1.GetControlFromPosition(5, i).Text = tableLayoutPanel1.GetControlFromPosition(5, int.Parse(position)).Text;
+
+                tableLayoutPanel1.GetControlFromPosition(0, int.Parse(position)).Text = name;
+                tableLayoutPanel1.GetControlFromPosition(1, int.Parse(position)).Text = played;
+                tableLayoutPanel1.GetControlFromPosition(2, int.Parse(position)).Text = won;
+                tableLayoutPanel1.GetControlFromPosition(3, int.Parse(position)).Text = loss;
+                tableLayoutPanel1.GetControlFromPosition(4, int.Parse(position)).Text = draw;
+                tableLayoutPanel1.GetControlFromPosition(5, int.Parse(position)).Text = position;
+
+                teamPositions[i - 1][0] = teamPositions[int.Parse(position) - 1][0];
+                teamPositions[int.Parse(position) - 1][0] = teamPos;
+
+            }
         }
 
         private void LeagueBack_Click(object sender, EventArgs e)
         {
+            scene1 = MENUSCENE.Menu;
             LeagueNextRound.Visible = false;
             tableLayoutPanel1.Visible = false;
             LeagueBack.Visible = false;
@@ -835,7 +916,7 @@ namespace TournementAndAnalysis
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

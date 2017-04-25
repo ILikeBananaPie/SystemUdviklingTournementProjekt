@@ -981,7 +981,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 481);
+            this.ClientSize = new System.Drawing.Size(1134, 455);
             this.Controls.Add(this.ElimAvP);
             this.Controls.Add(this.ElimIvP);
             this.Controls.Add(this.ElimAvH);
@@ -1053,7 +1053,6 @@
             this.Controls.Add(this.ElimAvB);
             this.Controls.Add(this.ElimCvD);
             this.Controls.Add(this.Elimbutton1);
-            this.ClientSize = new System.Drawing.Size(947, 455);
             this.Controls.Add(this.LeagueBack);
             this.Controls.Add(this.ErrorMessage);
             this.Controls.Add(this.LeagueNextRound);
