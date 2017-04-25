@@ -46,9 +46,14 @@ namespace TournementAndAnalysis
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            tableLayoutPanel1.BackgroundImage = Image.FromFile("ButtonTest5.png");
+            AddTeamTextbox.ForeColor = Color.White;
+            AddTeamTextbox.BackColor = Color.Purple;
+            LeagueTeams.ForeColor = Color.White;
+            LeagueTeams.BackColor = Color.Purple;
+            tableLayoutPanel1.BackgroundImage = Image.FromFile("ButtonTest52.png");
             tableLayoutPanel1.BackgroundImageLayout = ImageLayout.Stretch;
             //tableLayoutPanel1.BackColor = Color.Transparent;
+            LeagueBack.Width = 100;
             AddTeam.BackgroundImage = Image.FromFile("ButtonTest5.png");
             AddTeam.BackgroundImageLayout = ImageLayout.Stretch;
             AddTeam.FlatStyle = FlatStyle.Flat;
@@ -556,6 +561,9 @@ namespace TournementAndAnalysis
             {
                 Label myLabel = new Label();
                 myLabel.Text = ColumnHeaders[i];
+                myLabel.ForeColor = Color.White;
+                myLabel.Font = new Font("Rockwell", 8, FontStyle.Bold, GraphicsUnit.Point);
+
                 tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 100));
                 tableLayoutPanel1.Controls.Add(myLabel, i, 0);
             }
@@ -566,6 +574,8 @@ namespace TournementAndAnalysis
                 Button myButton = new Button();
                 myButton.BackgroundImage = Image.FromFile("ButtonTest5.png");
                 myButton.BackgroundImageLayout = ImageLayout.Stretch;
+                myButton.ForeColor = Color.White;
+                myButton.Font = new Font("Rockwell", 8, FontStyle.Bold, GraphicsUnit.Point);
                 myButton.FlatStyle = FlatStyle.Flat;
                 myButton.FlatAppearance.BorderSize = 0;
                 myButton.Text = LeagueTeamList[i][0];
@@ -581,6 +591,8 @@ namespace TournementAndAnalysis
                 {
                     Label myLabel = new Label();
                     myLabel.Text = "0";
+                    myLabel.ForeColor = Color.White;
+                    myLabel.Font = new Font("Rockwell", 8, FontStyle.Bold, GraphicsUnit.Point);
                     tableLayoutPanel1.Controls.Add(myLabel, y, x);
                 }
             }
@@ -824,7 +836,7 @@ namespace TournementAndAnalysis
                     tableLayoutPanel1.GetControlFromPosition(5, teamPositions[i][0]).Text = (teamPositions.IndexOf(teamPositions[i]) + 1).ToString();
                 }
             }
-            
+
         }
 
         public void SetPositions()

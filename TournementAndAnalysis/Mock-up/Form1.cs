@@ -42,7 +42,7 @@ namespace Mock_up
             BackToMain.Top = ClientRectangle.Height - BackToMain.Height;
             BackToMain.Left = ClientRectangle.Width - BackToMain.Width;
 
-            SetupCupTable();
+            //SetupCupTable();
 
         }
 
@@ -52,6 +52,7 @@ namespace Mock_up
             CupTable.Width = 20;
             CupTable.Top = 50;
             CupTable.ColumnCount = 6;
+            
             CupTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15));
             CupTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15));
             CupTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15));
@@ -82,6 +83,7 @@ namespace Mock_up
             Label label6 = new Label();
             label6.Text = "Position";
             CupTable.Controls.Add(label6, 5, 0);
+            
         }
 
         private void ElimTourn_Click(object sender, EventArgs e)

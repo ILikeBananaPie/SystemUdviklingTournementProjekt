@@ -97,6 +97,9 @@
     <Content Include="ButtonTest5.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="ButtonTest52.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ButtonTest53.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
